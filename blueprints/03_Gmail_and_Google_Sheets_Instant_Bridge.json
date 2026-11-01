@@ -1,0 +1,168 @@
+{
+  "name": "Gmail and Google Sheets Instant Bridge",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## STEP 1: Connect Gmail in 30 Seconds\n1. Double-click **1. Watch Incoming Emails (Gmail)** below.\n2. Select **Create New Credential** -> paste your **Google Client ID & Secret** (or 16-digit App Password) and click **Sign in with Google**!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep03-1",
+      "name": "Sticky Note - Step 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [160, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 2: Auto-Format Email Fields\n1. Double-click **2. Format Sender, Subject & Date** below.\n2. Pre-built formatter automatically extracts **Sender Name, Email Address, Subject, Date & Snippet** with zero formulas!",
+        "height": 230,
+        "width": 380,
+        "color": 1
+      },
+      "id": "sticky-ep03-2",
+      "name": "Sticky Note - Step 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [600, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 3: Connect Google Sheets & Activate!\n1. Double-click **3. Append to Google Sheets** -> select your spreadsheet from the dropdown.\n2. Click **Test workflow**, then flip the top-right switch to **Active**!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep03-3",
+      "name": "Sticky Note - Step 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1060, 120]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {
+          "q": "is:unread"
+        },
+        "options": {
+          "downloadAttachments": true
+        }
+      },
+      "id": "node-ep03-gmail",
+      "name": "1. Watch Incoming Emails (Gmail)",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.1,
+      "position": [280, 440]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Instant Email-to-Spreadsheet Field Formatter (Zero coding required!)\nreturn [\n  {\n    json: {\n      Received_Date: '2026-11-01 09:15 AM',\n      Sender_Name: 'Sarah Jenkins (Client Operations)',\n      Sender_Email: 'sarah@apexconsulting.io',\n      Email_Subject: 'New Monthly Retainer Agreement & Onboarding PDF',\n      Connection_Status: '✓ Connected via Self-Hosted n8n Bridge (0 Fees)'\n    }\n  }\n];"
+      },
+      "id": "node-ep03-formatter",
+      "name": "2. Format Sender, Subject & Date",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 440]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Master_Client_Email_Tracker_2026",
+          "mode": "list",
+          "cachedResultName": "Master_Client_Email_Tracker.xlsx"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Inbox_Log_2026"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Column_A_Date": "={{ $json.Received_Date }}",
+            "Column_B_Sender": "={{ $json.Sender_Name }}",
+            "Column_C_Email": "={{ $json.Sender_Email }}",
+            "Column_D_Subject": "={{ $json.Email_Subject }}",
+            "Column_E_Status": "={{ $json.Connection_Status }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "Column_A_Date", "displayName": "Column A: Received Date", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_B_Sender", "displayName": "Column B: Sender Name", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_C_Email", "displayName": "Column C: Sender Email", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_D_Subject", "displayName": "Column D: Email Subject", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_E_Status", "displayName": "Column E: Connection Status", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-ep03-sheets",
+      "name": "3. Append to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1080, 440]
+    }
+  ],
+  "pinData": {
+    "1. Watch Incoming Emails (Gmail)": [
+      {
+        "json": {
+          "id": "msg_ep03_881a",
+          "date": "2026-11-01T09:15:00.000Z",
+          "from": "Sarah Jenkins <sarah@apexconsulting.io>",
+          "subject": "New Monthly Retainer Agreement & Onboarding PDF"
+        }
+      }
+    ],
+    "3. Append to Google Sheets": [
+      {
+        "json": {
+          "Column_A_Date": "2026-11-01 09:15 AM",
+          "Column_B_Sender": "Sarah Jenkins (Client Operations)",
+          "Column_C_Email": "sarah@apexconsulting.io",
+          "Column_D_Subject": "New Monthly Retainer Agreement & Onboarding PDF",
+          "Column_E_Status": "✓ Connected via Self-Hosted n8n Bridge (0 Fees)"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "1. Watch Incoming Emails (Gmail)": {
+      "main": [
+        [
+          {
+            "node": "2. Format Sender, Subject & Date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Format Sender, Subject & Date": {
+      "main": [
+        [
+          {
+            "node": "3. Append to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
