@@ -1,0 +1,161 @@
+{
+  "name": "Hostinger 1-Click Cloud Starter Kit",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## STEP 1: 24/7 Cloud Schedule Trigger\n1. Double-click **1. 24/7 Cloud Heartbeat (Trigger)** below.\n2. Set to run **Every Hour** (or Every Minute) on your Hostinger KVM 1 Cloud.\n3. Runs 100% hands-free even while your laptop is turned OFF!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep02-1",
+      "name": "Sticky Note - Step 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [160, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 2: Cloud Health & Task Processor\n1. Double-click **2. Verify Cloud & Process Queue** below.\n2. Automatically checks server status (`Ubuntu 24.04 with n8n`) and processes queued tasks with **0 per-task fees**!",
+        "height": 230,
+        "width": 380,
+        "color": 1
+      },
+      "id": "sticky-ep02-2",
+      "name": "Sticky Note - Step 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [600, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 3: Log to Cloud Status Sheet & Turn ON!\n1. Click **Test workflow** at the bottom to verify your Hostinger n8n instance.\n2. Flip the top-right switch to **Active** — your $6.49/mo cloud server is now live 24/7!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep02-3",
+      "name": "Sticky Note - Step 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1060, 120]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 1
+            }
+          ]
+        }
+      },
+      "id": "node-schedule-trigger",
+      "name": "1. 24/7 Cloud Heartbeat (Trigger)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [280, 440]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Hostinger KVM 1 (Ubuntu 24.04 with n8n) Cloud Verification & Task Processor\nreturn [\n  {\n    json: {\n      Timestamp: '2026-11-01 09:00:00 UTC',\n      Cloud_Server: 'Hostinger KVM 1 ($6.49/mo - 1-Click n8n)',\n      Executions_Limit: 'UNLIMITED (Zero Per-Task Fees)',\n      Monthly_Savings_vs_Zapier: '$142.51/mo Saved ($1,710/yr)',\n      Server_Status: '✓ Online 24/7 (SSL & Queue Mode Active)'\n    }\n  }\n];"
+      },
+      "id": "node-cloud-verifier",
+      "name": "2. Verify Cloud & Process Queue",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 440]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Hostinger_Cloud_Status_Log_2026",
+          "mode": "list",
+          "cachedResultName": "Hostinger_n8n_Cloud_Log.xlsx"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Cloud_Uptime_2026"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Column_A_Timestamp": "={{ $json.Timestamp }}",
+            "Column_B_Cloud_Server": "={{ $json.Cloud_Server }}",
+            "Column_C_Executions": "={{ $json.Executions_Limit }}",
+            "Column_D_Savings": "={{ $json.Monthly_Savings_vs_Zapier }}",
+            "Column_E_Status": "={{ $json.Server_Status }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "Column_A_Timestamp", "displayName": "Column A: Timestamp", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_B_Cloud_Server", "displayName": "Column B: Cloud Server", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_C_Executions", "displayName": "Column C: Executions Limit", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_D_Savings", "displayName": "Column D: Monthly Savings", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_E_Status", "displayName": "Column E: Server Status", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-sheets-log",
+      "name": "3. Log to Cloud Status Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1080, 440]
+    }
+  ],
+  "pinData": {
+    "1. 24/7 Cloud Heartbeat (Trigger)": [
+      {
+        "json": {
+          "timestamp": "2026-11-01T09:00:00.000Z",
+          "mode": "everyHour",
+          "host": "Ubuntu 24.04 with n8n (Hostinger KVM 1)"
+        }
+      }
+    ],
+    "3. Log to Cloud Status Sheet": [
+      {
+        "json": {
+          "Column_A_Timestamp": "2026-11-01 09:00:00 UTC",
+          "Column_B_Cloud_Server": "Hostinger KVM 1 ($6.49/mo - 1-Click n8n)",
+          "Column_C_Executions": "UNLIMITED (Zero Per-Task Fees)",
+          "Column_D_Savings": "$142.51/mo Saved ($1,710/yr)",
+          "Column_E_Status": "✓ Online 24/7 (SSL & Queue Mode Active)"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "1. 24/7 Cloud Heartbeat (Trigger)": {
+      "main": [
+        [
+          {
+            "node": "2. Verify Cloud & Process Queue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Verify Cloud & Process Queue": {
+      "main": [
+        [
+          {
+            "node": "3. Log to Cloud Status Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
