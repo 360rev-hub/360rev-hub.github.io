@@ -1,0 +1,161 @@
+{
+  "name": "Multi-Step Zapier Replacement Flow",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## STEP 1: Unlimited Webhook / Lead Trigger\n1. Double-click **1. Incoming Lead / Order Trigger** below.\n2. In Zapier Pro, multi-step webhooks require a **$149/mo plan** and count against your monthly task cap.\n3. On your **Hostinger KVM 1 ($6.49/mo)** n8n cloud, incoming triggers are **100% UNLIMITED**!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep04-1",
+      "name": "Sticky Note - Step 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [160, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 2: Multi-Step Filter & Cost Calculator\n1. Double-click **2. Enrich Lead & Calculate Savings** below.\n2. Formats lead details, calculates order value, and logs **$0.00 per-task cost** (saving $1,710/year vs Zapier Pro)!",
+        "height": 230,
+        "width": 380,
+        "color": 1
+      },
+      "id": "sticky-ep04-2",
+      "name": "Sticky Note - Step 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [600, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 3: Save to Google Sheets & Turn ON!\n1. Double-click **3. Save to Master CRM Sheet** -> select your spreadsheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active** to replace Zapier 24/7!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep04-3",
+      "name": "Sticky Note - Step 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1060, 120]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 5
+            }
+          ]
+        }
+      },
+      "id": "node-ep04-trigger",
+      "name": "1. Incoming Lead / Order Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [280, 440]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Multi-Step Zapier Replacement Processor ($0.00 Per-Task Fee on Hostinger KVM 1)\nreturn [\n  {\n    json: {\n      Order_ID: 'ORD-2026-8841',\n      Client_Name: 'Apex Digital Agency',\n      Monthly_Tasks_Run: '50,000 Tasks/mo (UNLIMITED)',\n      Zapier_Pro_Cost: '$149.00/mo ($1,788/yr)',\n      Hostinger_n8n_Cost: '$6.49/mo (Saved $1,710/yr ✓)'\n    }\n  }\n];"
+      },
+      "id": "node-ep04-processor",
+      "name": "2. Enrich Lead & Calculate Savings",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 440]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Zapier_to_n8n_Migration_Sheet_2026",
+          "mode": "list",
+          "cachedResultName": "Zapier_Replacement_CRM_2026.xlsx"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Unlimited_Tasks_Log"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Column_A_Order_ID": "={{ $json.Order_ID }}",
+            "Column_B_Client": "={{ $json.Client_Name }}",
+            "Column_C_Tasks": "={{ $json.Monthly_Tasks_Run }}",
+            "Column_D_Zapier_Cost": "={{ $json.Zapier_Pro_Cost }}",
+            "Column_E_Hostinger_Cost": "={{ $json.Hostinger_n8n_Cost }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "Column_A_Order_ID", "displayName": "Column A: Order ID", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_B_Client", "displayName": "Column B: Client Name", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_C_Tasks", "displayName": "Column C: Monthly Tasks", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_D_Zapier_Cost", "displayName": "Column D: Zapier Cost", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_E_Hostinger_Cost", "displayName": "Column E: Hostinger KVM 1 Cost", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-ep04-sheets",
+      "name": "3. Save to Master CRM Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1080, 440]
+    }
+  ],
+  "pinData": {
+    "1. Incoming Lead / Order Trigger": [
+      {
+        "json": {
+          "orderId": "ORD-2026-8841",
+          "client": "Apex Digital Agency",
+          "tasks": 50000
+        }
+      }
+    ],
+    "3. Save to Master CRM Sheet": [
+      {
+        "json": {
+          "Column_A_Order_ID": "ORD-2026-8841",
+          "Column_B_Client": "Apex Digital Agency",
+          "Column_C_Tasks": "50,000 Tasks/mo (UNLIMITED)",
+          "Column_D_Zapier_Cost": "$149.00/mo ($1,788/yr)",
+          "Column_E_Hostinger_Cost": "$6.49/mo (Saved $1,710/yr ✓)"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "1. Incoming Lead / Order Trigger": {
+      "main": [
+        [
+          {
+            "node": "2. Enrich Lead & Calculate Savings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Enrich Lead & Calculate Savings": {
+      "main": [
+        [
+          {
+            "node": "3. Save to Master CRM Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
