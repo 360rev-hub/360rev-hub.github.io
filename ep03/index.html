@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>360 REV — Episode #03 Resource &amp; Blueprint Hub (Connect Google Sheets & Gmail to Self-Hosted n8n in 2 Minutes)</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; }
+    body { min-height: 100vh; background: #F8FAFC; color: #0F172A; display: flex; flex-direction: column; }
+    .topbar { height: 68px; background: #FFFFFF; border-bottom: 2px solid #E2E8F0; padding: 0 5%; display: flex; align-items: center; justify-content: space-between; }
+    .brand { display: flex; align-items: center; gap: 14px; font-size: 22px; font-weight: 900; color: #0F172A; text-decoration: none; }
+    .brand-badge { background: #0F172A; color: #FACC15; padding: 6px 14px; border-radius: 8px; font-weight: 900; font-size: 18px; }
+    .url-pill { background: #F1F5F9; border: 1.5px solid #CBD5E1; padding: 8px 20px; border-radius: 99px; font-size: 15px; font-weight: 700; color: #475569; }
+    .container { max-width: 1320px; width: 100%; margin: 0 auto; padding: 28px 24px 60px 24px; display: flex; flex-direction: column; gap: 22px; flex: 1; }
+    .header-box { text-align: center; }
+    .ep-tag { display: inline-block; background: #DCFCE7; color: #15803D; border: 1.5px solid #16A34A; font-size: 13px; font-weight: 900; padding: 4px 14px; border-radius: 99px; margin-bottom: 8px; }
+    .main-title { font-size: 34px; font-weight: 900; color: #0F172A; letter-spacing: -0.5px; }
+    .sub-title { font-size: 17px; color: #475569; font-weight: 600; margin-top: 6px; }
+    .cost-strip { background: #FFFFFF; border: 2px solid #CBD5E1; border-radius: 16px; padding: 16px 28px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04); }
+    .cost-left { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+    .cost-bad { background: #FEF2F2; border: 2px solid #FCA5A5; padding: 10px 18px; border-radius: 10px; color: #991B1B; font-size: 16px; font-weight: 800; text-decoration: line-through; }
+    .cost-vs { font-size: 18px; font-weight: 900; color: #64748B; }
+    .cost-good { background: #F0FDF4; border: 2.5px solid #16A34A; padding: 10px 20px; border-radius: 10px; color: #15803D; font-size: 18px; font-weight: 900; }
+    .cost-save { background: #FEF08A; color: #854D0E; padding: 8px 18px; border-radius: 99px; font-size: 15px; font-weight: 900; }
+    .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 28px; }
+    .hub-card { background: #FFFFFF; border: 3px solid #CBD5E1; border-radius: 20px; padding: 28px 32px; display: flex; flex-direction: column; justify-content: space-between; transition: all 0.22s ease; box-shadow: 0 12px 28px rgba(15, 23, 42, 0.05); }
+    .hub-card:hover { transform: translateY(-3px); }
+    .step-label { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 900; padding: 6px 16px; border-radius: 8px; width: fit-content; margin-bottom: 14px; }
+    .label-purple { background: #EDE9FE; color: #673DE6; }
+    .label-green { background: #DCFCE7; color: #15803D; }
+    .card-h { font-size: 26px; font-weight: 900; color: #0F172A; line-height: 1.25; }
+    .card-p { font-size: 16px; color: #475569; font-weight: 600; line-height: 1.5; margin-top: 10px; }
+    .check-list { margin-top: 16px; display: flex; flex-direction: column; gap: 9px; }
+    .check-item { font-size: 15px; font-weight: 700; color: #1E293B; display: flex; align-items: center; gap: 10px; }
+    .btn-action { margin-top: 24px; width: 100%; padding: 18px 24px; border-radius: 14px; font-size: 19px; font-weight: 900; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 10px; text-decoration: none; transition: all 0.2s; }
+    .btn-purple { background: #673DE6; color: #FFFFFF; box-shadow: 0 8px 22px rgba(103, 61, 230, 0.3); }
+    .btn-purple:hover { background: #5B32D1; }
+    .btn-green { background: #16A34A; color: #FFFFFF; box-shadow: 0 8px 22px rgba(22, 163, 74, 0.3); }
+    .btn-green:hover { background: #15803D; }
+    .quick-guide { background: #FFFFFF; border: 2px solid #CBD5E1; border-radius: 16px; padding: 22px 28px; margin-top: 6px; }
+    .quick-guide h3 { font-size: 20px; font-weight: 900; margin-bottom: 10px; color: #0F172A; }
+    .quick-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; font-size: 15px; color: #334155; font-weight: 600; line-height: 1.5; }
+    .q-box { background: #F8FAFC; border: 1.5px solid #E2E8F0; padding: 14px 18px; border-radius: 12px; }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <a href="/" class="brand"><span class="brand-badge">360 REV</span> Workflow Blueprint &amp; Setup Hub</a>
+    <div class="url-pill">🔗 Official Zero-Code Automation Resources</div>
+  </div>
+  <div class="container">
+    <div class="header-box">
+      <div class="ep-tag">EPISODE #03 • 2-MINUTE GOOGLE OAUTH BRIDGE</div>
+      <div class="main-title">Connect Google Sheets & Gmail to Self-Hosted n8n in 2 Minutes</div>
+      <div class="sub-title">Everything you need to sync incoming Gmail emails into Google Sheets 24/7:</div>
+    </div>
+    <div class="cost-strip">
+      <div class="cost-left">
+        <div class="cost-bad">Zapier / Cloud Pro: $149.00/mo</div>
+        <div class="cost-vs">➔</div>
+        <div class="cost-good">✓ Hostinger KVM 1 (1-Click n8n): $6.49/mo</div>
+      </div>
+      <div class="cost-save">💰 Save $1,710/Year • Unlimited 24/7 Workflows</div>
+    </div>
+    <div class="cards-grid">
+      <div class="hub-card">
+        <div>
+          <div class="step-label label-purple">👉 STEP 1: CLOUD ENGINE (LINK #1)</div>
+          <div class="card-h">Launch Hostinger 1-Click n8n Cloud ($6.49/mo)</div>
+          <div class="card-p">Official Hostinger KVM 1 VPS with the pre-installed <b>"Ubuntu 24.04 with n8n"</b> 1-click template.</div>
+          <div class="check-list">
+            <div class="check-item">✓ Runs 24/7 even when your office laptop is turned OFF</div>
+            <div class="check-item">✓ Unlimited workflows &amp; executions (Zero per-task fees)</div>
+            <div class="check-item">✓ 1-Click browser setup in hPanel — Zero terminal commands</div>
+          </div>
+        </div>
+        <a href="/hostinger" target="_blank" rel="noopener" class="btn-action btn-purple">🚀 Open Hostinger 1-Click n8n ($6.49/mo) →</a>
+      </div>
+      <div class="hub-card">
+        <div>
+          <div class="step-label label-green">🎁 STEP 2: FREE WORKFLOW FILE (LINK #2)</div>
+          <div class="card-h">Download Free .JSON Workflow Blueprint</div>
+          <div class="card-p">Ready-to-import workflow file: <code>03_Gmail_and_Google_Sheets_Instant_Bridge.json</code></div>
+          <div class="check-list">
+            <div class="check-item">✓ Pre-mapped Gmail Trigger → Field Formatter → Google Sheets</div>
+            <div class="check-item">✓ Includes 3 Yellow Sticky Notes inside the n8n canvas</div>
+            <div class="check-item">✓ Import in 10 seconds — Zero formulas or coding required</div>
+          </div>
+        </div>
+        <a href="/blueprints/03_Gmail_and_Google_Sheets_Instant_Bridge.json" download="03_Gmail_and_Google_Sheets_Instant_Bridge.json" class="btn-action btn-green">📥 Download Free .JSON Blueprint File</a>
+      </div>
+    </div>
+    <div class="quick-guide">
+      <h3>⚡ 3-Minute Setup Checklist (Zero Code)</h3>
+      <div class="quick-steps">
+        <div class="q-box"><b>1. Deploy 1-Click n8n:</b> Click the purple button above, choose <b>KVM 1 ($6.49/mo)</b>, and select <b>Applications → Ubuntu 24.04 with n8n</b> in Hostinger hPanel.</div>
+        <div class="q-box"><b>2. Import Blueprint:</b> Inside your n8n browser dashboard, click the top-right <b>⋯ menu → Import from File...</b> and select <code>03_Gmail_and_Google_Sheets_Instant_Bridge.json</code>.</div>
+        <div class="q-box"><b>3. Connect &amp; Activate:</b> Follow the 3 Yellow Sticky Notes inside the canvas, then flip the top-right switch to <b>Active</b>!</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
