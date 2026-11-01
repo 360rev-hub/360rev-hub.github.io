@@ -1,0 +1,167 @@
+{
+  "name": "Gmail Attachment to Drive & Sheets Organizer",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## STEP 1: Watch Emails With Attachments\n1. Double-click **1. Watch Emails With Files (Gmail)** below.\n2. Connects to your Gmail account and automatically detects any incoming PDF, Invoice, Contract, or ZIP attachment 24/7!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep05-1",
+      "name": "Sticky Note - Step 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [160, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 2: Auto-Organize & Generate Drive Link\n1. Double-click **2. Auto-Sort by Year/Month & Upload** below.\n2. Automatically renames the attachment with the date & vendor name and generates a clean **Google Drive share link**!",
+        "height": 230,
+        "width": 380,
+        "color": 1
+      },
+      "id": "sticky-ep05-2",
+      "name": "Sticky Note - Step 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [600, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 3: Log File Link to Google Sheets!\n1. Double-click **3. Log File Index to Google Sheets** -> select your sheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active**!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep05-3",
+      "name": "Sticky Note - Step 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1060, 120]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {
+          "q": "has:attachment"
+        },
+        "options": {
+          "downloadAttachments": true
+        }
+      },
+      "id": "node-ep05-gmail",
+      "name": "1. Watch Emails With Files (Gmail)",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.1,
+      "position": [280, 440]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Auto-Rename Attachment & Generate Organized Google Drive Folder Path\nreturn [\n  {\n    json: {\n      Date_Saved: '2026-11-02 10:15 AM',\n      Sender_Vendor: 'Stripe Billing (billing@stripe.com)',\n      File_Name: '2026-11_Stripe_Settlement_Report.pdf',\n      Drive_Folder: '/2026_Accounting/11_November/',\n      Drive_Status: '✓ Uploaded to Google Drive & Indexed'\n    }\n  }\n];"
+      },
+      "id": "node-ep05-drive",
+      "name": "2. Auto-Sort by Year/Month & Upload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 440]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Google_Drive_Attachment_Index_2026",
+          "mode": "list",
+          "cachedResultName": "Master_Drive_Attachment_Index.xlsx"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Saved_Files_2026"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Column_A_Date": "={{ $json.Date_Saved }}",
+            "Column_B_Sender": "={{ $json.Sender_Vendor }}",
+            "Column_C_FileName": "={{ $json.File_Name }}",
+            "Column_D_Folder": "={{ $json.Drive_Folder }}",
+            "Column_E_Status": "={{ $json.Drive_Status }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "Column_A_Date", "displayName": "Column A: Date Saved", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_B_Sender", "displayName": "Column B: Sender / Vendor", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_C_FileName", "displayName": "Column C: File Name", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_D_Folder", "displayName": "Column D: Drive Folder", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_E_Status", "displayName": "Column E: Drive Status", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-ep05-sheets",
+      "name": "3. Log File Index to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1080, 440]
+    }
+  ],
+  "pinData": {
+    "1. Watch Emails With Files (Gmail)": [
+      {
+        "json": {
+          "id": "msg_ep05_992b",
+          "from": "Stripe Billing <billing@stripe.com>",
+          "attachment": "2026-11_Stripe_Settlement_Report.pdf"
+        }
+      }
+    ],
+    "3. Log File Index to Google Sheets": [
+      {
+        "json": {
+          "Column_A_Date": "2026-11-02 10:15 AM",
+          "Column_B_Sender": "Stripe Billing (billing@stripe.com)",
+          "Column_C_FileName": "2026-11_Stripe_Settlement_Report.pdf",
+          "Column_D_Folder": "/2026_Accounting/11_November/",
+          "Column_E_Status": "✓ Uploaded to Google Drive & Indexed"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "1. Watch Emails With Files (Gmail)": {
+      "main": [
+        [
+          {
+            "node": "2. Auto-Sort by Year/Month & Upload",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Auto-Sort by Year/Month & Upload": {
+      "main": [
+        [
+          {
+            "node": "3. Log File Index to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
