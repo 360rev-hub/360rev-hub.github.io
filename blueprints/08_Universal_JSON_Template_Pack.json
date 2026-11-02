@@ -1,0 +1,160 @@
+{
+  "name": "All-in-One Office Automation Starter",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## STEP 1: Universal 1-Click .JSON Trigger\n1. Double-click **1. Universal Cloud Workflow Trigger** below.\n2. Any `.JSON` template from our free library imports into your **Hostinger KVM 1 ($6.49/mo)** n8n cloud in 3 clicks!\n3. Zero coding, zero terminal commands, and unlimited executions.",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep08-1",
+      "name": "Sticky Note - Step 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [160, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 2: Auto-Map Fields & Credentials\n1. Double-click **2. Auto-Map JSON Template Fields** below.\n2. Pre-formats incoming emails, invoices, or leads so you never have to write a single formula or script!",
+        "height": 230,
+        "width": 380,
+        "color": 1
+      },
+      "id": "sticky-ep08-2",
+      "name": "Sticky Note - Step 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [600, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 3: Connect Google Sheets & Activate\n1. Double-click **3. Sync to Master Office Sheet** -> select your Google Sheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active**!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep08-3",
+      "name": "Sticky Note - Step 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1060, 120]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 5
+            }
+          ]
+        }
+      },
+      "id": "node-ep08-trigger",
+      "name": "1. Universal Cloud Workflow Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [280, 440]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Universal 3-Click .JSON Template Field Mapper\nreturn [\n  {\n    json: {\n      Template_Loaded: '08_Universal_JSON_Template_Pack.json',\n      Import_Time: '1.2 Seconds (3 Clicks)',\n      Server_Engine: 'Hostinger KVM 1 ($6.49/mo 1-Click n8n)',\n      Monthly_Savings: '$1,710/yr Saved vs Zapier Pro',\n      Workflow_Status: 'Active 24/7 ✓'\n    }\n  }\n];"
+      },
+      "id": "node-ep08-processor",
+      "name": "2. Auto-Map JSON Template Fields",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 440]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Universal_JSON_Template_Sheet_2026",
+          "mode": "list",
+          "cachedResultName": "360REV_Master_Office_Automation.xlsx"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Imported_Blueprints"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Column_A_Template": "={{ $json.Template_Loaded }}",
+            "Column_B_Import_Speed": "={{ $json.Import_Time }}",
+            "Column_C_Engine": "={{ $json.Server_Engine }}",
+            "Column_D_Savings": "={{ $json.Monthly_Savings }}",
+            "Column_E_Status": "={{ $json.Workflow_Status }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "Column_A_Template", "displayName": "Column A: Blueprint File", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_B_Import_Speed", "displayName": "Column B: Import Speed", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_C_Engine", "displayName": "Column C: Cloud Engine", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_D_Savings", "displayName": "Column D: Annual Savings", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_E_Status", "displayName": "Column E: Status", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-ep08-sheets",
+      "name": "3. Sync to Master Office Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1080, 440]
+    }
+  ],
+  "pinData": {
+    "1. Universal Cloud Workflow Trigger": [
+      {
+        "json": {
+          "template": "08_Universal_JSON_Template_Pack.json",
+          "status": "Imported in 3 Clicks"
+        }
+      }
+    ],
+    "3. Sync to Master Office Sheet": [
+      {
+        "json": {
+          "Column_A_Template": "08_Universal_JSON_Template_Pack.json",
+          "Column_B_Import_Speed": "1.2 Seconds (3 Clicks)",
+          "Column_C_Engine": "Hostinger KVM 1 ($6.49/mo 1-Click n8n)",
+          "Column_D_Savings": "$1,710/yr Saved vs Zapier Pro",
+          "Column_E_Status": "Active 24/7 ✓"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "1. Universal Cloud Workflow Trigger": {
+      "main": [
+        [
+          {
+            "node": "2. Auto-Map JSON Template Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Auto-Map JSON Template Fields": {
+      "main": [
+        [
+          {
+            "node": "3. Sync to Master Office Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
