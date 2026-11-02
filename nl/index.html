@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>360 REV — Stop met $149/mnd betalen voor Zapier. Draai onbeperkte 24/7 n8n workflows voor € 5,99/mnd.</title>
-  <meta name="description" content="Stop met $149/mnd betalen voor Zapier. Draai onbeperkte 24/7 n8n workflows voor € 5,99/mnd. Start Hostinger 1-Click n8n Cloud (€ 5,99/mnd) • Download Gratis .JSON Workflow Blueprint (💰 Bespaar € 1.600/Jaar • Onbeperkte Workflows 24/7).">
+  <meta name="description" content="Stop met $149/mnd betalen voor Zapier. Draai onbeperkte 24/7 n8n workflows voor € 5,99/mnd. Start Hostinger 1-Click n8n Cloud (€ 5,99/mnd) • 20 Free .JSON n8n Workflow Blueprints (💰 Bespaar € 1.600/Jaar • Onbeperkte Workflows 24/7).">
   <link rel="canonical" href="https://360rev-hub.github.io/nl/">
   <link rel="alternate" hreflang="x-default" href="https://360rev-hub.github.io/">
   <link rel="alternate" hreflang="en" href="https://360rev-hub.github.io/">
@@ -84,11 +84,12 @@
     .bad-pill { background: rgba(239,68,68,0.18); border: 1.5px solid #F87171; color: #FCA5A5; padding: 7px 13px; border-radius: 8px; font-size: 13.5px; font-weight: 800; text-decoration: line-through; }
     .good-pill { background: rgba(22,163,74,0.22); border: 2px solid #4ADE80; color: #4ADE80; padding: 8px 15px; border-radius: 8px; font-size: 14.5px; font-weight: 900; }
 
-    .hero-card { background: #FFFFFF; color: #0F172A; border-radius: 18px; padding: 22px 24px; border: 3px solid #A78BFA; display: flex; flex-direction: column; gap: 11px; }
+    .hero-card { background: #FFFFFF; color: #0F172A; border-radius: 18px; padding: 22px 24px; border: 3px solid #A78BFA; display: flex; flex-direction: column; gap: 10px; }
     .hero-card-tag { font-size: 12.5px; font-weight: 900; color: #673DE6; background: #EDE9FE; padding: 5px 12px; border-radius: 6px; width: fit-content; }
     .hero-card-title { font-size: 20px; font-weight: 900; color: #0F172A; line-height: 1.25; }
-    .hero-card-list { font-size: 14px; font-weight: 700; color: #334155; display: flex; flex-direction: column; gap: 6px; line-height: 1.4; }
-    .hero-btn { margin-top: 6px; background: #673DE6; color: #FFFFFF; text-align: center; padding: 14px 18px; border-radius: 12px; font-size: 16px; font-weight: 900; text-decoration: none; box-shadow: 0 8px 20px rgba(103,61,230,0.3); transition: all 0.2s; }
+    .hero-card-list { font-size: 13.5px; font-weight: 700; color: #334155; display: flex; flex-direction: column; gap: 5px; line-height: 1.4; }
+    .hero-spec-lock { background: #F5F3FF; border: 1.5px dashed #673DE6; border-radius: 10px; padding: 8px 11px; font-size: 12px; font-weight: 800; color: #4C1D95; line-height: 1.35; }
+    .hero-btn { margin-top: 4px; background: #673DE6; color: #FFFFFF; text-align: center; padding: 14px 18px; border-radius: 12px; font-size: 16px; font-weight: 900; text-decoration: none; box-shadow: 0 8px 20px rgba(103,61,230,0.3); transition: all 0.2s; }
     .hero-btn:hover { background: #5B32D1; transform: translateY(-2px); }
 
     /* Interactive Zapier vs Hostinger Savings Calculator */
@@ -128,11 +129,11 @@
 
     .footer { background: #FFFFFF; border-top: 2px solid #E2E8F0; padding: 22px 5%; text-align: center; font-size: 13.5px; color: #64748B; font-weight: 600; line-height: 1.5; }
     
-    /* Smart Conversion Modal (Triggered on .JSON Download) */
+    /* Smart Conversion Modal (Triggered on .JSON Download + Auto-Clipboard Copy) */
     .modal-overlay {
       position: fixed;
       inset: 0;
-      background: rgba(15, 23, 42, 0.78);
+      background: rgba(15, 23, 42, 0.8);
       backdrop-filter: blur(6px);
       display: none;
       align-items: center;
@@ -145,10 +146,10 @@
       background: #FFFFFF;
       border: 4px solid #673DE6;
       border-radius: 22px;
-      max-width: 580px;
+      max-width: 600px;
       width: 100%;
-      padding: 28px 30px;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      padding: 26px 28px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.38);
       position: relative;
       text-align: left;
       animation: popIn 0.22s cubic-bezier(0.22, 1, 0.36, 1);
@@ -176,49 +177,71 @@
       background: #DCFCE7;
       color: #15803D;
       border: 1.5px solid #16A34A;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 900;
       padding: 5px 13px;
       border-radius: 99px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+    }
+    .clipboard-pill {
+      display: block;
+      background: #FEF08A;
+      color: #854D0E;
+      border: 1.5px solid #FACC15;
+      font-size: 12.5px;
+      font-weight: 900;
+      padding: 6px 12px;
+      border-radius: 10px;
+      margin-bottom: 10px;
     }
     .modal-title {
-      font-size: 24px;
+      font-size: 23px;
       font-weight: 900;
       color: #0F172A;
       line-height: 1.25;
     }
     .modal-p {
-      font-size: 15.5px;
+      font-size: 15px;
       color: #334155;
       font-weight: 600;
-      line-height: 1.5;
-      margin-top: 10px;
+      line-height: 1.45;
+      margin-top: 8px;
     }
     .modal-steps {
-      margin-top: 16px;
+      margin-top: 12px;
       background: #F8FAFC;
       border: 2px solid #E2E8F0;
       border-radius: 14px;
-      padding: 14px 18px;
+      padding: 12px 16px;
       display: flex;
       flex-direction: column;
-      gap: 8px;
-      font-size: 14.5px;
+      gap: 7px;
+      font-size: 14px;
       font-weight: 700;
       color: #1E293B;
     }
+    .spec-lock-box {
+      margin-top: 12px;
+      background: #F5F3FF;
+      border: 2px dashed #673DE6;
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #4C1D95;
+      line-height: 1.45;
+    }
     .modal-cta {
-      margin-top: 20px;
+      margin-top: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       background: #673DE6;
       color: #FFFFFF;
-      font-size: 18px;
+      font-size: 17.5px;
       font-weight: 900;
-      padding: 16px 22px;
+      padding: 15px 20px;
       border-radius: 14px;
       text-decoration: none;
       text-align: center;
@@ -228,12 +251,12 @@
     .modal-cta:hover { background: #5B32D1; transform: translateY(-2px); }
     .modal-sub {
       text-align: center;
-      font-size: 12.5px;
+      font-size: 12px;
       color: #64748B;
       font-weight: 700;
-      margin-top: 10px;
+      margin-top: 8px;
     }
-    /* Collapsible Below-the-Fold SEO Drawer (Zero Above-the-Fold Distraction) */
+    /* Collapsible Below-the-Fold SEO Drawer */
     details.seo-drawer {
       background: #FFFFFF;
       border: 2px solid #E2E8F0;
@@ -308,7 +331,7 @@
       <span class="brand-badge">360 REV</span>
       <div class="brand-text-wrap">
         <span class="brand-title">Blueprint Hub</span>
-        <span class="brand-sub">Zero-Code n8n Library</span>
+        <span class="brand-sub">20 Zero-Code n8n Blueprints</span>
       </div>
     </a>
     <div class="top-actions">
@@ -361,9 +384,9 @@
     <!-- Master Cloud Engine Hero -->
     <div class="hero-banner">
       <div>
-        <div class="hero-badge">⚡ OFFICIAL 360 REV CLOUD ENGINE &amp; FREE .JSON LIBRARY</div>
+        <div class="hero-badge">⚡ OFFICIAL 360 REV CLOUD ENGINE &amp; 20 FREE .JSON BLUEPRINTS</div>
         <h1 class="hero-title">Stop met $149/mnd betalen voor Zapier. Draai onbeperkte 24/7 n8n workflows voor € 5,99/mnd.</h1>
-        <div class="hero-sub">Every workflow blueprint on the 360 REV channel is 100% free to download and includes 3 beginner-friendly Yellow Sticky Notes inside the canvas. Import any file below into your self-hosted Hostinger 1-Click n8n Cloud in 10 seconds.</div>
+        <div class="hero-sub">Every workflow blueprint on the 360 REV channel is 100% free to download, auto-copies to your clipboard, and includes 3 beginner-friendly Yellow Sticky Notes inside the canvas. Paste any workflow directly into your Hostinger 1-Click n8n Cloud with <b>Ctrl+V</b>!</div>
         <div class="hero-Compare">
           <span class="bad-pill">Zapier Pro: $149.00/mo ($1,788/yr)</span>
           <span class="bad-pill">n8n Cloud Pro: $50.00/mo</span>
@@ -377,6 +400,9 @@
           <div>✓ 1-Click browser installation in hPanel (Zero Linux commands)</div>
           <div>✓ 4 GB RAM • 50 GB NVMe • Runs 24/7 while your laptop is OFF</div>
           <div>✓ Unlimited workflows, webhooks &amp; executions ($0 per-task fees)</div>
+        </div>
+        <div class="hero-spec-lock">
+          🎟️ <b>3-Click Checkout Cheat-Sheet:</b> ① Select <b>KVM 1 ($6.49/mo)</b> ➔ ② Pick <b>24 Months (68% OFF)</b> ➔ ③ Choose <b>Ubuntu 24.04 with n8n</b>
         </div>
         <a href="/hostinger" target="_blank" rel="noopener" class="hero-btn">🚀 Open Hostinger 1-Click n8n (€ 5,99/mnd • iDEAL) →</a>
       </div>
@@ -406,10 +432,10 @@
     <!-- Search & Directory Header -->
     <div class="section-bar">
       <div class="section-title">
-        <span>📂 Free Episode Blueprints</span>
-        <span class="count-badge">100% Free .JSON Downloads</span>
+        <span>📂 All 20 Free Episode Blueprints</span>
+        <span class="count-badge">1-Click Download + Auto-Copy (Ctrl+V)</span>
       </div>
-      <input type="text" id="searchBox" class="search-input" placeholder="🔍 Search episode or workflow (e.g. Invoice, Gmail, Drive)..." oninput="filterEpisodes()">
+      <input type="text" id="searchBox" class="search-input" placeholder="🔍 Search 20 blueprints (e.g. Invoice, Backup, Webhook, AI)..." oninput="filterEpisodes()">
     </div>
 
     <!-- All Episode Cards Grid -->
@@ -422,13 +448,13 @@
             <span class="ep-num">EPISODE #01</span>
             <span class="ep-cat">FINANCE & BOOKKEEPING</span>
           </div>
-          <div class="ep-h">PDF-facturen uit Gmail automatisch naar Excel / Google Sheets met n8n (Zonder Code)</div>
+          <div class="ep-h">Email PDF Invoice to Excel / Google Sheets Assistant</div>
           <div class="ep-desc">Automatically extract vendor name, invoice number, date, and total amount from incoming PDF invoices and log a clean row in Google Sheets 24/7.</div>
           <div class="ep-nodes">⚡ Nodes: Gmail Trigger → PDF Invoice Reader → Google Sheets</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep01" class="btn-ep-hub">📖 Episode #01 Hub</a>
-          <a href="/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json" download="01_Email_Invoice_to_Spreadsheet_Assistant.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json" download="01_Email_Invoice_to_Spreadsheet_Assistant.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -439,13 +465,13 @@
             <span class="ep-num">EPISODE #02</span>
             <span class="ep-cat">1-CLICK CLOUD SETUP</span>
           </div>
-          <div class="ep-h">n8n installeren op Hostinger VPS in 1 Klik (2026 Handleiding — Zonder Terminal & iDEAL)</div>
+          <div class="ep-h">Self-Host n8n on Hostinger VPS (1-Click Setup — No Terminal!)</div>
           <div class="ep-desc">Verify your newly deployed Hostinger "Ubuntu 24.04 with n8n" cloud server in 10 seconds with a 24/7 heartbeat monitor and Google Sheets status log.</div>
           <div class="ep-nodes">⚡ Nodes: 24/7 Cloud Heartbeat → Cloud Status Verifier → Google Sheets</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep02" class="btn-ep-hub">📖 Episode #02 Hub</a>
-          <a href="/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json" download="02_Hostinger_1Click_n8n_Starter_Kit.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json" download="02_Hostinger_1Click_n8n_Starter_Kit.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -456,13 +482,13 @@
             <span class="ep-num">EPISODE #03</span>
             <span class="ep-cat">GOOGLE WORKSPACE SYNC</span>
           </div>
-          <div class="ep-h">Google Sheets & Gmail koppelen aan Self-Hosted n8n in 2 Minuten (OAuth Gids 2026)</div>
+          <div class="ep-h">Connect Google Sheets & Gmail to Self-Hosted n8n in 2 Minutes</div>
           <div class="ep-desc">Instant 24/7 bridge that watches your Gmail inbox, cleans sender & subject fields, and appends every important email into Google Sheets automatically.</div>
           <div class="ep-nodes">⚡ Nodes: Watch New Emails (Gmail) → Clean Email Fields → Google Sheets</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep03" class="btn-ep-hub">📖 Episode #03 Hub</a>
-          <a href="/blueprints/03_Gmail_and_Google_Sheets_Instant_Bridge.json" download="03_Gmail_and_Google_Sheets_Instant_Bridge.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/03_Gmail_and_Google_Sheets_Instant_Bridge.json" download="03_Gmail_and_Google_Sheets_Instant_Bridge.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -473,13 +499,13 @@
             <span class="ep-num">EPISODE #04</span>
             <span class="ep-cat">ZAPIER MIGRATION KIT</span>
           </div>
-          <div class="ep-h">n8n vs Zapier vs Make Prijzen (2026): Vervang $149/mnd door € 5,99/mnd Cloud (iDEAL)!</div>
+          <div class="ep-h">n8n vs Zapier vs Make Pricing (2026): Replace $149/mo With $6.49</div>
           <div class="ep-desc">Replace expensive $149/mo multi-step Zapier workflows with an unlimited n8n lead & order enrichment pipeline that logs straight to your Master CRM Sheet.</div>
           <div class="ep-nodes">⚡ Nodes: Incoming Lead Trigger → Enrich & Savings → Master CRM Sheet</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep04" class="btn-ep-hub">📖 Episode #04 Hub</a>
-          <a href="/blueprints/04_Zapier_to_n8n_Migration_Pack.json" download="04_Zapier_to_n8n_Migration_Pack.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/04_Zapier_to_n8n_Migration_Pack.json" download="04_Zapier_to_n8n_Migration_Pack.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -490,13 +516,13 @@
             <span class="ep-num">EPISODE #05</span>
             <span class="ep-cat">GOOGLE DRIVE ORGANIZER</span>
           </div>
-          <div class="ep-h">Gmail-bijlagen automatisch opslaan in Google Drive & Sheets met n8n (Zonder Code 2026)</div>
+          <div class="ep-h">Automatically Save Gmail Attachments to Google Drive & Sheets</div>
           <div class="ep-desc">Never lose an email attachment again. Automatically detect incoming PDF/XLSX files in Gmail, sort them into Year/Month Drive folders, and index the share link.</div>
           <div class="ep-nodes">⚡ Nodes: Watch Gmail Files → Auto-Sort Drive Upload → Sheets Index</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep05" class="btn-ep-hub">📖 Episode #05 Hub</a>
-          <a href="/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json" download="05_Gmail_Attachments_to_Drive_Organizer.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json" download="05_Gmail_Attachments_to_Drive_Organizer.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -507,13 +533,13 @@
             <span class="ep-num">EPISODE #06</span>
             <span class="ep-cat">VPS SPEED BENCHMARK</span>
           </div>
-          <div class="ep-h">Hostinger KVM 1 vs KVM 2 voor n8n: 1.000-Rijen Snelheid & RAM Benchmark (2026)!</div>
+          <div class="ep-h">Hostinger KVM 1 vs KVM 2 for n8n: Full 2026 Benchmark</div>
           <div class="ep-desc">Test your self-hosted n8n server throughput with a 1,000-row batch benchmark workflow and log execution speed & RAM efficiency directly to Google Sheets.</div>
           <div class="ep-nodes">⚡ Nodes: Benchmark Trigger → KVM Spec Verifier → Sheets Benchmark Log</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep06" class="btn-ep-hub">📖 Episode #06 Hub</a>
-          <a href="/blueprints/06_n8n_Server_Benchmark_Workflow.json" download="06_n8n_Server_Benchmark_Workflow.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/06_n8n_Server_Benchmark_Workflow.json" download="06_n8n_Server_Benchmark_Workflow.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -524,13 +550,13 @@
             <span class="ep-num">EPISODE #07</span>
             <span class="ep-cat">RECEIPT & BANK OCR</span>
           </div>
-          <div class="ep-h">Bonnen & PDF-bankafschriften automatisch naar Excel / Google Sheets met n8n (Zonder Code)</div>
+          <div class="ep-h">Automate Bank Statement & Receipt Data Entry to Excel (No Code)</div>
           <div class="ep-desc">Automatically extract Transaction Date, Merchant Name, Tax, and Total Amount from incoming PDF receipts and bank statements in Gmail straight into Google Sheets.</div>
           <div class="ep-nodes">⚡ Nodes: Receipt Email Trigger → Field Extractor → Expense Ledger Sheet</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep07" class="btn-ep-hub">📖 Episode #07 Hub</a>
-          <a href="/blueprints/07_Receipt_and_Bank_Statement_Extractor.json" download="07_Receipt_and_Bank_Statement_Extractor.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/07_Receipt_and_Bank_Statement_Extractor.json" download="07_Receipt_and_Bank_Statement_Extractor.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -541,13 +567,13 @@
             <span class="ep-num">EPISODE #08</span>
             <span class="ep-cat">3-CLICK .JSON IMPORT</span>
           </div>
-          <div class="ep-h">Gratis Workflow Templates (.JSON) importeren in Self-Hosted n8n (In 3 Kliks!)</div>
+          <div class="ep-h">How to Import Free Workflow Templates (.JSON) into Self-Hosted n8n</div>
           <div class="ep-desc">Skip building workflows from a blank canvas! Import any ready-made .JSON workflow blueprint into your self-hosted Hostinger 1-Click n8n Cloud in 3 clicks.</div>
           <div class="ep-nodes">⚡ Nodes: Universal Cloud Trigger → Auto-Mapper → Master Office Sheet</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep08" class="btn-ep-hub">📖 Episode #08 Hub</a>
-          <a href="/blueprints/08_Universal_JSON_Template_Pack.json" download="08_Universal_JSON_Template_Pack.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/08_Universal_JSON_Template_Pack.json" download="08_Universal_JSON_Template_Pack.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
 
@@ -558,35 +584,227 @@
             <span class="ep-num">EPISODE #09</span>
             <span class="ep-cat">INSTANT LEAD RESPONDER</span>
           </div>
-          <div class="ep-h">Automatisch antwoorden op klantmails & leads opslaan in Google Sheets 24/7 (n8n)</div>
+          <div class="ep-h">Auto-Reply to Customer Inquiry Emails & Log Leads in Google Sheets</div>
           <div class="ep-desc">Never lose a high-value client lead to slow response times! Automatically send a personalized reply to incoming inquiry emails in 0.8s and log the lead in Google Sheets.</div>
           <div class="ep-nodes">⚡ Nodes: Inquiry Email Trigger → 0.8s Auto-Reply → Google Sheets CRM</div>
         </div>
         <div class="ep-actions">
           <a href="/nl/ep09" class="btn-ep-hub">📖 Episode #09 Hub</a>
-          <a href="/blueprints/09_Instant_Lead_Response_and_Tracker.json" download="09_Instant_Lead_Response_and_Tracker.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/09_Instant_Lead_Response_and_Tracker.json" download="09_Instant_Lead_Response_and_Tracker.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 10 -->
+      <div class="ep-card" data-keywords="ep10 episode 10 update n8n hostinger vps backup workflows google drive safe">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #10</span>
+            <span class="ep-cat">SAFE UPDATE & BACKUP</span>
+          </div>
+          <div class="ep-h">How to Update n8n on Hostinger VPS Safely + Auto-Backup Workflows to Google Drive</div>
+          <div class="ep-desc">Never risk losing your automation workflows during an update. Automatically export and save timestamped .JSON backups of all active n8n workflows to Google Drive daily.</div>
+          <div class="ep-nodes">⚡ Nodes: Midnight Schedule → Export Active Workflows → Google Drive Backup</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep10" class="btn-ep-hub">📖 Episode #10 Hub</a>
+          <a href="/blueprints/10_Automated_Workflow_Backup_to_Drive.json" download="10_Automated_Workflow_Backup_to_Drive.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 11 -->
+      <div class="ep-card" data-keywords="ep11 episode 11 overdue invoice reminder email google sheets gmail accounts receivable">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #11</span>
+            <span class="ep-cat">OVERDUE INVOICE FOLLOW-UP</span>
+          </div>
+          <div class="ep-h">Automate Overdue Invoice Reminder Emails from Google Sheets (No Code n8n)</div>
+          <div class="ep-desc">Automatically scan your Google Sheets invoice ledger every morning at 9:00 AM, filter overdue unpaid rows, and send a polite Gmail reminder with the invoice details.</div>
+          <div class="ep-nodes">⚡ Nodes: 9 AM Daily Check → Filter Unpaid Rows → Polite Gmail Reminder</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep11" class="btn-ep-hub">📖 Episode #11 Hub</a>
+          <a href="/blueprints/11_Overdue_Invoice_Followup_Assistant.json" download="11_Overdue_Invoice_Followup_Assistant.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 12 -->
+      <div class="ep-card" data-keywords="ep12 episode 12 custom domain free ssl hostinger n8n vps https webhook">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #12</span>
+            <span class="ep-cat">CUSTOM DOMAIN & SSL</span>
+          </div>
+          <div class="ep-h">How to Setup Custom Domain & Free SSL on Hostinger n8n VPS in 2 Minutes (2026)</div>
+          <div class="ep-desc">Verify your custom domain SSL certificate and capture live website form submissions, Stripe payments, or Shopify webhooks straight into Google Sheets in real time.</div>
+          <div class="ep-nodes">⚡ Nodes: HTTPS Webhook (SSL) → Sanitize Payload → Google Sheets CRM</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep12" class="btn-ep-hub">📖 Episode #12 Hub</a>
+          <a href="/blueprints/12_Web_Form_to_Sheets_and_Alerts.json" download="12_Web_Form_to_Sheets_and_Alerts.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 13 -->
+      <div class="ep-card" data-keywords="ep13 episode 13 local pc vs hostinger cloud vps cron schedule uptime 24/7">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #13</span>
+            <span class="ep-cat">LOCAL VS CLOUD VPS</span>
+          </div>
+          <div class="ep-h">Running n8n on Local PC vs Hostinger Cloud VPS: Why Desktop Cron Triggers Fail</div>
+          <div class="ep-desc">Eliminate missed schedules caused by laptop sleep mode. Run hourly, daily, and weekly cron schedules reliably 24/7 on your Hostinger KVM 1 cloud server.</div>
+          <div class="ep-nodes">⚡ Nodes: 24/7 Cloud Cron Trigger → Uptime & Task Metrics → Google Sheets</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep13" class="btn-ep-hub">📖 Episode #13 Hub</a>
+          <a href="/blueprints/13_24x7_Cloud_Scheduler_Pack.json" download="13_24x7_Cloud_Scheduler_Pack.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 14 -->
+      <div class="ep-card" data-keywords="ep14 episode 14 shopify stripe orders excel google sheets accounting sync ecommerce">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #14</span>
+            <span class="ep-cat">SHOPIFY & STRIPE SYNC</span>
+          </div>
+          <div class="ep-h">Sync Shopify & Stripe Orders to Excel / Google Sheets Automatically (Zero Zapier Fees)</div>
+          <div class="ep-desc">Stop paying Zapier per order! Automatically capture every new Shopify or Stripe order, calculate gateway fees and net revenue, and append a row to Google Sheets.</div>
+          <div class="ep-nodes">⚡ Nodes: Order Webhook → Net Revenue & Fee Calculator → Accounting Sheet</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep14" class="btn-ep-hub">📖 Episode #14 Hub</a>
+          <a href="/blueprints/14_Order_to_Accounting_Sheet_Sync.json" download="14_Order_to_Accounting_Sheet_Sync.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 15 -->
+      <div class="ep-card" data-keywords="ep15 episode 15 weekly sales expense report email google sheets kpi summary">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #15</span>
+            <span class="ep-cat">AUTOMATED KPI REPORTS</span>
+          </div>
+          <div class="ep-h">Automate Weekly Sales & Expense Summary Emails from Google Sheets (No Code n8n)</div>
+          <div class="ep-desc">Automatically aggregate your weekly revenue, expenses, and net profit from Google Sheets every Monday at 8:00 AM and email a formatted executive summary.</div>
+          <div class="ep-nodes">⚡ Nodes: Monday 8 AM Trigger → Aggregate Revenue & Spend → Executive Gmail</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep15" class="btn-ep-hub">📖 Episode #15 Hub</a>
+          <a href="/blueprints/15_Weekly_Executive_Report_Sender.json" download="15_Weekly_Executive_Report_Sender.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 16 -->
+      <div class="ep-card" data-keywords="ep16 episode 16 ai email document classifier self hosted n8n openai gemini">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #16</span>
+            <span class="ep-cat">AI AGENT WORKFLOW</span>
+          </div>
+          <div class="ep-h">Build a 24/7 AI Email & Document Classifier on Self-Hosted n8n ($6.49/mo VPS)</div>
+          <div class="ep-desc">Run unlimited AI classification workflows on your own Hostinger KVM 1 server without paying $50/mo for n8n Cloud Pro. Automatically tag and extract fields into Sheets.</div>
+          <div class="ep-nodes">⚡ Nodes: Watch Gmail → AI Document Classifier & Parser → Google Sheets</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep16" class="btn-ep-hub">📖 Episode #16 Hub</a>
+          <a href="/blueprints/16_AI_Document_Classifier_and_Extractor.json" download="16_AI_Document_Classifier_and_Extractor.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 17 -->
+      <div class="ep-card" data-keywords="ep17 episode 17 purchase order po pdf inventory spreadsheet excel google sheets">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #17</span>
+            <span class="ep-cat">PURCHASE ORDER OCR</span>
+          </div>
+          <div class="ep-h">Extract Purchase Order PDFs to Inventory Spreadsheets Automatically (No Code n8n)</div>
+          <div class="ep-desc">Eliminate manual purchase order entry. Automatically detect incoming PO PDFs in Gmail, extract PO Number, SKU, Quantity, and Total, and update your Inventory Sheet.</div>
+          <div class="ep-nodes">⚡ Nodes: Watch PO Inbox → Extract SKU, Qty & Total → Inventory Sheet</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep17" class="btn-ep-hub">📖 Episode #17 Hub</a>
+          <a href="/blueprints/17_Purchase_Order_PDF_to_Sheets.json" download="17_Purchase_Order_PDF_to_Sheets.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 18 -->
+      <div class="ep-card" data-keywords="ep18 episode 18 hostinger n8n vps pricing discount coupon 68% off kvm 1">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #18</span>
+            <span class="ep-cat">68% OFF DEAL & SAVINGS TRACKER</span>
+          </div>
+          <div class="ep-h">Hostinger n8n VPS Pricing & Discount Guide (2026): How to Get 68% OFF KVM 1</div>
+          <div class="ep-desc">Complete breakdown of 2026 Hostinger KVM 1 ($6.49/mo) vs KVM 2 ($8.99/mo) pricing, how to lock in the 68% 24-month discount, plus a live ROI & PDF tracker blueprint.</div>
+          <div class="ep-nodes">⚡ Nodes: Incoming Document Trigger → Parse & Calculate Savings → Master Sheet</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep18" class="btn-ep-hub">📖 Episode #18 Hub</a>
+          <a href="/blueprints/18_Resume_PDF_to_HR_Tracker.json" download="18_Resume_PDF_to_HR_Tracker.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 19 -->
+      <div class="ep-card" data-keywords="ep19 episode 19 client onboarding google drive folders welcome email crm">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #19</span>
+            <span class="ep-cat">CLIENT ONBOARDING</span>
+          </div>
+          <div class="ep-h">Automate Client Onboarding: Auto-Create Google Drive Folders & Welcome Emails (n8n)</div>
+          <div class="ep-desc">The moment a new client signs up, automatically create their dedicated Google Drive project folder, send a personalized welcome email with the folder link, and log to CRM.</div>
+          <div class="ep-nodes">⚡ Nodes: New Client Trigger → Create Client Drive Folder → Welcome Gmail & Sheet</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep19" class="btn-ep-hub">📖 Episode #19 Hub</a>
+          <a href="/blueprints/19_Client_Onboarding_Drive_and_Email.json" download="19_Client_Onboarding_Drive_and_Email.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
+        </div>
+      </div>
+
+      <!-- EPISODE 20 -->
+      <div class="ep-card" data-keywords="ep20 episode 20 5 in 1 master bundle small business office automation n8n">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #20</span>
+            <span class="ep-cat">5-IN-1 MASTER BUNDLE</span>
+          </div>
+          <div class="ep-h">5 Must-Have n8n Automations Every Small Business Should Run 24/7 (Complete Bundle)</div>
+          <div class="ep-desc">Combine Invoice OCR, Receipt Extraction, Drive Attachment Sorting, Instant Lead Replies, and Daily Backups into one unified 24/7 back-office engine on Hostinger KVM 1.</div>
+          <div class="ep-nodes">⚡ Nodes: Unified Business Trigger → Smart 5-Way Router → Master Sheets & Drive</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/nl/ep20" class="btn-ep-hub">📖 Episode #20 Hub</a>
+          <a href="/blueprints/20_Complete_5in1_Office_Automation_Bundle.json" download="20_Complete_5in1_Office_Automation_Bundle.json" onclick="triggerDlModal(this)" class="btn-ep-dl">📥 Free .JSON (+Copy)</a>
         </div>
       </div>
     </div>
   </div>
 
   <div class="footer">
-    <div>© 2026 360 REV (<a href="https://www.youtube.com/@360rev3" target="_blank" rel="noopener" style="color:#0F172A;font-weight:800;text-decoration:none;">@360rev3</a>) • Official Zero-Code Workflow Automation Blueprint Hub • All .JSON Templates Include 3 Yellow Sticky Notes</div>
-    <div style="margin-top:6px;font-size:12px;color:#94A3B8;">Transparency &amp; Partner Disclosure: All .JSON workflow blueprints are 100% free and open-source. Some cloud hosting links on this site are partner referral links that support our free educational library at zero additional cost to you.</div>
+    <div>© 2026 360 REV (<a href="https://www.youtube.com/@360rev3" target="_blank" rel="noopener" style="color:#0F172A;font-weight:800;text-decoration:none;">@360rev3</a>) • Official Zero-Code Workflow Automation Blueprint Hub (20 Episodes • 35 Languages)</div>
+    <div style="margin-top:6px;font-size:12px;color:#94A3B8;">Transparency &amp; Partner Disclosure: All 20 .JSON workflow blueprints are 100% free and open-source. Some cloud hosting links on this site are partner referral links that support our free educational library at zero additional cost to you.</div>
   </div>
 
   
-  <!-- Smart Conversion Modal after .JSON Download -->
+  <!-- Smart Conversion Modal after .JSON Download + Auto-Copy to Clipboard -->
   <div class="modal-overlay" id="dlModal" onclick="if(event.target===this)closeDlModal()">
     <div class="modal-box">
       <button class="modal-close" onclick="closeDlModal()">✕</button>
       <div class="modal-badge">✓ STEP 2/2: YOUR .JSON BLUEPRINT IS DOWNLOADING!</div>
+      <div class="clipboard-pill" id="clipStatusPill">📋 ALSO COPIED TO CLIPBOARD! Just press <b>Ctrl+V</b> (or Cmd+V) directly inside your n8n canvas!</div>
       <div class="modal-title">Where Will You Run This Workflow 24/7?</div>
       <div class="modal-p">If you run n8n on your laptop, your automations <b>stop the second you close the lid</b>. Launch your private 24/7 cloud server in 2 minutes:</div>
       <div class="modal-steps">
         <div>1️⃣ Click the purple button below &amp; select <b>Hostinger KVM 1 ($6.49/mo)</b></div>
         <div>2️⃣ In hPanel, select <b>Applications → Ubuntu 24.04 with n8n</b> (1-Click)</div>
-        <div>3️⃣ Click <b>⋯ → Import from File</b> in n8n and select your downloaded <code>.json</code>!</div>
+        <div>3️⃣ Open your n8n canvas and press <b>Ctrl+V</b> (or click <b>⋯ → Import from File</b>)!</div>
+      </div>
+      <div class="spec-lock-box">
+        🎟️ <b>3-Click Hostinger Checkout Cheat-Sheet (Max 68% Discount):</b><br>
+        ① Choose <b>KVM 1 ($6.49/mo)</b> ➔ ② Select <b>24 Months</b> (locks in 68% OFF) ➔ ③ Pick <b>Ubuntu 24.04 with n8n</b>
       </div>
       <a href="/hostinger" data-cta="dl_modal" target="_blank" rel="noopener" class="modal-cta" onclick="closeDlModal()">🚀 Launch Hostinger 1-Click n8n ($6.49/mo — Save $1,710/yr) →</a>
       <div class="modal-sub">✓ 30-Day Money-Back Guarantee • Unlimited Workflows &amp; Executions</div>
@@ -679,7 +897,7 @@
     }
     window.applyGeoEp = applyGeoLanguage;
     document.addEventListener('DOMContentLoaded', () => {
-      const pathLangMatch = window.location.pathname.match(/^/([a-z]{2})(/|$)/i);
+      const pathLangMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
       const pathLang = pathLangMatch ? pathLangMatch[1].toLowerCase() : '';
       const params = new URLSearchParams(window.location.search);
       const urlLang = (params.get('lang') || '').toLowerCase().slice(0, 2);
@@ -687,11 +905,20 @@
       const picked = GEO_DICT[pathLang] ? pathLang : (GEO_DICT[urlLang] ? urlLang : (GEO_DICT[navLang] ? navLang : 'en'));
       applyGeoLanguage(picked);
     });
-    function triggerDlModal() {
+
+    function triggerDlModal(el) {
+      try {
+        const href = el && el.getAttribute ? el.getAttribute('href') : null;
+        if (href && navigator.clipboard && navigator.clipboard.writeText) {
+          fetch(href).then(r => r.text()).then(txt => {
+            navigator.clipboard.writeText(txt).catch(() => {});
+          }).catch(() => {});
+        }
+      } catch (e) {}
       setTimeout(() => {
         const m = document.getElementById('dlModal');
         if (m) m.classList.add('show');
-      }, 350);
+      }, 280);
     }
     function closeDlModal() {
       const m = document.getElementById('dlModal');
