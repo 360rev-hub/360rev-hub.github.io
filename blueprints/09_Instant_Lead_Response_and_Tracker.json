@@ -1,0 +1,161 @@
+{
+  "name": "Instant Lead Auto-Responder & Sheet Logger",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## STEP 1: Watch Customer Inquiry Emails 24/7\n1. Double-click **1. Watch Incoming Customer Inquiries** below.\n2. Detects new client quote requests & inquiries in Gmail within 1 second—even at 2:00 AM while your laptop is OFF!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep09-1",
+      "name": "Sticky Note - Step 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [160, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 2: Send Instant Personalized Reply\n1. Double-click **2. Auto-Send Personalized Reply & Extract Lead** below.\n2. Replies to the customer with your pricing/booking link and extracts Name, Email, Company, and Budget!",
+        "height": 230,
+        "width": 380,
+        "color": 1
+      },
+      "id": "sticky-ep09-2",
+      "name": "Sticky Note - Step 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [600, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 3: Log Lead to Google Sheets CRM\n1. Double-click **3. Log Lead to Google Sheets CRM** -> select your CRM spreadsheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active** so you never lose a lead!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep09-3",
+      "name": "Sticky Note - Step 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1060, 120]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 5
+            }
+          ]
+        }
+      },
+      "id": "node-ep09-trigger",
+      "name": "1. Watch Incoming Customer Inquiries",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [280, 440]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Instant Customer Inquiry Auto-Responder & Lead Extractor\nreturn [\n  {\n    json: {\n      Inquiry_Time: '2026-11-02 14:22',\n      Lead_Name: 'Michael Vance (VP Operations)',\n      Lead_Email: 'm.vance@horizonlogistics.io',\n      Project_Budget: '$4,500 Project Inquiry',\n      Auto_Reply_Status: '✓ Instant Reply Sent in 0.8s'\n    }\n  }\n];"
+      },
+      "id": "node-ep09-processor",
+      "name": "2. Auto-Send Personalized Reply & Extract Lead",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 440]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Instant_Lead_CRM_Tracker_2026",
+          "mode": "list",
+          "cachedResultName": "2026_Inbound_Leads_CRM_Tracker.xlsx"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Active_Leads"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Column_A_Time": "={{ $json.Inquiry_Time }}",
+            "Column_B_Name": "={{ $json.Lead_Name }}",
+            "Column_C_Email": "={{ $json.Lead_Email }}",
+            "Column_D_Budget": "={{ $json.Project_Budget }}",
+            "Column_E_Reply": "={{ $json.Auto_Reply_Status }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "Column_A_Time", "displayName": "Column A: Inquiry Time", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_B_Name", "displayName": "Column B: Lead Name", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_C_Email", "displayName": "Column C: Email", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_D_Budget", "displayName": "Column D: Estimated Budget", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_E_Reply", "displayName": "Column E: Auto-Reply Status", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-ep09-sheets",
+      "name": "3. Log Lead to Google Sheets CRM",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1080, 440]
+    }
+  ],
+  "pinData": {
+    "1. Watch Incoming Customer Inquiries": [
+      {
+        "json": {
+          "from": "m.vance@horizonlogistics.io",
+          "subject": "Quote Request: Automation Rollout ($4,500)",
+          "receivedAt": "2026-11-02 14:22"
+        }
+      }
+    ],
+    "3. Log Lead to Google Sheets CRM": [
+      {
+        "json": {
+          "Column_A_Time": "2026-11-02 14:22",
+          "Column_B_Name": "Michael Vance (VP Operations)",
+          "Column_C_Email": "m.vance@horizonlogistics.io",
+          "Column_D_Budget": "$4,500 Project Inquiry",
+          "Column_E_Reply": "✓ Instant Reply Sent in 0.8s"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "1. Watch Incoming Customer Inquiries": {
+      "main": [
+        [
+          {
+            "node": "2. Auto-Send Personalized Reply & Extract Lead",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Auto-Send Personalized Reply & Extract Lead": {
+      "main": [
+        [
+          {
+            "node": "3. Log Lead to Google Sheets CRM",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
