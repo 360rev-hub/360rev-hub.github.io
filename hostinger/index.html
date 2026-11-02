@@ -6,7 +6,8 @@
   <meta name="robots" content="noindex, nofollow">
   <script>
     (function() {
-      var base = "https://www.dpbolvw.net/click-101707825-15836700";
+      // MASTER AFFILIATE TARGET LINK (Swap this 1 line to your Impact.com link once approved!)
+      var base = "https://www.hostinger.com/vps/n8n-hosting";
       var p = new URLSearchParams(window.location.search);
       var ep = (p.get("ep") || "direct").replace(/[^a-zA-Z0-9_-]/g, "");
       var src = (p.get("src") || p.get("s") || "").replace(/[^a-zA-Z0-9_-]/g, "");
@@ -30,22 +31,27 @@
       var cta = (p.get("cta") || "btn").replace(/[^a-zA-Z0-9_-]/g, "");
       var sid = [ep, src, geo, cta].join("__").slice(0, 64);
       var out = new URLSearchParams();
-      out.set("sid", sid);
+      out.set("utm_source", "360rev");
+      out.set("utm_medium", src);
+      out.set("utm_campaign", ep);
+      out.set("utm_content", cta + "_" + geo);
       out.set("subId1", ep);
       out.set("subId2", src);
       out.set("subId3", geo);
+      out.set("subId4", cta);
+      out.set("sid", sid);
       var dest = base + "?" + out.toString();
       window.location.replace(dest);
     })();
   </script>
   <noscript>
-    <meta http-equiv="refresh" content="0;url=https://www.dpbolvw.net/click-101707825-15836700?sid=noscript_fallback">
+    <meta http-equiv="refresh" content="0;url=https://www.hostinger.com/vps/n8n-hosting?utm_source=360rev">
   </noscript>
 </head>
 <body style="background:#0F172A;color:#F8FAFC;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
   <div style="text-align:center;">
     <div style="font-size:20px;font-weight:800;">🚀 Launching Official Hostinger 1-Click n8n Cloud ($6.49/mo)...</div>
-    <div style="margin-top:10px;font-size:14px;color:#94A3B8;">If you are not redirected automatically, <a href="https://www.dpbolvw.net/click-101707825-15836700" style="color:#4ADE80;">click here</a>.</div>
+    <div style="margin-top:10px;font-size:14px;color:#94A3B8;">If you are not redirected automatically, <a href="https://www.hostinger.com/vps/n8n-hosting" style="color:#4ADE80;">click here</a>.</div>
   </div>
 </body>
 </html>
