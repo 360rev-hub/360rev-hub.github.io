@@ -3,17 +3,49 @@
 <head>
   <meta charset="utf-8">
   <title>Redirecting to Official Hostinger 1-Click n8n Cloud ($6.49/mo)...</title>
-  <meta http-equiv="refresh" content="0; url=https://www.hostinger.com/vps/n8n-hosting">
+  <meta name="robots" content="noindex, nofollow">
   <script>
-    // MASTER AFFILIATE TARGET LINK (Swap this 1 line when Impact is approved!)
-    const AFFILIATE_URL = "https://www.hostinger.com/vps/n8n-hosting";
-    window.location.replace(AFFILIATE_URL);
+    (function() {
+      var base = "https://www.dpbolvw.net/click-101707825-15836700";
+      var p = new URLSearchParams(window.location.search);
+      var ep = (p.get("ep") || "direct").replace(/[^a-zA-Z0-9_-]/g, "");
+      var src = (p.get("src") || p.get("s") || "").replace(/[^a-zA-Z0-9_-]/g, "");
+      if (!src) {
+        var ref = (document.referrer || "").toLowerCase();
+        if (ref.indexOf("youtube.com") !== -1 || ref.indexOf("youtu.be") !== -1) src = "yt_direct";
+        else if (ref.indexOf("google.") !== -1) src = "google_seo";
+        else if (ref.indexOf("github.com") !== -1) src = "github";
+        else src = "hub";
+      }
+      var geo = (p.get("geo") || "").replace(/[^a-zA-Z0-9_-]/g, "");
+      if (!geo) {
+        try {
+          var lang = (navigator.language || "en").slice(0, 2).toLowerCase();
+          var tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || "UTC").split("/").pop().replace(/[^a-zA-Z0-9_-]/g, "");
+          geo = lang + "_" + tz;
+        } catch (e) {
+          geo = "en";
+        }
+      }
+      var cta = (p.get("cta") || "btn").replace(/[^a-zA-Z0-9_-]/g, "");
+      var sid = [ep, src, geo, cta].join("__").slice(0, 64);
+      var out = new URLSearchParams();
+      out.set("sid", sid);
+      out.set("subId1", ep);
+      out.set("subId2", src);
+      out.set("subId3", geo);
+      var dest = base + "?" + out.toString();
+      window.location.replace(dest);
+    })();
   </script>
+  <noscript>
+    <meta http-equiv="refresh" content="0;url=https://www.dpbolvw.net/click-101707825-15836700?sid=noscript_fallback">
+  </noscript>
 </head>
-<body style="font-family:system-ui,sans-serif;background:#0F172A;color:#F8FAFC;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
+<body style="background:#0F172A;color:#F8FAFC;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;margin:0;">
   <div style="text-align:center;">
-    <h2 style="margin-bottom:8px;">Opening Official Hostinger 1-Click n8n Cloud...</h2>
-    <p style="color:#94A3B8;">If you are not redirected automatically, <a href="https://www.hostinger.com/vps/n8n-hosting" style="color:#FACC15;font-weight:bold;">click here</a>.</p>
+    <div style="font-size:20px;font-weight:800;">🚀 Launching Official Hostinger 1-Click n8n Cloud ($6.49/mo)...</div>
+    <div style="margin-top:10px;font-size:14px;color:#94A3B8;">If you are not redirected automatically, <a href="https://www.dpbolvw.net/click-101707825-15836700" style="color:#4ADE80;">click here</a>.</div>
   </div>
 </body>
 </html>
