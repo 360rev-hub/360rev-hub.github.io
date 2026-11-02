@@ -27,6 +27,9 @@ Running n8n on a local laptop means your webhooks and Gmail triggers fail the mo
 | **#04** | **Zapier-to-n8n Multi-Step CRM Migration Pack** | `Lead Trigger` ➔ `Enrich & Savings` ➔ `CRM Sheet` | [Episode #04 Hub](https://360rev-hub.github.io/ep04) | [Download .JSON](https://360rev-hub.github.io/blueprints/04_Zapier_to_n8n_Migration_Pack.json) |
 | **#05** | **Gmail Attachments to Google Drive Auto-Organizer** | `Gmail Attachment` ➔ `Auto-Sort Drive` ➔ `Sheets Index` | [Episode #05 Hub](https://360rev-hub.github.io/ep05) | [Download .JSON](https://360rev-hub.github.io/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json) |
 | **#06** | **Hostinger KVM 1 vs KVM 2 1,000-Row Speed Benchmark** | `Benchmark Trigger` ➔ `Spec Verifier` ➔ `Sheets Log` | [Episode #06 Hub](https://360rev-hub.github.io/ep06) | [Download .JSON](https://360rev-hub.github.io/blueprints/06_n8n_Server_Benchmark_Workflow.json) |
+| **#07** | **Bank Statement & Receipt to Excel / Sheets Extractor** | `Receipt Email` ➔ `Field Extractor` ➔ `Expense Ledger` | [Episode #07 Hub](https://360rev-hub.github.io/ep07) | [Download .JSON](https://360rev-hub.github.io/blueprints/07_Receipt_and_Bank_Statement_Extractor.json) |
+| **#08** | **Universal 3-Click .JSON Workflow Template Pack** | `Universal Trigger` ➔ `Auto-Mapper` ➔ `Master Office Sheet` | [Episode #08 Hub](https://360rev-hub.github.io/ep08) | [Download .JSON](https://360rev-hub.github.io/blueprints/08_Universal_JSON_Template_Pack.json) |
+| **#09** | **24/7 Instant Customer Inquiry Auto-Responder & CRM** | `Inquiry Email` ➔ `0.8s Auto-Reply` ➔ `Google Sheets CRM` | [Episode #09 Hub](https://360rev-hub.github.io/ep09) | [Download .JSON](https://360rev-hub.github.io/blueprints/09_Instant_Lead_Response_and_Tracker.json) |
 
 ---
 
