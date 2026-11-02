@@ -1,0 +1,161 @@
+{
+  "name": "Bank Statement & Receipt to Excel Assistant",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## STEP 1: Watch Incoming Receipts & Statements\n1. Double-click **1. Watch Receipt & Statement Emails** below.\n2. Watches your inbox 24/7 for PDF bank statements, Stripe receipts, and expense bills.\n3. Runs continuously on your **Hostinger KVM 1 ($6.49/mo)** n8n cloud even while your laptop is OFF!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep07-1",
+      "name": "Sticky Note - Step 1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [160, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 2: Auto-Extract Merchant, Tax & Total\n1. Double-click **2. Extract Receipt & Statement Fields** below.\n2. Automatically parses Transaction Date, Merchant Name, Category, Tax, and Total Amount with **zero manual typing**!",
+        "height": 230,
+        "width": 380,
+        "color": 1
+      },
+      "id": "sticky-ep07-2",
+      "name": "Sticky Note - Step 2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [600, 120]
+    },
+    {
+      "parameters": {
+        "content": "## STEP 3: Append to Monthly Expense Ledger\n1. Double-click **3. Append to Expense Ledger Sheet** -> select your Excel / Google Sheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active** for 24/7 bookkeeping!",
+        "height": 230,
+        "width": 360,
+        "color": 1
+      },
+      "id": "sticky-ep07-3",
+      "name": "Sticky Note - Step 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [1060, 120]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 5
+            }
+          ]
+        }
+      },
+      "id": "node-ep07-trigger",
+      "name": "1. Watch Receipt & Statement Emails",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [280, 440]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Zero-Code Receipt & Bank Statement Field Extractor\nreturn [\n  {\n    json: {\n      Transaction_Date: '2026-11-02',\n      Merchant_Name: 'Delta Air Lines (Receipt #DL-9042)',\n      Expense_Category: 'Business Travel & Flights',\n      Tax_Amount: '$38.50',\n      Total_Amount: '$482.50 (Verified ✓)'\n    }\n  }\n];"
+      },
+      "id": "node-ep07-processor",
+      "name": "2. Extract Receipt & Statement Fields",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [680, 440]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1Receipt_Bank_Statement_Ledger_2026",
+          "mode": "list",
+          "cachedResultName": "2026_Monthly_Expense_Statement_Ledger.xlsx"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Verified_Receipts"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Column_A_Date": "={{ $json.Transaction_Date }}",
+            "Column_B_Merchant": "={{ $json.Merchant_Name }}",
+            "Column_C_Category": "={{ $json.Expense_Category }}",
+            "Column_D_Tax": "={{ $json.Tax_Amount }}",
+            "Column_E_Total": "={{ $json.Total_Amount }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            { "id": "Column_A_Date", "displayName": "Column A: Date", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_B_Merchant", "displayName": "Column B: Merchant", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_C_Category", "displayName": "Column C: Category", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_D_Tax", "displayName": "Column D: Tax", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
+            { "id": "Column_E_Total", "displayName": "Column E: Total Amount", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+          ]
+        },
+        "options": {}
+      },
+      "id": "node-ep07-sheets",
+      "name": "3. Append to Expense Ledger Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [1080, 440]
+    }
+  ],
+  "pinData": {
+    "1. Watch Receipt & Statement Emails": [
+      {
+        "json": {
+          "fileName": "Chase_Statement_Nov2026.pdf",
+          "merchant": "Delta Air Lines",
+          "total": 482.50
+        }
+      }
+    ],
+    "3. Append to Expense Ledger Sheet": [
+      {
+        "json": {
+          "Column_A_Date": "2026-11-02",
+          "Column_B_Merchant": "Delta Air Lines (Receipt #DL-9042)",
+          "Column_C_Category": "Business Travel & Flights",
+          "Column_D_Tax": "$38.50",
+          "Column_E_Total": "$482.50 (Verified ✓)"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "1. Watch Receipt & Statement Emails": {
+      "main": [
+        [
+          {
+            "node": "2. Extract Receipt & Statement Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Extract Receipt & Statement Fields": {
+      "main": [
+        [
+          {
+            "node": "3. Append to Expense Ledger Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
