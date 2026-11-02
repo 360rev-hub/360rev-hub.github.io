@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>360 REV — Official Zero-Code n8n Automation Blueprint Library &amp; 1-Click Cloud Hub</title>
+  <meta name="description" content="Download 100% free ready-to-import n8n .JSON workflow blueprints with 3 Yellow Sticky Notes. Replace $149/mo Zapier Pro with Hostinger KVM 1 1-Click n8n Cloud ($6.49/mo).">
+  <link rel="canonical" href="https://360rev-hub.github.io/">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif; }
     body { min-height: 100vh; background: #F8FAFC; color: #0F172A; display: flex; flex-direction: column; overflow-x: hidden; }
 
-    /* Clean, Balanced Responsive Header (Mobile + Desktop) */
     .topbar {
       background: rgba(15, 23, 42, 0.98);
       backdrop-filter: blur(10px);
@@ -23,75 +24,15 @@
       top: 0;
       z-index: 50;
     }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      color: #FFFFFF;
-      text-decoration: none;
-      min-width: 0;
-    }
-    .brand-badge {
-      background: #FACC15;
-      color: #0F172A;
-      padding: 5px 12px;
-      border-radius: 8px;
-      font-weight: 900;
-      font-size: 16px;
-      letter-spacing: -0.3px;
-      flex-shrink: 0;
-    }
-    .brand-text-wrap {
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-    }
-    .brand-title {
-      font-size: 19px;
-      font-weight: 900;
-      color: #FFFFFF;
-      line-height: 1.15;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-    .brand-sub {
-      font-size: 12px;
-      font-weight: 600;
-      color: #94A3B8;
-      white-space: nowrap;
-    }
-    .top-actions {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-shrink: 0;
-    }
-    .yt-pill {
-      background: rgba(255,255,255,0.1);
-      border: 1.5px solid rgba(255,255,255,0.22);
-      color: #F8FAFC;
-      padding: 8px 15px;
-      border-radius: 99px;
-      font-size: 13.5px;
-      font-weight: 700;
-      text-decoration: none;
-      white-space: nowrap;
-      transition: all 0.2s;
-    }
+    .brand { display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; min-width: 0; }
+    .brand-badge { background: #FACC15; color: #0F172A; padding: 5px 12px; border-radius: 8px; font-weight: 900; font-size: 16px; letter-spacing: -0.3px; flex-shrink: 0; }
+    .brand-text-wrap { display: flex; flex-direction: column; min-width: 0; }
+    .brand-title { font-size: 19px; font-weight: 900; color: #FFFFFF; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .brand-sub { font-size: 12px; font-weight: 600; color: #94A3B8; white-space: nowrap; }
+    .top-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .yt-pill { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.22); color: #F8FAFC; padding: 8px 15px; border-radius: 99px; font-size: 13.5px; font-weight: 700; text-decoration: none; white-space: nowrap; transition: all 0.2s; }
     .yt-pill:hover { background: rgba(255,255,255,0.2); }
-    .cta-top {
-      background: #673DE6;
-      color: #FFFFFF;
-      padding: 9px 18px;
-      border-radius: 10px;
-      font-size: 13.5px;
-      font-weight: 900;
-      text-decoration: none;
-      white-space: nowrap;
-      box-shadow: 0 4px 14px rgba(103,61,230,0.4);
-      transition: all 0.2s;
-    }
+    .cta-top { background: #673DE6; color: #FFFFFF; padding: 9px 18px; border-radius: 10px; font-size: 13.5px; font-weight: 900; text-decoration: none; white-space: nowrap; box-shadow: 0 4px 14px rgba(103,61,230,0.4); transition: all 0.2s; }
     .cta-top:hover { background: #5B32D1; }
     .cta-top-short { display: none; }
 
@@ -113,6 +54,18 @@
     .hero-card-list { font-size: 14px; font-weight: 700; color: #334155; display: flex; flex-direction: column; gap: 6px; line-height: 1.4; }
     .hero-btn { margin-top: 6px; background: #673DE6; color: #FFFFFF; text-align: center; padding: 14px 18px; border-radius: 12px; font-size: 16px; font-weight: 900; text-decoration: none; box-shadow: 0 8px 20px rgba(103,61,230,0.3); transition: all 0.2s; }
     .hero-btn:hover { background: #5B32D1; transform: translateY(-2px); }
+
+    /* Interactive Zapier vs Hostinger Savings Calculator */
+    .calc-box { background: #FFFFFF; border: 2.5px solid #CBD5E1; border-radius: 18px; padding: 20px 26px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04); }
+    .calc-left { flex: 1; min-width: 260px; }
+    .calc-title { font-size: 18px; font-weight: 900; color: #0F172A; display: flex; align-items: center; gap: 8px; }
+    .calc-slider-wrap { margin-top: 10px; display: flex; align-items: center; gap: 14px; }
+    .calc-slider { flex: 1; accent-color: #673DE6; height: 8px; cursor: pointer; }
+    .calc-tasks-badge { background: #EDE9FE; color: #673DE6; font-weight: 900; font-size: 14px; padding: 6px 12px; border-radius: 8px; white-space: nowrap; }
+    .calc-right { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
+    .calc-stat { background: #F0FDF4; border: 2px solid #16A34A; padding: 10px 18px; border-radius: 12px; text-align: center; }
+    .calc-stat-lbl { font-size: 11.5px; font-weight: 800; color: #166534; text-transform: uppercase; }
+    .calc-stat-val { font-size: 22px; font-weight: 900; color: #15803D; }
 
     /* Search & Section Header */
     .section-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; padding-top: 4px; }
@@ -138,29 +91,125 @@
     .btn-ep-dl:hover { background: #15803D; }
 
     .footer { background: #FFFFFF; border-top: 2px solid #E2E8F0; padding: 22px 5%; text-align: center; font-size: 13.5px; color: #64748B; font-weight: 600; line-height: 1.5; }
+    
+    /* Smart Conversion Modal (Triggered on .JSON Download) */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.78);
+      backdrop-filter: blur(6px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      padding: 16px;
+    }
+    .modal-overlay.show { display: flex; }
+    .modal-box {
+      background: #FFFFFF;
+      border: 4px solid #673DE6;
+      border-radius: 22px;
+      max-width: 580px;
+      width: 100%;
+      padding: 28px 30px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+      position: relative;
+      text-align: left;
+      animation: popIn 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    @keyframes popIn {
+      from { transform: scale(0.92) translateY(12px); opacity: 0; }
+      to { transform: scale(1) translateY(0); opacity: 1; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 14px;
+      right: 16px;
+      background: #F1F5F9;
+      border: none;
+      width: 34px;
+      height: 34px;
+      border-radius: 99px;
+      font-size: 18px;
+      font-weight: 900;
+      color: #475569;
+      cursor: pointer;
+    }
+    .modal-badge {
+      display: inline-block;
+      background: #DCFCE7;
+      color: #15803D;
+      border: 1.5px solid #16A34A;
+      font-size: 13px;
+      font-weight: 900;
+      padding: 5px 13px;
+      border-radius: 99px;
+      margin-bottom: 12px;
+    }
+    .modal-title {
+      font-size: 24px;
+      font-weight: 900;
+      color: #0F172A;
+      line-height: 1.25;
+    }
+    .modal-p {
+      font-size: 15.5px;
+      color: #334155;
+      font-weight: 600;
+      line-height: 1.5;
+      margin-top: 10px;
+    }
+    .modal-steps {
+      margin-top: 16px;
+      background: #F8FAFC;
+      border: 2px solid #E2E8F0;
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: #1E293B;
+    }
+    .modal-cta {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: #673DE6;
+      color: #FFFFFF;
+      font-size: 18px;
+      font-weight: 900;
+      padding: 16px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(103, 61, 230, 0.35);
+      transition: all 0.2s;
+    }
+    .modal-cta:hover { background: #5B32D1; transform: translateY(-2px); }
+    .modal-sub {
+      text-align: center;
+      font-size: 12.5px;
+      color: #64748B;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
 
     /* Mobile Optimization (< 640px) */
     @media (max-width: 640px) {
-      .topbar {
-        padding: 10px 14px;
-        gap: 8px;
-      }
+      .topbar { padding: 10px 14px; gap: 8px; }
       .brand { gap: 8px; flex-shrink: 0; }
-      .brand-badge {
-        font-size: 13px;
-        padding: 5px 10px;
-        border-radius: 7px;
-      }
+      .brand-badge { font-size: 13px; padding: 5px 10px; border-radius: 7px; }
       .brand-title { font-size: 15px; font-weight: 800; }
       .brand-sub { display: none; }
       .yt-pill { display: none; }
       .cta-top-full { display: none; }
       .cta-top-short { display: inline; }
-      .cta-top {
-        padding: 8px 13px;
-        font-size: 13px;
-        border-radius: 9px;
-      }
+      .cta-top { padding: 8px 13px; font-size: 13px; border-radius: 9px; }
       .container { padding: 18px 14px 48px 14px; gap: 20px; }
       .hero-banner { padding: 20px 16px; border-radius: 18px; gap: 18px; }
       .hero-badge { font-size: 11px; padding: 4px 10px; }
@@ -175,6 +224,9 @@
       .ep-grid { grid-template-columns: 1fr; gap: 16px; }
       .ep-card { padding: 18px 16px; }
       .ep-h { font-size: 18.5px; }
+      .calc-box { padding: 16px; }
+      .calc-right { width: 100%; justify-content: space-between; }
+      .calc-stat { flex: 1; }
     }
   </style>
 </head>
@@ -188,6 +240,13 @@
       </div>
     </a>
     <div class="top-actions">
+      <select id="geoSelectRoot" onchange="applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
+        <option value="en">🇺🇸 EN ($)</option>
+        <option value="es">🇪🇸 ES (€/$)</option>
+        <option value="pt">🇧🇷 PT (PIX)</option>
+        <option value="de">🇩🇪 DE (DSGVO)</option>
+        <option value="fr">🇫🇷 FR (RGPD)</option>
+      </select>
       <a href="https://www.youtube.com/@360rev3" target="_blank" rel="noopener" class="yt-pill">▶ @360rev3</a>
       <a href="/hostinger" target="_blank" rel="noopener" class="cta-top">
         <span class="cta-top-full">🚀 Launch 1-Click n8n Cloud ($6.49/mo)</span>
@@ -201,7 +260,7 @@
     <div class="hero-banner">
       <div>
         <div class="hero-badge">⚡ OFFICIAL 360 REV CLOUD ENGINE &amp; FREE .JSON LIBRARY</div>
-        <div class="hero-title">Stop Paying $149/mo for Zapier. Run Unlimited 24/7 n8n Workflows for $6.49/mo.</div>
+        <h1 class="hero-title">Stop Paying $149/mo for Zapier. Run Unlimited 24/7 n8n Workflows for $6.49/mo.</h1>
         <div class="hero-sub">Every workflow blueprint on the 360 REV channel is 100% free to download and includes 3 beginner-friendly Yellow Sticky Notes inside the canvas. Import any file below into your self-hosted Hostinger 1-Click n8n Cloud in 10 seconds.</div>
         <div class="hero-Compare">
           <span class="bad-pill">Zapier Pro: $149.00/mo ($1,788/yr)</span>
@@ -221,6 +280,27 @@
       </div>
     </div>
 
+    <!-- Interactive Zapier vs Hostinger Savings Calculator -->
+    <div class="calc-box">
+      <div class="calc-left">
+        <div class="calc-title">🧮 Interactive Annual Savings Calculator (Zapier Pro vs Hostinger KVM 1)</div>
+        <div class="calc-slider-wrap">
+          <input type="range" id="taskSlider" class="calc-slider" min="1" max="5" step="1" value="3" oninput="updateSavings()">
+          <span class="calc-tasks-badge" id="taskLabel">15,000 Tasks/mo (Zapier $149/mo)</span>
+        </div>
+      </div>
+      <div class="calc-right">
+        <div class="calc-stat">
+          <div class="calc-stat-lbl">1-Year Cash Saved</div>
+          <div class="calc-stat-val" id="save1Yr">$1,710/yr</div>
+        </div>
+        <div class="calc-stat">
+          <div class="calc-stat-lbl">3-Year Cash Saved</div>
+          <div class="calc-stat-val" id="save3Yr">$5,130</div>
+        </div>
+      </div>
+    </div>
+
     <!-- Search & Directory Header -->
     <div class="section-bar">
       <div class="section-title">
@@ -232,12 +312,13 @@
 
     <!-- All Episode Cards Grid -->
     <div class="ep-grid" id="epGrid">
+      
       <!-- EPISODE 01 -->
       <div class="ep-card" data-keywords="ep01 episode 01 invoice pdf excel google sheets bookkeeping email">
         <div>
           <div class="ep-top">
             <span class="ep-num">EPISODE #01</span>
-            <span class="ep-cat">FINANCE &amp; BOOKKEEPING</span>
+            <span class="ep-cat">FINANCE & BOOKKEEPING</span>
           </div>
           <div class="ep-h">Email PDF Invoice to Excel / Google Sheets Assistant</div>
           <div class="ep-desc">Automatically extract vendor name, invoice number, date, and total amount from incoming PDF invoices and log a clean row in Google Sheets 24/7.</div>
@@ -245,7 +326,7 @@
         </div>
         <div class="ep-actions">
           <a href="/ep01" class="btn-ep-hub">📖 Episode #01 Hub</a>
-          <a href="/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json" download="01_Email_Invoice_to_Spreadsheet_Assistant.json" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json" download="01_Email_Invoice_to_Spreadsheet_Assistant.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
         </div>
       </div>
 
@@ -256,13 +337,13 @@
             <span class="ep-num">EPISODE #02</span>
             <span class="ep-cat">1-CLICK CLOUD SETUP</span>
           </div>
-          <div class="ep-h">Self-Host n8n on Hostinger VPS (1-Click Starter Kit)</div>
+          <div class="ep-h">Self-Host n8n on Hostinger VPS (1-Click Setup — No Terminal!)</div>
           <div class="ep-desc">Verify your newly deployed Hostinger "Ubuntu 24.04 with n8n" cloud server in 10 seconds with a 24/7 heartbeat monitor and Google Sheets status log.</div>
           <div class="ep-nodes">⚡ Nodes: 24/7 Cloud Heartbeat → Cloud Status Verifier → Google Sheets</div>
         </div>
         <div class="ep-actions">
           <a href="/ep02" class="btn-ep-hub">📖 Episode #02 Hub</a>
-          <a href="/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json" download="02_Hostinger_1Click_n8n_Starter_Kit.json" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json" download="02_Hostinger_1Click_n8n_Starter_Kit.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
         </div>
       </div>
 
@@ -273,13 +354,13 @@
             <span class="ep-num">EPISODE #03</span>
             <span class="ep-cat">GOOGLE WORKSPACE SYNC</span>
           </div>
-          <div class="ep-h">Connect Google Sheets &amp; Gmail to Self-Hosted n8n</div>
-          <div class="ep-desc">Instant 24/7 bridge that watches your Gmail inbox, cleans sender &amp; subject fields, and appends every important email into Google Sheets automatically.</div>
+          <div class="ep-h">Connect Google Sheets & Gmail to Self-Hosted n8n in 2 Minutes</div>
+          <div class="ep-desc">Instant 24/7 bridge that watches your Gmail inbox, cleans sender & subject fields, and appends every important email into Google Sheets automatically.</div>
           <div class="ep-nodes">⚡ Nodes: Watch New Emails (Gmail) → Clean Email Fields → Google Sheets</div>
         </div>
         <div class="ep-actions">
           <a href="/ep03" class="btn-ep-hub">📖 Episode #03 Hub</a>
-          <a href="/blueprints/03_Gmail_and_Google_Sheets_Instant_Bridge.json" download="03_Gmail_and_Google_Sheets_Instant_Bridge.json" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/03_Gmail_and_Google_Sheets_Instant_Bridge.json" download="03_Gmail_and_Google_Sheets_Instant_Bridge.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
         </div>
       </div>
 
@@ -290,13 +371,13 @@
             <span class="ep-num">EPISODE #04</span>
             <span class="ep-cat">ZAPIER MIGRATION KIT</span>
           </div>
-          <div class="ep-h">n8n vs Zapier vs Make Pricing: Multi-Step CRM Migration Pack</div>
-          <div class="ep-desc">Replace expensive $149/mo multi-step Zapier workflows with an unlimited n8n lead &amp; order enrichment pipeline that logs straight to your Master CRM Sheet.</div>
-          <div class="ep-nodes">⚡ Nodes: Incoming Lead Trigger → Enrich &amp; Savings → Master CRM Sheet</div>
+          <div class="ep-h">n8n vs Zapier vs Make Pricing (2026): Replace $149/mo With $6.49</div>
+          <div class="ep-desc">Replace expensive $149/mo multi-step Zapier workflows with an unlimited n8n lead & order enrichment pipeline that logs straight to your Master CRM Sheet.</div>
+          <div class="ep-nodes">⚡ Nodes: Incoming Lead Trigger → Enrich & Savings → Master CRM Sheet</div>
         </div>
         <div class="ep-actions">
           <a href="/ep04" class="btn-ep-hub">📖 Episode #04 Hub</a>
-          <a href="/blueprints/04_Zapier_to_n8n_Migration_Pack.json" download="04_Zapier_to_n8n_Migration_Pack.json" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/04_Zapier_to_n8n_Migration_Pack.json" download="04_Zapier_to_n8n_Migration_Pack.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
         </div>
       </div>
 
@@ -307,13 +388,13 @@
             <span class="ep-num">EPISODE #05</span>
             <span class="ep-cat">GOOGLE DRIVE ORGANIZER</span>
           </div>
-          <div class="ep-h">Auto-Save Gmail Attachments to Google Drive &amp; Sheets</div>
+          <div class="ep-h">Automatically Save Gmail Attachments to Google Drive & Sheets</div>
           <div class="ep-desc">Never lose an email attachment again. Automatically detect incoming PDF/XLSX files in Gmail, sort them into Year/Month Drive folders, and index the share link.</div>
           <div class="ep-nodes">⚡ Nodes: Watch Gmail Files → Auto-Sort Drive Upload → Sheets Index</div>
         </div>
         <div class="ep-actions">
           <a href="/ep05" class="btn-ep-hub">📖 Episode #05 Hub</a>
-          <a href="/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json" download="05_Gmail_Attachments_to_Drive_Organizer.json" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json" download="05_Gmail_Attachments_to_Drive_Organizer.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
         </div>
       </div>
 
@@ -324,13 +405,13 @@
             <span class="ep-num">EPISODE #06</span>
             <span class="ep-cat">VPS SPEED BENCHMARK</span>
           </div>
-          <div class="ep-h">Hostinger KVM 1 vs KVM 2 for n8n: 1,000-Row Benchmark</div>
-          <div class="ep-desc">Test your self-hosted n8n server throughput with a 1,000-row batch benchmark workflow and log execution speed &amp; RAM efficiency directly to Google Sheets.</div>
+          <div class="ep-h">Hostinger KVM 1 vs KVM 2 for n8n: Full 2026 Benchmark</div>
+          <div class="ep-desc">Test your self-hosted n8n server throughput with a 1,000-row batch benchmark workflow and log execution speed & RAM efficiency directly to Google Sheets.</div>
           <div class="ep-nodes">⚡ Nodes: Benchmark Trigger → KVM Spec Verifier → Sheets Benchmark Log</div>
         </div>
         <div class="ep-actions">
           <a href="/ep06" class="btn-ep-hub">📖 Episode #06 Hub</a>
-          <a href="/blueprints/06_n8n_Server_Benchmark_Workflow.json" download="06_n8n_Server_Benchmark_Workflow.json" class="btn-ep-dl">📥 Free .JSON File</a>
+          <a href="/blueprints/06_n8n_Server_Benchmark_Workflow.json" download="06_n8n_Server_Benchmark_Workflow.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
         </div>
       </div>
     </div>
@@ -340,7 +421,166 @@
     © 2026 360 REV (@360rev3) • Official Zero-Code Workflow Automation Blueprint Hub • All .JSON Templates Include 3 Yellow Sticky Notes
   </div>
 
+  
+  <!-- Smart Conversion Modal after .JSON Download -->
+  <div class="modal-overlay" id="dlModal" onclick="if(event.target===this)closeDlModal()">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeDlModal()">✕</button>
+      <div class="modal-badge">✓ STEP 2/2: YOUR .JSON BLUEPRINT IS DOWNLOADING!</div>
+      <div class="modal-title">Where Will You Run This Workflow 24/7?</div>
+      <div class="modal-p">If you run n8n on your laptop, your automations <b>stop the second you close the lid</b>. Launch your private 24/7 cloud server in 2 minutes:</div>
+      <div class="modal-steps">
+        <div>1️⃣ Click the purple button below &amp; select <b>Hostinger KVM 1 ($6.49/mo)</b></div>
+        <div>2️⃣ In hPanel, select <b>Applications → Ubuntu 24.04 with n8n</b> (1-Click)</div>
+        <div>3️⃣ Click <b>⋯ → Import from File</b> in n8n and select your downloaded <code>.json</code>!</div>
+      </div>
+      <a href="/hostinger" target="_blank" rel="noopener" class="modal-cta" onclick="closeDlModal()">🚀 Launch Hostinger 1-Click n8n ($6.49/mo — Save $1,710/yr) →</a>
+      <div class="modal-sub">✓ 30-Day Money-Back Guarantee • Unlimited Workflows &amp; Executions</div>
+    </div>
+  </div>
   <script>
+    const GEO_DICT = {
+      en: {
+        step1Lbl: '👉 STEP 1: CLOUD ENGINE (LINK #1)',
+        step1H: 'Launch Hostinger 1-Click n8n Cloud ($6.49/mo)',
+        step1Btn: '🚀 Open Hostinger 1-Click n8n ($6.49/mo) →',
+        step2Lbl: '🎁 STEP 2: FREE WORKFLOW FILE (LINK #2)',
+        step2H: 'Download Free .JSON Workflow Blueprint',
+        step2Btn: '📥 Download Free .JSON Blueprint File',
+        costGood: '✓ Hostinger KVM 1 (1-Click n8n): $6.49/mo',
+        costSave: '💰 Save $1,710/Year • Unlimited 24/7 Workflows',
+        modalBadge: '✓ STEP 2/2: YOUR .JSON BLUEPRINT IS DOWNLOADING!',
+        modalTitle: 'Where Will You Run This Workflow 24/7?',
+        modalCta: '🚀 Launch Hostinger 1-Click n8n ($6.49/mo — Save $1,710/yr) →',
+        heroTitle: 'Stop Paying $149/mo for Zapier. Run Unlimited 24/7 n8n Workflows for $6.49/mo.',
+        ctaTopFull: '🚀 Launch 1-Click n8n Cloud ($6.49/mo)',
+        ctaTopShort: '🚀 $6.49 n8n Cloud'
+      },
+      es: {
+        step1Lbl: '👉 PASO 1: SERVIDOR CLOUD 24/7 (LINK #1)',
+        step1H: 'Lanzar Hostinger 1-Click n8n Cloud (5,99 €/mes)',
+        step1Btn: '🚀 Abrir Hostinger 1-Click n8n (5,99 €/mes) →',
+        step2Lbl: '🎁 PASO 2: PLANTILLA .JSON GRATIS (LINK #2)',
+        step2H: 'Descargar Plantilla de Flujo .JSON Gratis',
+        step2Btn: '📥 Descargar Archivo .JSON Gratis (100% Libre)',
+        costGood: '✓ Hostinger KVM 1 (1-Click n8n): 5,99 €/mes ($6.49)',
+        costSave: '💰 Ahorra 1.600 €/Año • Flujos Ilimitados 24/7',
+        modalBadge: '✓ PASO 2/2: ¡TU ARCHIVO .JSON SE ESTÁ DESCARGANDO!',
+        modalTitle: '¿Dónde Ejecutarás Este Flujo 24/7?',
+        modalCta: '🚀 Lanzar Hostinger 1-Click n8n (5,99 €/mes — Ilimitado) →',
+        heroTitle: 'Deja de Pagar $149/mes en Zapier. Ejecuta Flujos n8n Ilimitados 24/7 por 5,99 €/mes.',
+        ctaTopFull: '🚀 Lanzar n8n Cloud 1-Clic (5,99 €/mes)',
+        ctaTopShort: '🚀 n8n 5,99 €/mes'
+      },
+      pt: {
+        step1Lbl: '👉 PASSO 1: SERVIDOR CLOUD 24/7 (LINK #1)',
+        step1H: 'Lançar Hostinger 1-Click n8n Cloud (R$ 29,99/mês)',
+        step1Btn: '🚀 Abrir Hostinger 1-Click n8n (PIX / Cartão) →',
+        step2Lbl: '🎁 PASSO 2: FLUXO .JSON GRÁTIS (LINK #2)',
+        step2H: 'Baixar Modelo de Fluxo .JSON Grátis',
+        step2Btn: '📥 Baixar Arquivo .JSON Grátis (3 Notas Adesivas)',
+        costGood: '✓ Hostinger KVM 1 (1-Click n8n): R$ 29,99/mês (PIX)',
+        costSave: '💰 Economize R$ 8.500/Ano • Execuções Ilimitadas 24/7',
+        modalBadge: '✓ PASSO 2/2: SEU ARQUIVO .JSON ESTÁ BAIXANDO!',
+        modalTitle: 'Onde Você Vai Rodar Esse Fluxo 24/7?',
+        modalCta: '🚀 Lançar Hostinger 1-Click n8n (R$ 29,99/mês no PIX) →',
+        heroTitle: 'Pare de Pagar Caro no Zapier. Rode Fluxos n8n Ilimitados 24/7 na Hostinger (1-Clique).',
+        ctaTopFull: '🚀 Lançar n8n Cloud 1-Clique (PIX)',
+        ctaTopShort: '🚀 n8n Cloud (PIX)'
+      },
+      de: {
+        step1Lbl: '👉 SCHRITT 1: 24/7 CLOUD-ENGINE (100% DSGVO)',
+        step1H: 'Hostinger 1-Click n8n Cloud starten (5,99 €/Monat)',
+        step1Btn: '🚀 Hostinger 1-Click n8n öffnen (5,99 €/Mo • DSGVO) →',
+        step2Lbl: '🎁 SCHRITT 2: KOSTENLOSE .JSON VORLAGE (LINK #2)',
+        step2H: 'Kostenloses Workflow .JSON Blueprint herunterladen',
+        step2Btn: '📥 Kostenlose .JSON Vorlage herunterladen',
+        costGood: '✓ Hostinger KVM 1 (1-Click n8n): 5,99 €/Mo (100% DSGVO)',
+        costSave: '💰 1.600 €/Jahr sparen • Unbegrenzte Workflows 24/7',
+        modalBadge: '✓ SCHRITT 2/2: IHRE .JSON-DATEI WIRD HERUNTERGELADEN!',
+        modalTitle: 'Wo führen Sie diesen Workflow 24/7 DSGVO-konform aus?',
+        modalCta: '🚀 Hostinger 1-Click n8n starten (5,99 €/Monat • DSGVO) →',
+        heroTitle: 'Schluss mit 149 $/Mo für Zapier. Unbegrenzte 24/7 n8n-Workflows für 5,99 €/Monat (DSGVO-konform).',
+        ctaTopFull: '🚀 1-Click n8n Cloud (5,99 €/Mo)',
+        ctaTopShort: '🚀 n8n 5,99 €/Mo'
+      },
+      fr: {
+        step1Lbl: '👉 ÉTAPE 1 : SERVEUR CLOUD 24/7 (CONFORME RGPD)',
+        step1H: 'Lancer Hostinger 1-Click n8n Cloud (5,99 €/mois)',
+        step1Btn: '🚀 Ouvrir Hostinger 1-Click n8n (5,99 €/mois) →',
+        step2Lbl: '🎁 ÉTAPE 2 : MODÈLE .JSON GRATUIT (LIEN #2)',
+        step2H: 'Télécharger le Blueprint .JSON Gratuit',
+        step2Btn: '📥 Télécharger le Fichier .JSON Gratuit',
+        costGood: '✓ Hostinger KVM 1 (1-Click n8n) : 5,99 €/mois (RGPD)',
+        costSave: '💰 Économisez 1 600 €/An • Workflows Illimités 24/7',
+        modalBadge: '✓ ÉTAPE 2/2 : VOTRE FICHIER .JSON EST EN COURS DE TÉLÉCHARGEMENT !',
+        modalTitle: 'Où allez-vous exécuter ce workflow 24/7 ?',
+        modalCta: '🚀 Lancer Hostinger 1-Click n8n (5,99 €/mois • RGPD) →',
+        heroTitle: 'Arrêtez de payer 149 $/mois pour Zapier. Exécutez des workflows n8n illimités 24/7 pour 5,99 €/mois.',
+        ctaTopFull: '🚀 Lancer n8n Cloud 1-Clic (5,99 €/mois)',
+        ctaTopShort: '🚀 n8n 5,99 €/mois'
+      }
+    };
+    function applyGeoLanguage(lang) {
+      const d = GEO_DICT[lang] || GEO_DICT.en;
+      const sel1 = document.getElementById('geoSelectEp');
+      if (sel1) sel1.value = lang;
+      const sel2 = document.getElementById('geoSelectRoot');
+      if (sel2) sel2.value = lang;
+      const setTxt = (q, val) => { const el = document.querySelector(q); if (el && val) el.textContent = val; };
+      setTxt('.label-purple', d.step1Lbl);
+      setTxt('.hub-card:nth-child(1) .card-h', d.step1H);
+      setTxt('.btn-purple', d.step1Btn);
+      setTxt('.label-green', d.step2Lbl);
+      setTxt('.hub-card:nth-child(2) .card-h', d.step2H);
+      setTxt('.btn-green', d.step2Btn);
+      setTxt('.cost-good', d.costGood);
+      setTxt('.cost-save', d.costSave);
+      setTxt('.modal-badge', d.modalBadge);
+      setTxt('.modal-title', d.modalTitle);
+      setTxt('.modal-cta', d.modalCta);
+      setTxt('.hero-title', d.heroTitle);
+      setTxt('.cta-top-full', d.ctaTopFull);
+      setTxt('.cta-top-short', d.ctaTopShort);
+    }
+    window.applyGeoEp = applyGeoLanguage;
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const urlLang = (params.get('lang') || '').toLowerCase();
+      const navLang = (navigator.language || 'en').slice(0, 2).toLowerCase();
+      const picked = ['en','es','pt','de','fr'].includes(urlLang) ? urlLang : (['es','pt','de','fr'].includes(navLang) ? navLang : 'en');
+      if (picked !== 'en') applyGeoLanguage(picked);
+    });
+    function triggerDlModal() {
+      setTimeout(() => {
+        const m = document.getElementById('dlModal');
+        if (m) m.classList.add('show');
+      }, 350);
+    }
+    function closeDlModal() {
+      const m = document.getElementById('dlModal');
+      if (m) m.classList.remove('show');
+    }
+  </script>
+
+
+  <script>
+    const TIERS = {
+      1: { label: '2,000 Tasks/mo (Zapier $49/mo)', zap: 49 },
+      2: { label: '5,000 Tasks/mo (Zapier $89/mo)', zap: 89 },
+      3: { label: '15,000 Tasks/mo (Zapier $149/mo)', zap: 149 },
+      4: { label: '50,000 Tasks/mo (Zapier $299/mo)', zap: 299 },
+      5: { label: '100,000+ Tasks/mo (Zapier $599/mo)', zap: 599 }
+    };
+    function updateSavings() {
+      const v = document.getElementById('taskSlider').value;
+      const t = TIERS[v] || TIERS[3];
+      document.getElementById('taskLabel').textContent = t.label;
+      const yr1 = Math.round((t.zap - 6.49) * 12);
+      const yr3 = yr1 * 3;
+      document.getElementById('save1Yr').textContent = '$' + yr1.toLocaleString() + '/yr';
+      document.getElementById('save3Yr').textContent = '$' + yr3.toLocaleString();
+    }
     function filterEpisodes() {
       const q = (document.getElementById('searchBox').value || '').toLowerCase().trim();
       const cards = document.querySelectorAll('.ep-card');
