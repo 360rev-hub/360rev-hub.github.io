@@ -35,6 +35,76 @@
   <url><loc>https://360rev-hub.github.io/he/</loc><priority>0.85</priority></url>
   <url><loc>https://360rev-hub.github.io/ru/</loc><priority>0.85</priority></url>
   <url><loc>https://360rev-hub.github.io/et/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/coupon/</loc><priority>0.9</priority></url>
+  <url><loc>https://360rev-hub.github.io/es/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/pt/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/de/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/fr/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/it/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/nl/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/pl/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ja/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ko/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/id/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/hi/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/tr/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ar/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/vi/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/sv/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/da/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/no/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/fi/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/cs/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ro/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/hu/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/el/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/bg/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/uk/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/hr/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/sk/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/lt/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/zh/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ms/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/th/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/tl/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/he/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ru/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/et/coupon/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/kvm1-vs-kvm2/</loc><priority>0.9</priority></url>
+  <url><loc>https://360rev-hub.github.io/es/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/pt/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/de/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/fr/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/it/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/nl/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/pl/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ja/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ko/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/id/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/hi/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/tr/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ar/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/vi/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/sv/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/da/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/no/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/fi/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/cs/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ro/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/hu/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/el/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/bg/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/uk/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/hr/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/sk/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/lt/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/zh/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ms/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/th/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/tl/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/he/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/ru/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
+  <url><loc>https://360rev-hub.github.io/et/kvm1-vs-kvm2/</loc><priority>0.85</priority></url>
   <url><loc>https://360rev-hub.github.io/ep01/</loc><priority>0.9</priority></url>
   <url><loc>https://360rev-hub.github.io/es/ep01/</loc><priority>0.85</priority></url>
   <url><loc>https://360rev-hub.github.io/pt/ep01/</loc><priority>0.85</priority></url>
