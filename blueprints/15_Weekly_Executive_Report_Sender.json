@@ -1,0 +1,144 @@
+{
+  "name": "360 REV — EP15: Automated Monday Morning Sales & Expense Executive Report",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ STEP 1: 24/7 CLOUD AUTOMATION ENGINE ($6.49/MO)\n👉 **https://360rev-hub.github.io/hostinger**",
+        "height": 220,
+        "width": 380,
+        "color": 4
+      },
+      "id": "sticky-step1-ep15",
+      "name": "Sticky Note — Step 1 (24/7 Cloud)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 STEP 2: SELECT SOURCE GOOGLE SHEET\nConnect the spreadsheet containing your weekly revenue and expense rows.",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step2-ep15",
+      "name": "Sticky Note — Step 2 (Configure)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🚀 STEP 3: ENTER RECIPIENT EMAIL & ACTIVATE\nSet your manager or team email in the Gmail node and flip to **Active**!",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step3-ep15",
+      "name": "Sticky Note — Step 3 (Activate)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        980,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "node-trigger-ep15",
+      "name": "Every Monday 8:00 AM Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "episode",
+              "value": "EP15"
+            },
+            {
+              "name": "cloudEngine",
+              "value": "Hostinger KVM 1 ($6.49/mo — https://360rev-hub.github.io/hostinger)"
+            },
+            {
+              "name": "status",
+              "value": "Verified 24/7 Execution"
+            }
+          ]
+        }
+      },
+      "id": "node-mid-ep15",
+      "name": "Aggregate Weekly Revenue & Expenses",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        }
+      },
+      "id": "node-dest-ep15",
+      "name": "Send Executive Summary Email via Gmail",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1040,
+        360
+      ]
+    }
+  ],
+  "connections": {
+    "Every Monday 8:00 AM Trigger": {
+      "main": [
+        [
+          {
+            "node": "Aggregate Weekly Revenue & Expenses",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate Weekly Revenue & Expenses": {
+      "main": [
+        [
+          {
+            "node": "Send Executive Summary Email via Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

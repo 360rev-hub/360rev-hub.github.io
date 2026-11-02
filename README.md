@@ -1,48 +1,44 @@
-# ⚡ Awesome Zero-Code n8n Business Workflow Blueprints (2026 Free `.JSON` Library + Hostinger KVM Benchmark)
+# ⚡ Awesome Zero-Code n8n Business Workflow Blueprints (20 Free `.JSON` Templates + 2026 Hostinger KVM Benchmark)
 
 [![Live Blueprint Hub](https://img.shields.io/badge/Live_Blueprint_Hub-360rev--hub.github.io-16A34A?style=for-the-badge)](https://360rev-hub.github.io/)
 [![1-Click n8n Cloud](https://img.shields.io/badge/Hostinger_1--Click_n8n-$6.49%2Fmo_(68%25_OFF_Auto--Applied)-673DE6?style=for-the-badge)](https://360rev-hub.github.io/hostinger)
 [![YouTube Channel](https://img.shields.io/badge/YouTube-@360rev3_(35_Audio_Languages)-EF4444?style=for-the-badge)](https://www.youtube.com/@360rev3)
 
-Welcome to the official **360 REV** repository of production-ready, zero-code **n8n workflow blueprints (`.json`)**! Every blueprint in this library is **100% free to download**, verified on n8n 2026, and includes **3 beginner-friendly Yellow Sticky Notes** directly inside the n8n canvas.
+Welcome to the official **360 REV** repository of **20 production-ready, zero-code n8n workflow blueprints (`.json`)**! Every blueprint in this library is **100% free to download**, auto-copies to your clipboard for instant **`Ctrl+V`** pasting on the n8n canvas, and includes **3 beginner-friendly Yellow Sticky Notes**.
 
-🌐 **Interactive Blueprint Hub, Savings Calculator & 35-Language Guides:** [**https://360rev-hub.github.io/**](https://360rev-hub.github.io/)
-
----
-
-## 🎟️ 2026 Verified Hostinger n8n VPS Partner Deal & KVM 1 vs KVM 2 Benchmark
-
-Before you checkout on Hostinger or pay **$149/month** for Zapier Pro / **$50/month** for n8n Cloud, check our live 1,000-row benchmark and auto-applied partner discount:
-
-| Cloud Plan / Tier | Monthly Price | RAM / CPU / NVMe | 1,000-Row Batch Speed | Peak RAM Used | Best Use Case |
-| :--- | :---: | :---: | :---: | :---: | :--- |
-| **Hostinger KVM 1 (1-Click n8n)** | **$6.49/mo** *(Save $1,710/yr)* | **4 GB RAM** • 1 vCPU • 50 GB NVMe | **0.42 sec** | **18% (720 MB)** | **Best Value:** Unlimited Gmail, PDF, Sheets, Drive & CRM workflows 24/7 |
-| **Hostinger KVM 2 (1-Click n8n)** | **$8.99/mo** | **8 GB RAM** • 2 vCPU • 100 GB NVMe | **0.31 sec** | **11% (890 MB)** | Running local AI LLMs (Ollama) + heavy concurrent webhooks |
-| *Zapier Pro (Cloud)* | *$149.00/mo ($1,788/yr)* | *Shared Cloud* | *Throttled* | *N/A* | *Expensive per-task billing (Every filter counts as a task)* |
-
-👉 **[Activate Official Hostinger 1-Click "Ubuntu 24.04 with n8n" Deal ($6.49/mo — Max Discount Auto-Applied at Checkout)](https://360rev-hub.github.io/hostinger)**
+🌐 **Interactive 20-Episode Blueprint Hub & 35-Language Guides:** [**https://360rev-hub.github.io/**](https://360rev-hub.github.io/)
 
 ---
 
-## 📂 Free Ready-to-Import n8n `.JSON` Blueprints (Includes 3 Yellow Sticky Notes)
+## 🎟️ 2026 Verified Hostinger n8n VPS Partner Deal & 3-Click Checkout Cheat-Sheet
 
-| Episode | Workflow Blueprint Name | Nodes Included | Interactive Setup Hub | Direct `.JSON` Download | YouTube Video Guide |
+1. **Click Partner Activation Link:** [**https://360rev-hub.github.io/hostinger**](https://360rev-hub.github.io/hostinger)
+2. **Choose Plan & Term:** Select **KVM 1 ($6.49/mo, 4 GB RAM, 50 GB NVMe)** and pick the **24-Month cycle** to lock in the maximum **68% OFF** discount (saves **$1,710/year** vs $149/mo Zapier Pro).
+3. **Select 1-Click Template:** Under OS & Panel -> Applications, pick **`Ubuntu 24.04 with n8n`**.
+
+---
+
+## 📂 All 20 Free Ready-to-Import n8n `.JSON` Blueprints (Includes 3 Yellow Sticky Notes)
+
+| Episode | Workflow Blueprint Name | Nodes Included | Interactive Setup Hub | Direct `.JSON` Download | Video / Guide |
 | :---: | :--- | :--- | :---: | :---: | :---: |
-| **#01** | **Email PDF Invoice to Excel / Google Sheets Assistant** | `Gmail Trigger` ➔ `PDF Reader` ➔ `Google Sheets` | [Episode #01 Hub](https://360rev-hub.github.io/ep01) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json) | [Watch EP01](https://www.youtube.com/watch?v=qHAa30IxU_A) |
-| **#02** | **Hostinger 1-Click n8n Cloud Starter Kit & Heartbeat** | `24/7 Heartbeat` ➔ `Cloud Verifier` ➔ `Google Sheets` | [Episode #02 Hub](https://360rev-hub.github.io/ep02) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json) | [Watch EP02](https://www.youtube.com/watch?v=TJuo4kIFhbY) |
-| **#03** | **Gmail & Google Sheets 2-Minute OAuth Instant Bridge** | `Watch Gmail` ➔ `Field Formatter` ➔ `Google Sheets` | [Episode #03 Hub](https://360rev-hub.github.io/ep03) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/03_Gmail_and_Google_Sheets_Instant_Bridge.json) | [Watch EP03](https://www.youtube.com/watch?v=Ol6l8IFQQu8) |
-| **#04** | **Zapier-to-n8n Multi-Step CRM Migration Pack** | `Lead Trigger` ➔ `Enrich & Savings` ➔ `CRM Sheet` | [Episode #04 Hub](https://360rev-hub.github.io/ep04) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/04_Zapier_to_n8n_Migration_Pack.json) | [Watch EP04](https://www.youtube.com/watch?v=NO6nRD4wC7c) |
-| **#05** | **Gmail Attachments to Google Drive Auto-Organizer** | `Gmail Attachment` ➔ `Auto-Sort Drive` ➔ `Sheets Index` | [Episode #05 Hub](https://360rev-hub.github.io/ep05) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json) | [Watch EP05](https://www.youtube.com/watch?v=kFTTyzGt7GY) |
-| **#06** | **Hostinger KVM 1 vs KVM 2 1,000-Row Speed Benchmark** | `Benchmark Trigger` ➔ `Spec Verifier` ➔ `Sheets Log` | [Episode #06 Hub](https://360rev-hub.github.io/ep06) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/06_n8n_Server_Benchmark_Workflow.json) | [Watch EP06](https://www.youtube.com/watch?v=_8fusBwU9n0) |
-| **#07** | **Bank Statement & Receipt to Excel / Sheets Extractor** | `Receipt Email` ➔ `Field Extractor` ➔ `Expense Ledger` | [Episode #07 Hub](https://360rev-hub.github.io/ep07) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/07_Receipt_and_Bank_Statement_Extractor.json) | [Hub Guide](https://360rev-hub.github.io/ep07) |
-| **#08** | **Universal 3-Click .JSON Workflow Template Pack** | `Universal Trigger` ➔ `Auto-Mapper` ➔ `Master Office Sheet` | [Episode #08 Hub](https://360rev-hub.github.io/ep08) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/08_Universal_JSON_Template_Pack.json) | [Hub Guide](https://360rev-hub.github.io/ep08) |
-| **#09** | **24/7 Instant Customer Inquiry Auto-Responder & CRM** | `Inquiry Email` ➔ `0.8s Auto-Reply` ➔ `Google Sheets CRM` | [Episode #09 Hub](https://360rev-hub.github.io/ep09) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/09_Instant_Lead_Response_and_Tracker.json) | [Hub Guide](https://360rev-hub.github.io/ep09) |
-
----
-
-## ⚡ How to Import Any `.JSON` Blueprint in 3 Clicks (10 Seconds)
-
-1. Launch your **[Hostinger 1-Click n8n Cloud ($6.49/mo)](https://360rev-hub.github.io/hostinger)** (`OS & Panel -> Applications -> Ubuntu 24.04 with n8n`).
-2. Open your n8n browser canvas and click the top-right **`⋯` menu → `Import from File...`**.
-3. Select your downloaded `.json` file from the table above.
-4. Follow the **3 Yellow Sticky Notes** inside the canvas and flip the top-right switch to **Active**!
+| **#01** | **Email PDF Invoice to Excel / Google Sheets Assistant** | `Gmail Trigger → PDF Invoice Reader → Google Sheets` | [Episode #01 Hub](https://360rev-hub.github.io/ep01) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json) | [▶ Watch EP01](https://www.youtube.com/watch?v=qHAa30IxU_A) |
+| **#02** | **Self-Host n8n on Hostinger VPS (1-Click Setup — No Terminal!)** | `24/7 Cloud Heartbeat → Cloud Status Verifier → Google Sheets` | [Episode #02 Hub](https://360rev-hub.github.io/ep02) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json) | [▶ Watch EP02](https://www.youtube.com/watch?v=TJuo4kIFhbY) |
+| **#03** | **Connect Google Sheets & Gmail to Self-Hosted n8n in 2 Minutes** | `Watch New Emails (Gmail) → Clean Email Fields → Google Sheets` | [Episode #03 Hub](https://360rev-hub.github.io/ep03) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/03_Gmail_and_Google_Sheets_Instant_Bridge.json) | [▶ Watch EP03](https://www.youtube.com/watch?v=Ol6l8IFQQu8) |
+| **#04** | **n8n vs Zapier vs Make Pricing (2026): Replace $149/mo With $6.49** | `Incoming Lead Trigger → Enrich & Savings → Master CRM Sheet` | [Episode #04 Hub](https://360rev-hub.github.io/ep04) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/04_Zapier_to_n8n_Migration_Pack.json) | [▶ Watch EP04](https://www.youtube.com/watch?v=NO6nRD4wC7c) |
+| **#05** | **Automatically Save Gmail Attachments to Google Drive & Sheets** | `Watch Gmail Files → Auto-Sort Drive Upload → Sheets Index` | [Episode #05 Hub](https://360rev-hub.github.io/ep05) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json) | [▶ Watch EP05](https://www.youtube.com/watch?v=kFTTyzGt7GY) |
+| **#06** | **Hostinger KVM 1 vs KVM 2 for n8n: Full 2026 Benchmark** | `Benchmark Trigger → KVM Spec Verifier → Sheets Benchmark Log` | [Episode #06 Hub](https://360rev-hub.github.io/ep06) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/06_n8n_Server_Benchmark_Workflow.json) | [▶ Watch EP06](https://www.youtube.com/watch?v=_8fusBwU9n0) |
+| **#07** | **Automate Bank Statement & Receipt Data Entry to Excel (No Code)** | `Receipt Email Trigger → Field Extractor → Expense Ledger Sheet` | [Episode #07 Hub](https://360rev-hub.github.io/ep07) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/07_Receipt_and_Bank_Statement_Extractor.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep07) |
+| **#08** | **How to Import Free Workflow Templates (.JSON) into Self-Hosted n8n** | `Universal Cloud Trigger → Auto-Mapper → Master Office Sheet` | [Episode #08 Hub](https://360rev-hub.github.io/ep08) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/08_Universal_JSON_Template_Pack.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep08) |
+| **#09** | **Auto-Reply to Customer Inquiry Emails & Log Leads in Google Sheets** | `Inquiry Email Trigger → 0.8s Auto-Reply → Google Sheets CRM` | [Episode #09 Hub](https://360rev-hub.github.io/ep09) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/09_Instant_Lead_Response_and_Tracker.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep09) |
+| **#10** | **How to Update n8n on Hostinger VPS Safely + Auto-Backup Workflows to Google Drive** | `Midnight Schedule → Export Active Workflows → Google Drive Backup` | [Episode #10 Hub](https://360rev-hub.github.io/ep10) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/10_Automated_Workflow_Backup_to_Drive.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep10) |
+| **#11** | **Automate Overdue Invoice Reminder Emails from Google Sheets (No Code n8n)** | `9 AM Daily Check → Filter Unpaid Rows → Polite Gmail Reminder` | [Episode #11 Hub](https://360rev-hub.github.io/ep11) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/11_Overdue_Invoice_Followup_Assistant.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep11) |
+| **#12** | **How to Setup Custom Domain & Free SSL on Hostinger n8n VPS in 2 Minutes (2026)** | `HTTPS Webhook (SSL) → Sanitize Payload → Google Sheets CRM` | [Episode #12 Hub](https://360rev-hub.github.io/ep12) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/12_Web_Form_to_Sheets_and_Alerts.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep12) |
+| **#13** | **Running n8n on Local PC vs Hostinger Cloud VPS: Why Desktop Cron Triggers Fail** | `24/7 Cloud Cron Trigger → Uptime & Task Metrics → Google Sheets` | [Episode #13 Hub](https://360rev-hub.github.io/ep13) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/13_24x7_Cloud_Scheduler_Pack.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep13) |
+| **#14** | **Sync Shopify & Stripe Orders to Excel / Google Sheets Automatically (Zero Zapier Fees)** | `Order Webhook → Net Revenue & Fee Calculator → Accounting Sheet` | [Episode #14 Hub](https://360rev-hub.github.io/ep14) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/14_Order_to_Accounting_Sheet_Sync.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep14) |
+| **#15** | **Automate Weekly Sales & Expense Summary Emails from Google Sheets (No Code n8n)** | `Monday 8 AM Trigger → Aggregate Revenue & Spend → Executive Gmail` | [Episode #15 Hub](https://360rev-hub.github.io/ep15) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/15_Weekly_Executive_Report_Sender.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep15) |
+| **#16** | **Build a 24/7 AI Email & Document Classifier on Self-Hosted n8n ($6.49/mo VPS)** | `Watch Gmail → AI Document Classifier & Parser → Google Sheets` | [Episode #16 Hub](https://360rev-hub.github.io/ep16) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/16_AI_Document_Classifier_and_Extractor.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep16) |
+| **#17** | **Extract Purchase Order PDFs to Inventory Spreadsheets Automatically (No Code n8n)** | `Watch PO Inbox → Extract SKU, Qty & Total → Inventory Sheet` | [Episode #17 Hub](https://360rev-hub.github.io/ep17) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/17_Purchase_Order_PDF_to_Sheets.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep17) |
+| **#18** | **Hostinger n8n VPS Pricing & Discount Guide (2026): How to Get 68% OFF KVM 1** | `Incoming Document Trigger → Parse & Calculate Savings → Master Sheet` | [Episode #18 Hub](https://360rev-hub.github.io/ep18) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/18_Resume_PDF_to_HR_Tracker.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep18) |
+| **#19** | **Automate Client Onboarding: Auto-Create Google Drive Folders & Welcome Emails (n8n)** | `New Client Trigger → Create Client Drive Folder → Welcome Gmail & Sheet` | [Episode #19 Hub](https://360rev-hub.github.io/ep19) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/19_Client_Onboarding_Drive_and_Email.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep19) |
+| **#20** | **5 Must-Have n8n Automations Every Small Business Should Run 24/7 (Complete Bundle)** | `Unified Business Trigger → Smart 5-Way Router → Master Sheets & Drive` | [Episode #20 Hub](https://360rev-hub.github.io/ep20) | [📥 Download .JSON](https://360rev-hub.github.io/blueprints/20_Complete_5in1_Office_Automation_Bundle.json) | [📖 Setup Guide](https://360rev-hub.github.io/ep20) |

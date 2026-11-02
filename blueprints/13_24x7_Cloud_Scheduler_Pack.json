@@ -1,0 +1,144 @@
+{
+  "name": "360 REV — EP13: 24/7 Cloud Cron Scheduler & Uptime Report Generator",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ STEP 1: KEEP YOUR AUTOMATIONS RUNNING WHILE LAPTOP IS OFF ($6.49/MO)\nDeploy on Hostinger KVM 1 1-Click n8n Cloud:\n👉 **https://360rev-hub.github.io/hostinger**",
+        "height": 220,
+        "width": 380,
+        "color": 4
+      },
+      "id": "sticky-step1-ep13",
+      "name": "Sticky Note — Step 1 (24/7 Cloud)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 STEP 2: SET YOUR CRON INTERVAL\nChoose Hourly, Daily, or Weekly schedule in the first block.",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step2-ep13",
+      "name": "Sticky Note — Step 2 (Configure)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🚀 STEP 3: CONNECT GOOGLE SHEETS LOG & ACTIVATE\nSelect your Google Sheet and flip the top-right switch to **Active**!",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step3-ep13",
+      "name": "Sticky Note — Step 3 (Activate)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        980,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "node-trigger-ep13",
+      "name": "24/7 Cloud Cron Trigger (Laptop OFF)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "episode",
+              "value": "EP13"
+            },
+            {
+              "name": "cloudEngine",
+              "value": "Hostinger KVM 1 ($6.49/mo — https://360rev-hub.github.io/hostinger)"
+            },
+            {
+              "name": "status",
+              "value": "Verified 24/7 Execution"
+            }
+          ]
+        }
+      },
+      "id": "node-mid-ep13",
+      "name": "Compile Server Uptime & Task Metrics",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        }
+      },
+      "id": "node-dest-ep13",
+      "name": "Log Cloud Execution to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1040,
+        360
+      ]
+    }
+  ],
+  "connections": {
+    "24/7 Cloud Cron Trigger (Laptop OFF)": {
+      "main": [
+        [
+          {
+            "node": "Compile Server Uptime & Task Metrics",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Compile Server Uptime & Task Metrics": {
+      "main": [
+        [
+          {
+            "node": "Log Cloud Execution to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

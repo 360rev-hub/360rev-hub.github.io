@@ -1,0 +1,144 @@
+{
+  "name": "360 REV — EP12: Production HTTPS Webhook & Custom Domain SSL Verifier to Google Sheets",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ STEP 1: PRODUCTION HTTPS WEBHOOK SERVER ($6.49/MO)\nWebhooks require a live 24/7 HTTPS URL (localhost fails when your PC sleeps):\n👉 **https://360rev-hub.github.io/hostinger**",
+        "height": 220,
+        "width": 380,
+        "color": 4
+      },
+      "id": "sticky-step1-ep12",
+      "name": "Sticky Note — Step 1 (24/7 Cloud)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 STEP 2: COPY YOUR PRODUCTION WEBHOOK URL\nClick the **Incoming HTTPS Webhook** node and copy the Production URL into your website form or Stripe/Shopify webhook settings.",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step2-ep12",
+      "name": "Sticky Note — Step 2 (Configure)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🚀 STEP 3: CONNECT GOOGLE SHEETS & ACTIVATE\nSelect your Master Leads Sheet and flip the top-right switch to **Active**!",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step3-ep12",
+      "name": "Sticky Note — Step 3 (Activate)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        980,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "node-trigger-ep12",
+      "name": "Incoming HTTPS Webhook (SSL Verified)",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "episode",
+              "value": "EP12"
+            },
+            {
+              "name": "cloudEngine",
+              "value": "Hostinger KVM 1 ($6.49/mo — https://360rev-hub.github.io/hostinger)"
+            },
+            {
+              "name": "status",
+              "value": "Verified 24/7 Execution"
+            }
+          ]
+        }
+      },
+      "id": "node-mid-ep12",
+      "name": "Sanitize & Format Payload Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        }
+      },
+      "id": "node-dest-ep12",
+      "name": "Append Lead Row to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1040,
+        360
+      ]
+    }
+  ],
+  "connections": {
+    "Incoming HTTPS Webhook (SSL Verified)": {
+      "main": [
+        [
+          {
+            "node": "Sanitize & Format Payload Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Sanitize & Format Payload Fields": {
+      "main": [
+        [
+          {
+            "node": "Append Lead Row to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

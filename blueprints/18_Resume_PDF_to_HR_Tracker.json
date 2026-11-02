@@ -1,0 +1,144 @@
+{
+  "name": "360 REV — EP18: Hostinger n8n VPS Cost & Execution Savings Tracker (+ HR PDF Parser)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ STEP 1: ACTIVATE 68% OFF HOSTINGER KVM 1 ($6.49/MO)\nSave $1,710/year compared to Zapier Pro ($149/mo) with unlimited executions:\n👉 **https://360rev-hub.github.io/hostinger**",
+        "height": 220,
+        "width": 380,
+        "color": 4
+      },
+      "id": "sticky-step1-ep18",
+      "name": "Sticky Note — Step 1 (24/7 Cloud)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 STEP 2: CONNECT INCOMING EMAIL / WEBHOOK TRIGGER\nSelect your Gmail or Webhook trigger to process incoming PDF files automatically.",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step2-ep18",
+      "name": "Sticky Note — Step 2 (Configure)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🚀 STEP 3: CONNECT MASTER TRACKER SHEET & ACTIVATE\nSelect your Google Sheet and flip the top-right switch to **Active**!",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step3-ep18",
+      "name": "Sticky Note — Step 3 (Activate)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        980,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "node-trigger-ep18",
+      "name": "Incoming Document / Application Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "episode",
+              "value": "EP18"
+            },
+            {
+              "name": "cloudEngine",
+              "value": "Hostinger KVM 1 ($6.49/mo — https://360rev-hub.github.io/hostinger)"
+            },
+            {
+              "name": "status",
+              "value": "Verified 24/7 Execution"
+            }
+          ]
+        }
+      },
+      "id": "node-mid-ep18",
+      "name": "Parse Key Fields & Calculate Task Savings",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        }
+      },
+      "id": "node-dest-ep18",
+      "name": "Append Verified Row to Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1040,
+        360
+      ]
+    }
+  ],
+  "connections": {
+    "Incoming Document / Application Trigger": {
+      "main": [
+        [
+          {
+            "node": "Parse Key Fields & Calculate Task Savings",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Parse Key Fields & Calculate Task Savings": {
+      "main": [
+        [
+          {
+            "node": "Append Verified Row to Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

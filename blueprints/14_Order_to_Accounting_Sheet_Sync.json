@@ -1,0 +1,144 @@
+{
+  "name": "360 REV — EP14: Shopify & Stripe Order to Excel / Google Sheets Accounting Sync",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ STEP 1: ZERO PER-TASK FEES ON HOSTINGER KVM 1 ($6.49/MO)\nSync unlimited e-commerce orders 24/7 without paying Zapier per-task fees:\n👉 **https://360rev-hub.github.io/hostinger**",
+        "height": 220,
+        "width": 380,
+        "color": 4
+      },
+      "id": "sticky-step1-ep14",
+      "name": "Sticky Note — Step 1 (24/7 Cloud)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 STEP 2: CONNECT ORDER WEBHOOK\nPaste your n8n webhook URL into Stripe or Shopify Order Created notifications.",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step2-ep14",
+      "name": "Sticky Note — Step 2 (Configure)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🚀 STEP 3: MAP ACCOUNTING COLUMNS & ACTIVATE\nConnect your Google Sheets accounting ledger and flip the switch to **Active**!",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step3-ep14",
+      "name": "Sticky Note — Step 3 (Activate)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        980,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "node-trigger-ep14",
+      "name": "New E-Commerce Order Webhook",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "episode",
+              "value": "EP14"
+            },
+            {
+              "name": "cloudEngine",
+              "value": "Hostinger KVM 1 ($6.49/mo — https://360rev-hub.github.io/hostinger)"
+            },
+            {
+              "name": "status",
+              "value": "Verified 24/7 Execution"
+            }
+          ]
+        }
+      },
+      "id": "node-mid-ep14",
+      "name": "Calculate Net Revenue, Tax & Fees",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        }
+      },
+      "id": "node-dest-ep14",
+      "name": "Append Order Row to Accounting Sheet",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1040,
+        360
+      ]
+    }
+  ],
+  "connections": {
+    "New E-Commerce Order Webhook": {
+      "main": [
+        [
+          {
+            "node": "Calculate Net Revenue, Tax & Fees",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculate Net Revenue, Tax & Fees": {
+      "main": [
+        [
+          {
+            "node": "Append Order Row to Accounting Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}

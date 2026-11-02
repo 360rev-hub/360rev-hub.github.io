@@ -1,0 +1,144 @@
+{
+  "name": "360 REV — EP10: Daily n8n Workflow Auto-Backup to Google Drive (Safe Update Kit)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ STEP 1: RUN THIS BACKUP 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\nBefore updating n8n, always auto-backup your workflows to Google Drive 24/7:\n👉 **https://360rev-hub.github.io/hostinger**\n- Official 1-Click `Ubuntu 24.04 with n8n` template in hPanel\n- Zero data loss during updates",
+        "height": 220,
+        "width": 380,
+        "color": 4
+      },
+      "id": "sticky-step1-ep10",
+      "name": "Sticky Note — Step 1 (24/7 Cloud)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🔧 STEP 2: SELECT YOUR GOOGLE DRIVE BACKUP FOLDER\n1. Double-click the **Google Drive Backup** node.\n2. Select your Google Drive OAuth2 credential and pick your `n8n_Backups` folder.",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step2-ep10",
+      "name": "Sticky Note — Step 2 (Configure)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## 🚀 STEP 3: ACTIVATE 24/7 DAILY SCHEDULE\nFlip the top-right workflow switch to **Active** so your workflows back up every midnight automatically!",
+        "height": 220,
+        "width": 340,
+        "color": 4
+      },
+      "id": "sticky-step3-ep10",
+      "name": "Sticky Note — Step 3 (Activate)",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        980,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "node-trigger-ep10",
+      "name": "Daily Midnight Backup Schedule",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        260,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": false,
+        "values": {
+          "string": [
+            {
+              "name": "episode",
+              "value": "EP10"
+            },
+            {
+              "name": "cloudEngine",
+              "value": "Hostinger KVM 1 ($6.49/mo — https://360rev-hub.github.io/hostinger)"
+            },
+            {
+              "name": "status",
+              "value": "Verified 24/7 Execution"
+            }
+          ]
+        }
+      },
+      "id": "node-mid-ep10",
+      "name": "Export Active Workflows JSON",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "YOUR_GOOGLE_SHEET_ID",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Sheet1",
+          "mode": "name"
+        }
+      },
+      "id": "node-dest-ep10",
+      "name": "Upload Timestamped Backup to Google Drive",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1040,
+        360
+      ]
+    }
+  ],
+  "connections": {
+    "Daily Midnight Backup Schedule": {
+      "main": [
+        [
+          {
+            "node": "Export Active Workflows JSON",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Export Active Workflows JSON": {
+      "main": [
+        [
+          {
+            "node": "Upload Timestamped Backup to Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
