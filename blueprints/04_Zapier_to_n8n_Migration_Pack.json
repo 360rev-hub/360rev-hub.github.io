@@ -3,16 +3,19 @@
   "nodes": [
     {
       "parameters": {
-        "content": "## STEP 1: Unlimited Webhook / Lead Trigger\n1. Double-click **1. Incoming Lead / Order Trigger** below.\n2. In Zapier Pro, multi-step webhooks require a **$149/mo plan** and count against your monthly task cap.\n3. On your **Hostinger KVM 1 ($6.49/mo)** n8n cloud, incoming triggers are **100% UNLIMITED**!",
-        "height": 230,
-        "width": 360,
+        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep04](https://360rev-hub.github.io/ep04)",
+        "height": 250,
+        "width": 390,
         "color": 1
       },
       "id": "sticky-ep04-1",
       "name": "Sticky Note - Step 1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [160, 120]
+      "position": [
+        160,
+        120
+      ]
     },
     {
       "parameters": {
@@ -25,20 +28,26 @@
       "name": "Sticky Note - Step 2",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [600, 120]
+      "position": [
+        600,
+        120
+      ]
     },
     {
       "parameters": {
-        "content": "## STEP 3: Save to Google Sheets & Turn ON!\n1. Double-click **3. Save to Master CRM Sheet** -> select your spreadsheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active** to replace Zapier 24/7!",
-        "height": 230,
-        "width": 360,
+        "content": "## STEP 3: Save to Google Sheets & Turn ON!\n1. Double-click **3. Save to Master CRM Sheet** -> select your spreadsheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active** to replace Zapier 24/7!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
+        "height": 250,
+        "width": 370,
         "color": 1
       },
       "id": "sticky-ep04-3",
       "name": "Sticky Note - Step 3",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
-      "position": [1060, 120]
+      "position": [
+        1060,
+        120
+      ]
     },
     {
       "parameters": {
@@ -55,7 +64,10 @@
       "name": "1. Incoming Lead / Order Trigger",
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
-      "position": [280, 440]
+      "position": [
+        280,
+        440
+      ]
     },
     {
       "parameters": {
@@ -65,7 +77,10 @@
       "name": "2. Enrich Lead & Calculate Savings",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
-      "position": [680, 440]
+      "position": [
+        680,
+        440
+      ]
     },
     {
       "parameters": {
@@ -93,11 +108,51 @@
           },
           "matchingColumns": [],
           "schema": [
-            { "id": "Column_A_Order_ID", "displayName": "Column A: Order ID", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
-            { "id": "Column_B_Client", "displayName": "Column B: Client Name", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
-            { "id": "Column_C_Tasks", "displayName": "Column C: Monthly Tasks", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
-            { "id": "Column_D_Zapier_Cost", "displayName": "Column D: Zapier Cost", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true },
-            { "id": "Column_E_Hostinger_Cost", "displayName": "Column E: Hostinger KVM 1 Cost", "required": false, "defaultMatch": false, "display": true, "type": "string", "canBeUsedToMatch": true }
+            {
+              "id": "Column_A_Order_ID",
+              "displayName": "Column A: Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Column_B_Client",
+              "displayName": "Column B: Client Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Column_C_Tasks",
+              "displayName": "Column C: Monthly Tasks",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Column_D_Zapier_Cost",
+              "displayName": "Column D: Zapier Cost",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Column_E_Hostinger_Cost",
+              "displayName": "Column E: Hostinger KVM 1 Cost",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
           ]
         },
         "options": {}
@@ -106,7 +161,10 @@
       "name": "3. Save to Master CRM Sheet",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
-      "position": [1080, 440]
+      "position": [
+        1080,
+        440
+      ]
     }
   ],
   "pinData": {

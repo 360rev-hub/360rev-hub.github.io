@@ -3,9 +3,9 @@
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: RUN ALL 5 OFFICE WORKFLOWS 24/7 FOR $6.49/MO\nReplace $149/mo Zapier Pro with unlimited workflows on Hostinger KVM 1:\n👉 **https://360rev-hub.github.io/hostinger**",
-        "height": 220,
-        "width": 380,
+        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep20](https://360rev-hub.github.io/ep20)",
+        "height": 250,
+        "width": 390,
         "color": 4
       },
       "id": "sticky-step1-ep20",
@@ -35,9 +35,9 @@
     },
     {
       "parameters": {
-        "content": "## 🚀 STEP 3: ACTIVATE YOUR 24/7 BACK-OFFICE ENGINE\nFlip the top-right switch to **Active**!",
-        "height": 220,
-        "width": 340,
+        "content": "## 🚀 STEP 3: ACTIVATE YOUR 24/7 BACK-OFFICE ENGINE\nFlip the top-right switch to **Active**!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
+        "height": 250,
+        "width": 370,
         "color": 4
       },
       "id": "sticky-step3-ep20",

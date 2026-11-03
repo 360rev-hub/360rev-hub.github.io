@@ -3,9 +3,9 @@
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: ZERO PER-TASK FEES ON HOSTINGER KVM 1 ($6.49/MO)\nSync unlimited e-commerce orders 24/7 without paying Zapier per-task fees:\n👉 **https://360rev-hub.github.io/hostinger**",
-        "height": 220,
-        "width": 380,
+        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep14](https://360rev-hub.github.io/ep14)",
+        "height": 250,
+        "width": 390,
         "color": 4
       },
       "id": "sticky-step1-ep14",
@@ -35,9 +35,9 @@
     },
     {
       "parameters": {
-        "content": "## 🚀 STEP 3: MAP ACCOUNTING COLUMNS & ACTIVATE\nConnect your Google Sheets accounting ledger and flip the switch to **Active**!",
-        "height": 220,
-        "width": 340,
+        "content": "## 🚀 STEP 3: MAP ACCOUNTING COLUMNS & ACTIVATE\nConnect your Google Sheets accounting ledger and flip the switch to **Active**!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
+        "height": 250,
+        "width": 370,
         "color": 4
       },
       "id": "sticky-step3-ep14",
