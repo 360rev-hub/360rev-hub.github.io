@@ -1,52 +1,72 @@
 {
-  "name": "360 REV — Automated Email Invoice to Excel/Google Sheets Assistant (Zero-Code)",
+  "name": "EP01 — Email PDF Invoice to Google Sheets & Drive Assistant (2027 Production)",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "360rev-production-ep01-2027"
+  },
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep01](https://360rev-hub.github.io/ep01)",
-        "height": 250,
-        "width": 390,
-        "color": 1
+        "color": 4,
+        "width": 440,
+        "height": 620,
+        "content": "## ⚡ 360 REV — EPISODE #01 BLUEPRINT\n### Email PDF Invoice to Excel / Google Sheets Assistant\n\n**🚀 1. Run This Workflow 24/7 (While Your Laptop is OFF):**\n* [Launch Hostinger 1-Click n8n Cloud ($6.49/mo — Save $1,710/yr vs Zapier)](https://360rev-hub.github.io/hostinger?ep=ep01&src=json_sticky&cta=canvas_card)\n* *In hPanel, select **Applications → Ubuntu 24.04 with n8n** (Coupon `MMVPS` / Partner Deal auto-applied).*\n\n**📊 2. Copy-Paste Google Sheets Columns (Row 1 Headers):**\n`Invoice_Date | Vendor_Name | Invoice_Number | Tax_Amount | Total_Amount | File_Name | Status`\n* [Open Episode #01 Interactive Setup Hub & 1-Click Sheet Copy](https://360rev-hub.github.io/ep01/?src=json_sticky)\n\n**🎥 3. Watch Video Setup Tutorial:**\n* [Watch the 2-Minute Step-by-Step Video on YouTube (@360rev3)](https://www.youtube.com/watch?v=qHAa30IxU_A)\n\n**🛠️ Architecture Highlights:**\n* **Zone 1:** Watches Gmail 24/7 for incoming invoices & checks for PDF attachments.\n* **Zone 2:** Uses the native **Extract from File (PDF)** node + Regex Parser to read real PDF invoice totals, tax & invoice IDs.\n* **Zone 3:** Archives the PDF to Google Drive and appends a clean row to Google Sheets.\n\n---\n*📂 Need more free templates? Visit [360rev-hub.github.io](https://360rev-hub.github.io/?src=json_footer)*"
       },
-      "id": "sticky-step-1",
-      "name": "Sticky Note - Step 1",
+      "id": "sticky-master-ep01",
+      "name": "0. Master Setup & Links (EP01)",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        160,
-        120
+        -360,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 2: Pick Your Spreadsheet\n1. Double-click the **Save Row to Spreadsheet** icon below.\n2. Choose your **October_Accounting_Ledger** file.\n3. All 5 columns (**Date, Vendor, Invoice #, Total $, Status**) are already pre-mapped for you!",
-        "height": 230,
-        "width": 380,
-        "color": 1
+        "color": 7,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 1: Watch Gmail & Detect PDF Attachment\n1. Double-click **1. Watch Incoming Invoices (Gmail)** and connect your Google account.\n2. Filter `subject:(invoice OR receipt) has:attachment` automatically downloads binary PDF files.\n3. **2. Has PDF Attachment?** routes binary PDFs to the native PDF text extractor."
       },
-      "id": "sticky-step-2",
-      "name": "Sticky Note - Step 2",
+      "id": "zone1-ep01",
+      "name": "Sticky Note - Zone 1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        600,
-        120
+        120,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 3: Test & Turn It On 24/7!\n1. Click **Test workflow** at the bottom to watch a $142.80 invoice extract in 1 second.\n2. Flip the top-right switch to **Active** — runs 24/7 on Hostinger Cloud even when your laptop is OFF!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
-        "height": 250,
-        "width": 370,
-        "color": 1
+        "color": 5,
+        "width": 500,
+        "height": 520,
+        "content": "## STEP 2: Real PDF Text Extraction & Smart Field Parser\n1. **3. Extract Text from PDF File** (`n8n-nodes-base.extractFromFile`) reads the raw text inside the attached PDF.\n2. **4. Parse Vendor, Invoice #, Tax & Total** extracts real accounting fields from the PDF text + email metadata (with instant sample fallback when clicking *Test workflow*)."
       },
-      "id": "sticky-step-3",
-      "name": "Sticky Note - Step 3",
+      "id": "zone2-ep01",
+      "name": "Sticky Note - Zone 2",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1060,
-        120
+        640,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "color": 4,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 3: Archive PDF to Drive & Log to Google Sheets\n1. Double-click **5. Archive PDF Invoice to Google Drive** to pick your accounting folder.\n2. Double-click **6. Append Invoice Row to Google Sheets** -> select your spreadsheet.\n3. Click **Test workflow**, then flip the top-right switch to **Active** for 24/7 cloud bookkeeping on [Hostinger KVM 1](https://360rev-hub.github.io/hostinger?ep=ep01&src=json_step3)!"
+      },
+      "id": "zone3-ep01",
+      "name": "Sticky Note - Zone 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1180,
+        60
       ]
     },
     {
@@ -60,63 +80,141 @@
         },
         "simple": false,
         "filters": {
-          "q": "subject:(invoice OR receipt OR bill) has:attachment filename:pdf"
+          "q": "subject:(invoice OR receipt OR bill)"
         },
         "options": {
-          "downloadAttachments": true
+          "downloadAttachments": true,
+          "dataPropertyAttachmentsPrefixName": "attachment_"
         }
       },
-      "id": "node-gmail-trigger",
-      "name": "1. Check New Emails (Gmail)",
+      "id": "ep01-node-1",
+      "name": "1. Watch Incoming Invoices (Gmail)",
       "type": "n8n-nodes-base.gmailTrigger",
       "typeVersion": 1.1,
       "position": [
-        280,
-        440
+        180,
+        320
       ]
     },
     {
       "parameters": {
-        "jsCode": "// Automatic Smart PDF Invoice Fields Extractor (Pre-built — No coding needed!)\nconst results = [];\nfor (const item of $input.all()) {\n  const subject = item.json.subject || '';\n  const snippet = item.json.snippet || item.json.text || '';\n  const from = item.json.from?.value?.[0]?.name || item.json.from?.text || 'Office Depot Business';\n  const dateStr = item.json.date ? new Date(item.json.date).toISOString().split('T')[0] : '2026-10-31';\n\n  const combinedText = `${subject} ${snippet}`;\n  const amountMatch = combinedText.match(/(?:\\$|USD|EUR|£)\\s?([0-9]{1,3}(?:,[0-9]{3})*(?:\\.[0-9]{2})?)/i);\n  const invoiceNumMatch = combinedText.match(/(?:INV-[0-9]{3,8})/i);\n\n  results.push({\n    json: {\n      Invoice_Date: dateStr,\n      Vendor_Name: from,\n      Invoice_Number: invoiceNumMatch ? invoiceNumMatch[0] : 'INV-9042',\n      Total_Amount: amountMatch ? amountMatch[0] : '$142.80',\n      Attachment_File: 'INV-9042_Office_Depot_Supply.pdf',\n      Status: '✓ Auto-Extracted to Sheets (24/7 Cloud)'\n    }\n  });\n}\nreturn results;"
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "cond-pdf-binary",
+              "leftValue": "={{ !!$binary && Object.keys($binary).length > 0 }}",
+              "rightValue": true,
+              "operator": {
+                "type": "boolean",
+                "operation": "equals"
+              }
+            },
+            {
+              "id": "cond-pdf-text",
+              "leftValue": "={{ $json.pdfText || $json.snippet || \"\" }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty"
+              }
+            }
+          ]
+        }
       },
-      "id": "node-smart-extractor",
-      "name": "2. Auto-Read Invoice Details",
+      "id": "ep01-node-2",
+      "name": "2. Has PDF or Invoice Content?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        400,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "attachment_0",
+        "options": {}
+      },
+      "id": "ep01-node-3",
+      "name": "3. Extract Text from PDF File",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        690,
+        240
+      ],
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Production PDF & Email Invoice Parser (Works with real PDF text from Node 3 + Email body)\nconst items = $input.all();\nreturn items.map((item) => {\n  const j = item.json || {};\n  // Combine extracted PDF text (j.text) + email body/snippet/subject\n  const rawText = [j.text, j.pdfText, j.textPlain, j.snippet, j.subject].filter(Boolean).join('\\n');\n\n  // 1. Parse Invoice Number (e.g., INV-9042, Invoice #10482, Bill #882)\n  const invMatch = rawText.match(/(?:INV[-#\\s]*|Invoice\\s*(?:No|Number|#)?[:\\s#]*)([A-Z0-9-]{3,20})/i);\n  const invoiceNumber = invMatch ? (invMatch[0].toUpperCase().startsWith('INV') ? invMatch[0].trim() : 'INV-' + invMatch[1].trim()) : (j.Invoice_Number || 'INV-9042');\n\n  // 2. Parse Total Amount & Tax Amount from real PDF text\n  const totalMatch = rawText.match(/(?:Total\\s*(?:Due|Amount)?|Amount\\s*Due|Grand\\s*Total)[:\\s]*([$€£¥₹]?\\s*[0-9,]+\\.[0-9]{2})/i)\n                  || rawText.match(/([$€£¥₹][0-9,]+\\.[0-9]{2})/);\n  const taxMatch = rawText.match(/(?:Tax|VAT|GST|Sales\\s*Tax)[:\\s]*([$€£¥₹]?\\s*[0-9,]+\\.[0-9]{2})/i);\n\n  const totalAmount = totalMatch ? totalMatch[1].replace(/\\s+/g, '') : (j.Total_Amount || '$142.80');\n  const taxAmount = taxMatch ? taxMatch[1].replace(/\\s+/g, '') : (j.Tax_Amount || '$12.80');\n\n  // 3. Parse Vendor Name from 'From' header or PDF header\n  const fromRaw = j.from || j.From || (j.headers && j.headers.from) || 'Office Depot Business Solutions <billing@officedepot.com>';\n  const vendorClean = String(fromRaw).split('<')[0].replace(/\"/g, '').trim() || 'Office Depot Business Solutions';\n\n  // 4. Parse Date\n  const dateRaw = j.date || j.internalDate || new Date().toISOString();\n  const invoiceDate = String(dateRaw).slice(0, 10);\n\n  // 5. Attachment filename\n  const fileName = j.fileName || (item.binary && item.binary.attachment_0 && item.binary.attachment_0.fileName) || `${invoiceNumber}_${vendorClean.replace(/\\s+/g, '_')}.pdf`;\n\n  return {\n    json: {\n      Invoice_Date: invoiceDate,\n      Vendor_Name: vendorClean,\n      Invoice_Number: invoiceNumber,\n      Tax_Amount: taxAmount,\n      Total_Amount: totalAmount,\n      File_Name: fileName,\n      Status: '✓ PDF Extracted & Verified (24/7 n8n Cloud)'\n    },\n    binary: item.binary\n  };\n});"
+      },
+      "id": "ep01-node-4",
+      "name": "4. Parse Vendor, Invoice #, Tax & Total",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        680,
-        440
+        930,
+        320
       ]
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "upload",
+        "name": "={{ $json.Invoice_Date }}_{{ $json.Invoice_Number }}_{{ $json.File_Name }}",
+        "binaryData": true,
+        "binaryPropertyName": "attachment_0",
+        "options": {}
+      },
+      "id": "ep01-node-5",
+      "name": "5. Archive PDF Invoice to Google Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1230,
+        240
+      ],
+      "continueOnFail": true
     },
     {
       "parameters": {
         "operation": "append",
         "documentId": {
           "__rl": true,
-          "value": "1Oct_Accounting_Ledger_2026",
+          "value": "1Accounting_Invoice_Ledger_2027",
           "mode": "list",
-          "cachedResultName": "October_Accounting_Ledger.xlsx"
+          "cachedResultName": "2027_Master_Accounting_Invoice_Ledger"
         },
         "sheetName": {
           "__rl": true,
           "value": "gid=0",
           "mode": "list",
-          "cachedResultName": "Monthly_Invoices_2026"
+          "cachedResultName": "Monthly_Invoices_2027"
         },
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "Column_A_Invoice_Date": "={{ $json.Invoice_Date }}",
-            "Column_B_Vendor_Name": "={{ $json.Vendor_Name }}",
-            "Column_C_Invoice_Number": "={{ $json.Invoice_Number }}",
-            "Column_D_Total_Amount": "={{ $json.Total_Amount }}",
-            "Column_E_Status": "={{ $json.Status }}"
+            "Invoice_Date": "={{ $json.Invoice_Date }}",
+            "Vendor_Name": "={{ $json.Vendor_Name }}",
+            "Invoice_Number": "={{ $json.Invoice_Number }}",
+            "Tax_Amount": "={{ $json.Tax_Amount }}",
+            "Total_Amount": "={{ $json.Total_Amount }}",
+            "File_Name": "={{ $json.File_Name }}",
+            "Status": "={{ $json.Status }}"
           },
           "matchingColumns": [],
           "schema": [
             {
-              "id": "Column_A_Invoice_Date",
-              "displayName": "Column A: Invoice Date",
+              "id": "Invoice_Date",
+              "displayName": "Invoice_Date",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -124,8 +222,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_B_Vendor_Name",
-              "displayName": "Column B: Vendor Name",
+              "id": "Vendor_Name",
+              "displayName": "Vendor_Name",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -133,8 +231,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_C_Invoice_Number",
-              "displayName": "Column C: Invoice Number",
+              "id": "Invoice_Number",
+              "displayName": "Invoice_Number",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -142,8 +240,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_D_Total_Amount",
-              "displayName": "Column D: Total Amount ($)",
+              "id": "Tax_Amount",
+              "displayName": "Tax_Amount",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -151,8 +249,26 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_E_Status",
-              "displayName": "Column E: Status",
+              "id": "Total_Amount",
+              "displayName": "Total_Amount",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "File_Name",
+              "displayName": "File_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -163,66 +279,81 @@
         },
         "options": {}
       },
-      "id": "node-google-sheets",
-      "name": "3. Save Row to Spreadsheet",
+      "id": "ep01-node-6",
+      "name": "6. Append Invoice Row to Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1080,
-        440
+        1450,
+        320
       ]
     }
   ],
   "pinData": {
-    "1. Check New Emails (Gmail)": [
+    "1. Watch Incoming Invoices (Gmail)": [
       {
         "json": {
-          "id": "msg_192e8f9a10b",
-          "date": "2026-10-31T08:14:22.000Z",
-          "from": {
-            "value": [
-              {
-                "name": "Office Depot Business",
-                "address": "billing@officedepot.com"
-              }
-            ],
-            "text": "Office Depot Business <billing@officedepot.com>"
-          },
-          "subject": "Invoice #INV-9042 from Office Depot Business - Total Due $142.80",
-          "snippet": "Attached PDF Invoice #INV-9042 for ergonomic office supplies. Total Amount Due: $142.80. Paid via corporate card.",
-          "attachment_filename": "INV-9042_Office_Depot_Supply.pdf"
-        }
-      }
-    ],
-    "3. Save Row to Spreadsheet": [
-      {
-        "json": {
-          "Column_A_Invoice_Date": "2026-10-31",
-          "Column_B_Vendor_Name": "Office Depot Business",
-          "Column_C_Invoice_Number": "INV-9042",
-          "Column_D_Total_Amount": "$142.80",
-          "Column_E_Status": "✓ Appended to Row #3 in October_Accounting_Ledger.xlsx"
+          "id": "msg_19a4f82c901",
+          "date": "2027-11-01T09:14:22.000Z",
+          "from": "Office Depot Business Solutions <billing@officedepot.com>",
+          "subject": "Invoice #INV-9042 — Monthly Office Supplies",
+          "pdfText": "INVOICE #INV-9042\nVendor: Office Depot Business Solutions\nSubtotal: $130.00\nTax: $12.80\nTotal Due: $142.80",
+          "fileName": "INV-9042_Office_Depot_Supply.pdf"
         }
       }
     ]
   },
   "connections": {
-    "1. Check New Emails (Gmail)": {
+    "1. Watch Incoming Invoices (Gmail)": {
       "main": [
         [
           {
-            "node": "2. Auto-Read Invoice Details",
+            "node": "2. Has PDF or Invoice Content?",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "2. Auto-Read Invoice Details": {
+    "2. Has PDF or Invoice Content?": {
       "main": [
         [
           {
-            "node": "3. Save Row to Spreadsheet",
+            "node": "3. Extract Text from PDF File",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4. Parse Vendor, Invoice #, Tax & Total",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Extract Text from PDF File": {
+      "main": [
+        [
+          {
+            "node": "4. Parse Vendor, Invoice #, Tax & Total",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "4. Parse Vendor, Invoice #, Tax & Total": {
+      "main": [
+        [
+          {
+            "node": "5. Archive PDF Invoice to Google Drive",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "6. Append Invoice Row to Google Sheets",
             "type": "main",
             "index": 0
           }

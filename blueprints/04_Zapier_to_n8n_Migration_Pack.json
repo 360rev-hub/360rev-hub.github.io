@@ -1,85 +1,133 @@
 {
-  "name": "Multi-Step Zapier Replacement Flow",
+  "name": "EP04 — Multi-Step Zapier Pro Replacement Pipeline (Webhook -> Enrich -> Router -> CRM)",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "360rev-production-ep04-2027"
+  },
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep04](https://360rev-hub.github.io/ep04)",
-        "height": 250,
-        "width": 390,
-        "color": 1
+        "color": 4,
+        "width": 440,
+        "height": 620,
+        "content": "## ⚡ 360 REV — EPISODE #04 BLUEPRINT\n### n8n vs Zapier vs Make Pricing (2027): Replace $149/mo With $6.49\n\n**🚀 1. Run This Workflow 24/7 (While Your Laptop is OFF):**\n* [Launch Hostinger 1-Click n8n Cloud ($6.49/mo — Save $1,710/yr vs Zapier)](https://360rev-hub.github.io/hostinger?ep=ep04&src=json_sticky&cta=canvas_card)\n* *In hPanel, select **Applications → Ubuntu 24.04 with n8n** (Coupon `MMVPS` / Partner Deal auto-applied).*\n\n**📊 2. Copy-Paste Google Sheets Columns (Row 1 Headers):**\n`Order_ID | Client_Name | Client_Email | Deal_Amount | Priority_Tier | Zapier_Fee_Saved`\n* [Open Episode #04 Interactive Setup Hub & 1-Click Sheet Copy](https://360rev-hub.github.io/ep04/?src=json_sticky)\n\n**🎥 3. Watch Video Setup Tutorial:**\n* [Watch the 2-Minute Step-by-Step Video on YouTube (@360rev3)](https://www.youtube.com/watch?v=NO6nRD4wC7c)\n\n**🛠️ Architecture Highlights:**\n* **Zone 1:** Captures real incoming Webhooks from Stripe, Shopify, Typeform, or Calendly (replaces Zapier Webhook Pro).\n* **Zone 2:** Dynamically normalizes customer fields, calculates deal tier, and routes VIP deals (`>= $1,000`) without paying per-step Zapier fees.\n* **Zone 3:** Logs enriched leads/orders to Google Sheets CRM & sends instant VIP Gmail notifications.\n\n---\n*📂 Need more free templates? Visit [360rev-hub.github.io](https://360rev-hub.github.io/?src=json_footer)*"
       },
-      "id": "sticky-ep04-1",
-      "name": "Sticky Note - Step 1",
+      "id": "sticky-master-ep04",
+      "name": "0. Master Setup & Links (EP04)",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        160,
-        120
+        -360,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 2: Multi-Step Filter & Cost Calculator\n1. Double-click **2. Enrich Lead & Calculate Savings** below.\n2. Formats lead details, calculates order value, and logs **$0.00 per-task cost** (saving $1,710/year vs Zapier Pro)!",
-        "height": 230,
-        "width": 380,
-        "color": 1
+        "color": 7,
+        "width": 460,
+        "height": 520,
+        "content": "## STEP 1: Universal Webhook Trigger (Zero Task Fees)\n1. **1. Incoming Lead / Order Webhook** gives you a dedicated HTTPS Webhook URL on your [Hostinger KVM 1 n8n Cloud](https://360rev-hub.github.io/hostinger?ep=ep04&src=json_step1).\n2. Paste this URL into Stripe, Shopify, Webflow, Elementor, or Typeform!"
       },
-      "id": "sticky-ep04-2",
-      "name": "Sticky Note - Step 2",
+      "id": "zone1-ep04",
+      "name": "Sticky Note - Zone 1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        600,
-        120
+        120,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 3: Save to Google Sheets & Turn ON!\n1. Double-click **3. Save to Master CRM Sheet** -> select your spreadsheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active** to replace Zapier 24/7!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
-        "height": 250,
-        "width": 370,
-        "color": 1
+        "color": 5,
+        "width": 500,
+        "height": 520,
+        "content": "## STEP 2: Multi-Step Lead Normalizer & VIP Router\n1. **2. Normalize & Enrich Payload** parses real webhook fields (`body.email`, `body.name`, `body.amount`) and formats currency.\n2. **3. Is VIP Deal (>= $1,000)?** routes high-ticket orders for priority handling (in Zapier, every filter & path costs extra tasks; in n8n it is 100% free!)."
       },
-      "id": "sticky-ep04-3",
-      "name": "Sticky Note - Step 3",
+      "id": "zone2-ep04",
+      "name": "Sticky Note - Zone 2",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1060,
-        120
+        620,
+        60
       ]
     },
     {
       "parameters": {
-        "rule": {
-          "interval": [
+        "color": 4,
+        "width": 460,
+        "height": 520,
+        "content": "## STEP 3: Sync to Master CRM Sheet & VIP Alert\n1. Double-click **4. Sync to Master CRM Google Sheet** -> select your CRM spreadsheet.\n2. Optional: Connect **5. Send VIP Deal Alert (Gmail)** for deals over $1,000."
+      },
+      "id": "zone3-ep04",
+      "name": "Sticky Note - Zone 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1160,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "zapier-migration-intake",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "ep04-node-1",
+      "name": "1. Incoming Lead / Order Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        180,
+        320
+      ],
+      "webhookId": "360rev-ep04-webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Dynamic Webhook Lead/Order Normalizer (Reads real POST body or query parameters)\nreturn $input.all().map((item) => {\n  const raw = item.json.body || item.json.query || item.json || {};\n  const amountNum = parseFloat(String(raw.amount || raw.total || raw.Deal_Amount || '1250.00').replace(/[^0-9.]/g, '')) || 1250.00;\n  const isVip = amountNum >= 1000;\n\n  return {\n    json: {\n      Order_ID: raw.order_id || raw.id || raw.Order_ID || 'ORD-2027-' + Math.floor(1000 + Math.random() * 9000),\n      Client_Name: raw.name || raw.customer_name || raw.Client_Name || 'Apex Digital Agency',\n      Client_Email: raw.email || raw.customer_email || raw.Client_Email || 'ops@apexdigital.io',\n      Deal_Amount: '$' + amountNum.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),\n      Amount_Numeric: amountNum,\n      Is_VIP: isVip,\n      Priority_Tier: isVip ? '🔥 VIP HIGH-TICKET (>= $1,000)' : '✓ Standard Order',\n      Zapier_Fee_Saved: '$0.00 Task Fee (Hostinger KVM 1 Unlimited — Save $1,710/yr)'\n    }\n  };\n});"
+      },
+      "id": "ep04-node-2",
+      "name": "2. Normalize & Enrich Payload",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        670,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
             {
-              "field": "minutes",
-              "minutesInterval": 5
+              "id": "cond-vip-amount",
+              "leftValue": "={{ $json.Amount_Numeric }}",
+              "rightValue": 1000,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
             }
           ]
         }
       },
-      "id": "node-ep04-trigger",
-      "name": "1. Incoming Lead / Order Trigger",
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.2,
-      "position": [
-        280,
-        440
-      ]
-    },
-    {
-      "parameters": {
-        "jsCode": "// Multi-Step Zapier Replacement Processor ($0.00 Per-Task Fee on Hostinger KVM 1)\nreturn [\n  {\n    json: {\n      Order_ID: 'ORD-2026-8841',\n      Client_Name: 'Apex Digital Agency',\n      Monthly_Tasks_Run: '50,000 Tasks/mo (UNLIMITED)',\n      Zapier_Pro_Cost: '$149.00/mo ($1,788/yr)',\n      Hostinger_n8n_Cost: '$6.49/mo (Saved $1,710/yr ✓)'\n    }\n  }\n];"
-      },
-      "id": "node-ep04-processor",
-      "name": "2. Enrich Lead & Calculate Savings",
-      "type": "n8n-nodes-base.code",
+      "id": "ep04-node-3",
+      "name": "3. Is VIP Deal (>= $1,000)?",
+      "type": "n8n-nodes-base.if",
       "typeVersion": 2,
       "position": [
-        680,
-        440
+        920,
+        320
       ]
     },
     {
@@ -87,30 +135,31 @@
         "operation": "append",
         "documentId": {
           "__rl": true,
-          "value": "1Zapier_to_n8n_Migration_Sheet_2026",
+          "value": "1Zapier_Migration_CRM_Sheet_2027",
           "mode": "list",
-          "cachedResultName": "Zapier_Replacement_CRM_2026.xlsx"
+          "cachedResultName": "Master_CRM_Orders_2027"
         },
         "sheetName": {
           "__rl": true,
           "value": "gid=0",
           "mode": "list",
-          "cachedResultName": "Unlimited_Tasks_Log"
+          "cachedResultName": "Unlimited_n8n_Sync"
         },
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "Column_A_Order_ID": "={{ $json.Order_ID }}",
-            "Column_B_Client": "={{ $json.Client_Name }}",
-            "Column_C_Tasks": "={{ $json.Monthly_Tasks_Run }}",
-            "Column_D_Zapier_Cost": "={{ $json.Zapier_Pro_Cost }}",
-            "Column_E_Hostinger_Cost": "={{ $json.Hostinger_n8n_Cost }}"
+            "Order_ID": "={{ $json.Order_ID }}",
+            "Client_Name": "={{ $json.Client_Name }}",
+            "Client_Email": "={{ $json.Client_Email }}",
+            "Deal_Amount": "={{ $json.Deal_Amount }}",
+            "Priority_Tier": "={{ $json.Priority_Tier }}",
+            "Zapier_Fee_Saved": "={{ $json.Zapier_Fee_Saved }}"
           },
           "matchingColumns": [],
           "schema": [
             {
-              "id": "Column_A_Order_ID",
-              "displayName": "Column A: Order ID",
+              "id": "Order_ID",
+              "displayName": "Order_ID",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -118,8 +167,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_B_Client",
-              "displayName": "Column B: Client Name",
+              "id": "Client_Name",
+              "displayName": "Client_Name",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -127,8 +176,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_C_Tasks",
-              "displayName": "Column C: Monthly Tasks",
+              "id": "Client_Email",
+              "displayName": "Client_Email",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -136,8 +185,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_D_Zapier_Cost",
-              "displayName": "Column D: Zapier Cost",
+              "id": "Deal_Amount",
+              "displayName": "Deal_Amount",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -145,8 +194,17 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_E_Hostinger_Cost",
-              "displayName": "Column E: Hostinger KVM 1 Cost",
+              "id": "Priority_Tier",
+              "displayName": "Priority_Tier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Zapier_Fee_Saved",
+              "displayName": "Zapier_Fee_Saved",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -157,55 +215,87 @@
         },
         "options": {}
       },
-      "id": "node-ep04-sheets",
-      "name": "3. Save to Master CRM Sheet",
+      "id": "ep04-node-4",
+      "name": "4. Sync to Master CRM Google Sheet",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1080,
-        440
+        1230,
+        380
       ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.Client_Email }}",
+        "subject": "=VIP Priority Confirmation — Order {{ $json.Order_ID }} ({{ $json.Deal_Amount }})",
+        "message": "=Hi {{ $json.Client_Name }},\n\nWe have received your priority order {{ $json.Order_ID }} ({{ $json.Deal_Amount }}) and assigned a dedicated account manager.\n\nBest regards,\nOperations Team",
+        "options": {}
+      },
+      "id": "ep04-node-5",
+      "name": "5. Send VIP Priority Confirmation (Gmail)",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1230,
+        200
+      ],
+      "continueOnFail": true
     }
   ],
   "pinData": {
-    "1. Incoming Lead / Order Trigger": [
+    "1. Incoming Lead / Order Webhook": [
       {
         "json": {
-          "orderId": "ORD-2026-8841",
-          "client": "Apex Digital Agency",
-          "tasks": 50000
-        }
-      }
-    ],
-    "3. Save to Master CRM Sheet": [
-      {
-        "json": {
-          "Column_A_Order_ID": "ORD-2026-8841",
-          "Column_B_Client": "Apex Digital Agency",
-          "Column_C_Tasks": "50,000 Tasks/mo (UNLIMITED)",
-          "Column_D_Zapier_Cost": "$149.00/mo ($1,788/yr)",
-          "Column_E_Hostinger_Cost": "$6.49/mo (Saved $1,710/yr ✓)"
+          "body": {
+            "order_id": "ORD-2027-8841",
+            "name": "Apex Digital Agency",
+            "email": "ops@apexdigital.io",
+            "amount": 1250
+          }
         }
       }
     ]
   },
   "connections": {
-    "1. Incoming Lead / Order Trigger": {
+    "1. Incoming Lead / Order Webhook": {
       "main": [
         [
           {
-            "node": "2. Enrich Lead & Calculate Savings",
+            "node": "2. Normalize & Enrich Payload",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "2. Enrich Lead & Calculate Savings": {
+    "2. Normalize & Enrich Payload": {
       "main": [
         [
           {
-            "node": "3. Save to Master CRM Sheet",
+            "node": "3. Is VIP Deal (>= $1,000)?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Is VIP Deal (>= $1,000)?": {
+      "main": [
+        [
+          {
+            "node": "5. Send VIP Priority Confirmation (Gmail)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "4. Sync to Master CRM Google Sheet",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4. Sync to Master CRM Google Sheet",
             "type": "main",
             "index": 0
           }

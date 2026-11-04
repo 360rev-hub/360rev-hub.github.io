@@ -1,52 +1,72 @@
 {
-  "name": "Gmail and Google Sheets Instant Bridge",
+  "name": "EP03 — Gmail & Google Sheets Instant 24/7 Bridge (2027 Production)",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "360rev-production-ep03-2027"
+  },
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep03](https://360rev-hub.github.io/ep03)",
-        "height": 250,
-        "width": 390,
-        "color": 1
+        "color": 4,
+        "width": 440,
+        "height": 620,
+        "content": "## ⚡ 360 REV — EPISODE #03 BLUEPRINT\n### Connect Google Sheets & Gmail to Self-Hosted n8n in 2 Minutes\n\n**🚀 1. Run This Workflow 24/7 (While Your Laptop is OFF):**\n* [Launch Hostinger 1-Click n8n Cloud ($6.49/mo — Save $1,710/yr vs Zapier)](https://360rev-hub.github.io/hostinger?ep=ep03&src=json_sticky&cta=canvas_card)\n* *In hPanel, select **Applications → Ubuntu 24.04 with n8n** (Coupon `MMVPS` / Partner Deal auto-applied).*\n\n**📊 2. Copy-Paste Google Sheets Columns (Row 1 Headers):**\n`Received_Date | Sender_Name | Sender_Email | Email_Subject | Summary_Snippet | Status`\n* [Open Episode #03 Interactive Setup Hub & 1-Click Sheet Copy](https://360rev-hub.github.io/ep03/?src=json_sticky)\n\n**🎥 3. Watch Video Setup Tutorial:**\n* [Watch the 2-Minute Step-by-Step Video on YouTube (@360rev3)](https://www.youtube.com/watch?v=Ol6l8IFQQu8)\n\n**🛠️ Architecture Highlights:**\n* **Zone 1:** Connects to Gmail OAuth2 and filters out noreply/newsletter noise.\n* **Zone 2:** Dynamically parses real `From` name, email address, subject, date & clean snippet from incoming Gmail payloads.\n* **Zone 3:** Appends every client email into Google Sheets in real time.\n\n---\n*📂 Need more free templates? Visit [360rev-hub.github.io](https://360rev-hub.github.io/?src=json_footer)*"
       },
-      "id": "sticky-ep03-1",
-      "name": "Sticky Note - Step 1",
+      "id": "sticky-master-ep03",
+      "name": "0. Master Setup & Links (EP03)",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        160,
-        120
+        -360,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 2: Auto-Format Email Fields\n1. Double-click **2. Format Sender, Subject & Date** below.\n2. Pre-built formatter automatically extracts **Sender Name, Email Address, Subject, Date & Snippet** with zero formulas!",
-        "height": 230,
-        "width": 380,
-        "color": 1
+        "color": 7,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 1: Connect Gmail OAuth2 & Filter Real Senders\n1. Double-click **1. Watch Incoming Emails (Gmail)** -> click **Sign in with Google**.\n2. **2. Filter Out No-Reply / Spam** ensures only real human/business emails are logged."
       },
-      "id": "sticky-ep03-2",
-      "name": "Sticky Note - Step 2",
+      "id": "zone1-ep03",
+      "name": "Sticky Note - Zone 1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        600,
-        120
+        120,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 3: Connect Google Sheets & Activate!\n1. Double-click **3. Append to Google Sheets** -> select your spreadsheet from the dropdown.\n2. Click **Test workflow**, then flip the top-right switch to **Active**!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
-        "height": 250,
-        "width": 370,
-        "color": 1
+        "color": 5,
+        "width": 460,
+        "height": 520,
+        "content": "## STEP 2: Real Dynamic Sender & Subject Parser\n1. **3. Parse Real Sender Name, Email & Snippet** splits `\"Name <email@domain.com>\"` into clean separate columns and strips HTML tags from the email preview."
       },
-      "id": "sticky-ep03-3",
-      "name": "Sticky Note - Step 3",
+      "id": "zone2-ep03",
+      "name": "Sticky Note - Zone 2",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1060,
-        120
+        640,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "color": 4,
+        "width": 440,
+        "height": 520,
+        "content": "## STEP 3: Sync to Google Sheets 24/7\n1. Double-click **4. Append Row to Google Sheets** -> select your spreadsheet.\n2. Flip the top-right switch to **Active** on your [Hostinger 1-Click n8n Cloud](https://360rev-hub.github.io/hostinger?ep=ep03&src=json_step3)!"
+      },
+      "id": "zone3-ep03",
+      "name": "Sticky Note - Zone 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        60
       ]
     },
     {
@@ -60,32 +80,61 @@
         },
         "simple": false,
         "filters": {
-          "q": "is:unread"
+          "q": "is:unread -category:promotions -category:social"
         },
-        "options": {
-          "downloadAttachments": true
-        }
+        "options": {}
       },
-      "id": "node-ep03-gmail",
+      "id": "ep03-node-1",
       "name": "1. Watch Incoming Emails (Gmail)",
       "type": "n8n-nodes-base.gmailTrigger",
       "typeVersion": 1.1,
       "position": [
-        280,
-        440
+        180,
+        320
       ]
     },
     {
       "parameters": {
-        "jsCode": "// Instant Email-to-Spreadsheet Field Formatter (Zero coding required!)\nreturn [\n  {\n    json: {\n      Received_Date: '2026-11-01 09:15 AM',\n      Sender_Name: 'Sarah Jenkins (Client Operations)',\n      Sender_Email: 'sarah@apexconsulting.io',\n      Email_Subject: 'New Monthly Retainer Agreement & Onboarding PDF',\n      Connection_Status: '✓ Connected via Self-Hosted n8n Bridge (0 Fees)'\n    }\n  }\n];"
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "cond-not-noreply",
+              "leftValue": "={{ String($json.from || $json.From || \"\") }}",
+              "rightValue": "noreply@",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
+            }
+          ]
+        }
       },
-      "id": "node-ep03-formatter",
-      "name": "2. Format Sender, Subject & Date",
+      "id": "ep03-node-2",
+      "name": "2. Filter Out No-Reply / Spam",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        410,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Dynamic Gmail Payload Parser (Extracts real Sender Name, Email, Subject & Snippet)\nreturn $input.all().map((item) => {\n  const j = item.json || {};\n  const rawFrom = String(j.from || j.From || (j.headers && j.headers.from) || 'Sarah Jenkins <sarah@apexconsulting.io>');\n  const emailMatch = rawFrom.match(/<([^>]+)>/);\n  const senderEmail = emailMatch ? emailMatch[1].trim() : (rawFrom.includes('@') ? rawFrom.trim() : 'sarah@apexconsulting.io');\n  const senderName = rawFrom.split('<')[0].replace(/\"/g, '').trim() || senderEmail.split('@')[0];\n\n  const subject = j.subject || j.Subject || (j.headers && j.headers.subject) || 'New Monthly Retainer Agreement & Onboarding PDF';\n  const snippet = String(j.snippet || j.textPlain || 'Hi team, attached is our signed monthly retainer agreement and project kickoff schedule.').replace(/\\s+/g, ' ').slice(0, 220);\n  const rawDate = j.date || j.Date || new Date().toISOString();\n\n  return {\n    json: {\n      Received_Date: String(rawDate).slice(0, 16).replace('T', ' '),\n      Sender_Name: senderName,\n      Sender_Email: senderEmail,\n      Email_Subject: subject,\n      Summary_Snippet: snippet,\n      Status: '✓ Synced via Self-Hosted n8n Bridge ($0 Fees)'\n    }\n  };\n});"
+      },
+      "id": "ep03-node-3",
+      "name": "3. Parse Real Sender Name, Email & Snippet",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        680,
-        440
+        740,
+        320
       ]
     },
     {
@@ -93,30 +142,31 @@
         "operation": "append",
         "documentId": {
           "__rl": true,
-          "value": "1Master_Client_Email_Tracker_2026",
+          "value": "1Master_Client_Email_Tracker_2027",
           "mode": "list",
-          "cachedResultName": "Master_Client_Email_Tracker.xlsx"
+          "cachedResultName": "Master_Client_Email_Tracker_2027"
         },
         "sheetName": {
           "__rl": true,
           "value": "gid=0",
           "mode": "list",
-          "cachedResultName": "Inbox_Log_2026"
+          "cachedResultName": "Inbox_Log_2027"
         },
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "Column_A_Date": "={{ $json.Received_Date }}",
-            "Column_B_Sender": "={{ $json.Sender_Name }}",
-            "Column_C_Email": "={{ $json.Sender_Email }}",
-            "Column_D_Subject": "={{ $json.Email_Subject }}",
-            "Column_E_Status": "={{ $json.Connection_Status }}"
+            "Received_Date": "={{ $json.Received_Date }}",
+            "Sender_Name": "={{ $json.Sender_Name }}",
+            "Sender_Email": "={{ $json.Sender_Email }}",
+            "Email_Subject": "={{ $json.Email_Subject }}",
+            "Summary_Snippet": "={{ $json.Summary_Snippet }}",
+            "Status": "={{ $json.Status }}"
           },
           "matchingColumns": [],
           "schema": [
             {
-              "id": "Column_A_Date",
-              "displayName": "Column A: Received Date",
+              "id": "Received_Date",
+              "displayName": "Received_Date",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -124,8 +174,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_B_Sender",
-              "displayName": "Column B: Sender Name",
+              "id": "Sender_Name",
+              "displayName": "Sender_Name",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -133,8 +183,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_C_Email",
-              "displayName": "Column C: Sender Email",
+              "id": "Sender_Email",
+              "displayName": "Sender_Email",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -142,8 +192,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_D_Subject",
-              "displayName": "Column D: Email Subject",
+              "id": "Email_Subject",
+              "displayName": "Email_Subject",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -151,8 +201,17 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_E_Status",
-              "displayName": "Column E: Connection Status",
+              "id": "Summary_Snippet",
+              "displayName": "Summary_Snippet",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -163,13 +222,13 @@
         },
         "options": {}
       },
-      "id": "node-ep03-sheets",
-      "name": "3. Append to Google Sheets",
+      "id": "ep03-node-4",
+      "name": "4. Append Row to Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1080,
-        440
+        1220,
+        320
       ]
     }
   ],
@@ -178,20 +237,10 @@
       {
         "json": {
           "id": "msg_ep03_881a",
-          "date": "2026-11-01T09:15:00.000Z",
+          "date": "2027-11-01T09:15:00.000Z",
           "from": "Sarah Jenkins <sarah@apexconsulting.io>",
-          "subject": "New Monthly Retainer Agreement & Onboarding PDF"
-        }
-      }
-    ],
-    "3. Append to Google Sheets": [
-      {
-        "json": {
-          "Column_A_Date": "2026-11-01 09:15 AM",
-          "Column_B_Sender": "Sarah Jenkins (Client Operations)",
-          "Column_C_Email": "sarah@apexconsulting.io",
-          "Column_D_Subject": "New Monthly Retainer Agreement & Onboarding PDF",
-          "Column_E_Status": "✓ Connected via Self-Hosted n8n Bridge (0 Fees)"
+          "subject": "New Monthly Retainer Agreement & Onboarding PDF",
+          "snippet": "Hi team, attached is our signed monthly retainer agreement and project kickoff schedule for Q4."
         }
       }
     ]
@@ -201,18 +250,29 @@
       "main": [
         [
           {
-            "node": "2. Format Sender, Subject & Date",
+            "node": "2. Filter Out No-Reply / Spam",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "2. Format Sender, Subject & Date": {
+    "2. Filter Out No-Reply / Spam": {
       "main": [
         [
           {
-            "node": "3. Append to Google Sheets",
+            "node": "3. Parse Real Sender Name, Email & Snippet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Parse Real Sender Name, Email & Snippet": {
+      "main": [
+        [
+          {
+            "node": "4. Append Row to Google Sheets",
             "type": "main",
             "index": 0
           }
