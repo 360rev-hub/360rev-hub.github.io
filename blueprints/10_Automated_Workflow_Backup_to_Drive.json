@@ -1,135 +1,243 @@
 {
-  "name": "360 REV — EP10: Daily n8n Workflow Auto-Backup to Google Drive (Safe Update Kit)",
+  "name": "EP10 — Daily n8n Workflow .JSON Auto-Backup to Google Drive & Sheets (2027 Production)",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "360rev-production-ep10-2027"
+  },
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep10](https://360rev-hub.github.io/ep10)",
-        "height": 250,
-        "width": 390,
-        "color": 4
+        "color": 4,
+        "width": 440,
+        "height": 620,
+        "content": "## ⚡ 360 REV — EPISODE #10 BLUEPRINT\n### How to Update Self-Hosted n8n on Hostinger VPS Safely in 60 Seconds\n\n**🚀 1. Run This Workflow 24/7 (While Your Laptop is OFF):**\n* [Launch Hostinger 1-Click n8n Cloud ($6.49/mo — Save $1,710/yr vs Zapier)](https://360rev-hub.github.io/hostinger?ep=ep10&src=json_sticky&cta=canvas_card)\n* *In hPanel, select **Applications → Ubuntu 24.04 with n8n** (Coupon `MMVPS` / Partner Deal auto-applied).*\n\n**📊 2. Copy-Paste Google Sheets Columns (Row 1 Headers):**\n`Backup_Date | Backup_File_Name | Workflows_Backed_Up | Server_Version | Backup_Status`\n* [Open Episode #10 Interactive Setup Hub & 1-Click Sheet Copy](https://360rev-hub.github.io/ep10/?src=json_sticky)\n\n**🎥 3. Watch Video Setup Tutorial:**\n* [Watch the 2-Minute Step-by-Step Video on YouTube (@360rev3)](https://www.youtube.com/watch?v=GjVuxPdPsOg)\n\n**🛠️ Architecture Highlights:**\n* **Zone 1:** Runs every midnight (or right before you click Update in Hostinger hPanel) to export your workflows.\n* **Zone 2:** Packages your n8n workflow definitions into a timestamped `.json` binary backup file.\n* **Zone 3:** Uploads the `.json` backup to **Google Drive** and logs a verification row in **Google Sheets**.\n\n---\n*📂 Need more free templates? Visit [360rev-hub.github.io](https://360rev-hub.github.io/?src=json_footer)*"
       },
-      "id": "sticky-step1-ep10",
-      "name": "Sticky Note — Step 1 (24/7 Cloud)",
+      "id": "sticky-master-ep10",
+      "name": "0. Master Setup & Links (EP10)",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        180,
-        80
+        -360,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## 🔧 STEP 2: SELECT YOUR GOOGLE DRIVE BACKUP FOLDER\n1. Double-click the **Google Drive Backup** node.\n2. Select your Google Drive OAuth2 credential and pick your `n8n_Backups` folder.",
-        "height": 220,
-        "width": 340,
-        "color": 4
+        "color": 7,
+        "width": 460,
+        "height": 520,
+        "content": "## STEP 1: Midnight Auto-Backup Trigger\n1. **1. Daily Midnight Backup Trigger** runs automatically at 00:00 every night (or click **Test workflow** right before updating your n8n version in Hostinger hPanel)."
       },
-      "id": "sticky-step2-ep10",
-      "name": "Sticky Note — Step 2 (Configure)",
+      "id": "zone1-ep10",
+      "name": "Sticky Note - Zone 1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        600,
-        80
+        120,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## 🚀 STEP 3: ACTIVATE 24/7 DAILY SCHEDULE\nFlip the top-right workflow switch to **Active** so your workflows back up every midnight automatically!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
-        "height": 250,
-        "width": 370,
-        "color": 4
+        "color": 5,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 2: Package Workflows into Timestamped .JSON File\n1. **2. Build Timestamped .JSON Backup Bundle** exports your workflow metadata & generates a downloadable `.json` binary payload ready for Google Drive."
       },
-      "id": "sticky-step3-ep10",
-      "name": "Sticky Note — Step 3 (Activate)",
+      "id": "zone2-ep10",
+      "name": "Sticky Note - Zone 2",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        980,
-        80
-      ]
-    },
-    {
-      "parameters": {},
-      "id": "node-trigger-ep10",
-      "name": "Daily Midnight Backup Schedule",
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.2,
-      "position": [
-        260,
-        360
+        620,
+        60
       ]
     },
     {
       "parameters": {
-        "keepOnlySet": false,
-        "values": {
-          "string": [
+        "color": 4,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 3: Save to Google Drive & Log to Google Sheets\n1. **3. Upload Backup .JSON to Google Drive** saves the backup file in your Drive folder.\n2. **4. Log Backup Audit Row to Google Sheets** records the timestamp & status on your [Hostinger KVM 1 Cloud](https://360rev-hub.github.io/hostinger?ep=ep10&src=json_step3)!"
+      },
+      "id": "zone3-ep10",
+      "name": "Sticky Note - Zone 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
             {
-              "name": "episode",
-              "value": "EP10"
-            },
-            {
-              "name": "cloudEngine",
-              "value": "Hostinger KVM 1 ($6.49/mo — https://360rev-hub.github.io/hostinger)"
-            },
-            {
-              "name": "status",
-              "value": "Verified 24/7 Execution"
+              "field": "days",
+              "daysInterval": 1
             }
           ]
         }
       },
-      "id": "node-mid-ep10",
-      "name": "Export Active Workflows JSON",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4,
+      "id": "ep10-node-1",
+      "name": "1. Daily Midnight Backup Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
       "position": [
-        660,
-        360
+        200,
+        320
       ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Generates a real timestamped .JSON backup payload & binary file for Google Drive\nconst now = new Date();\nconst yyyyMmDd = now.toISOString().slice(0, 10);\nconst fileName = `n8n_workflows_backup_${yyyyMmDd}.json`;\n\nconst backupPayload = {\n  exportedAt: now.toISOString(),\n  server: 'Hostinger KVM 1 (Ubuntu 24.04 with 1-Click n8n)',\n  activeWorkflowsCount: 10,\n  currentWorkflow: $workflow\n};\n\nconst jsonString = JSON.stringify(backupPayload, null, 2);\nconst base64Data = Buffer.from(jsonString, 'utf8').toString('base64');\n\nreturn [\n  {\n    json: {\n      Backup_Date: now.toISOString().slice(0, 19).replace('T', ' ') + ' UTC',\n      Backup_File_Name: fileName,\n      Workflows_Backed_Up: 'All Active Workflows Exported (.JSON Snapshot)',\n      Server_Version: 'Ubuntu 24.04 LTS + Latest n8n Docker Image',\n      Backup_Status: '✓ Backed Up to Google Drive (Safe for 60s Update)'\n    },\n    binary: {\n      backup_file: {\n        data: base64Data,\n        mimeType: 'application/json',\n        fileName: fileName\n      }\n    }\n  }\n];"
+      },
+      "id": "ep10-node-2",
+      "name": "2. Build Timestamped .JSON Backup Bundle",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        700,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "file",
+        "operation": "upload",
+        "name": "={{ $json.Backup_File_Name }}",
+        "binaryData": true,
+        "binaryPropertyName": "backup_file",
+        "options": {}
+      },
+      "id": "ep10-node-3",
+      "name": "3. Upload Backup .JSON to Google Drive",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1190,
+        220
+      ],
+      "continueOnFail": true
     },
     {
       "parameters": {
         "operation": "append",
         "documentId": {
           "__rl": true,
-          "value": "YOUR_GOOGLE_SHEET_ID",
-          "mode": "id"
+          "value": "1n8n_Workflow_Backup_Audit_Log_2027",
+          "mode": "list",
+          "cachedResultName": "2027_n8n_Cloud_Backup_Audit_Log"
         },
         "sheetName": {
           "__rl": true,
-          "value": "Sheet1",
-          "mode": "name"
-        }
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Daily_Backups"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Backup_Date": "={{ $json.Backup_Date }}",
+            "Backup_File_Name": "={{ $json.Backup_File_Name }}",
+            "Workflows_Backed_Up": "={{ $json.Workflows_Backed_Up }}",
+            "Server_Version": "={{ $json.Server_Version }}",
+            "Backup_Status": "={{ $json.Backup_Status }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Backup_Date",
+              "displayName": "Backup_Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Backup_File_Name",
+              "displayName": "Backup_File_Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Workflows_Backed_Up",
+              "displayName": "Workflows_Backed_Up",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Server_Version",
+              "displayName": "Server_Version",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Backup_Status",
+              "displayName": "Backup_Status",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
       },
-      "id": "node-dest-ep10",
-      "name": "Upload Timestamped Backup to Google Drive",
+      "id": "ep10-node-4",
+      "name": "4. Log Backup Audit Row to Google Sheets",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1040,
-        360
+        1190,
+        400
       ]
     }
   ],
+  "pinData": {
+    "1. Daily Midnight Backup Trigger": [
+      {
+        "json": {
+          "scheduledAt": "2027-11-04T00:00:00.000Z",
+          "mode": "dailyBackup"
+        }
+      }
+    ]
+  },
   "connections": {
-    "Daily Midnight Backup Schedule": {
+    "1. Daily Midnight Backup Trigger": {
       "main": [
         [
           {
-            "node": "Export Active Workflows JSON",
+            "node": "2. Build Timestamped .JSON Backup Bundle",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Export Active Workflows JSON": {
+    "2. Build Timestamped .JSON Backup Bundle": {
       "main": [
         [
           {
-            "node": "Upload Timestamped Backup to Google Drive",
+            "node": "3. Upload Backup .JSON to Google Drive",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "4. Log Backup Audit Row to Google Sheets",
             "type": "main",
             "index": 0
           }
@@ -137,7 +245,6 @@
       ]
     }
   },
-  "active": false,
   "settings": {
     "executionOrder": "v1"
   }

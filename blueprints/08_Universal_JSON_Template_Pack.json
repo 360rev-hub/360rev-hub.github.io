@@ -1,52 +1,72 @@
 {
-  "name": "All-in-One Office Automation Starter",
+  "name": "EP08 — Universal 3-Click .JSON Office Automation Starter Pack (Webhook + Schedule)",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "360rev-production-ep08-2027"
+  },
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep08](https://360rev-hub.github.io/ep08)",
-        "height": 250,
-        "width": 390,
-        "color": 1
+        "color": 4,
+        "width": 440,
+        "height": 620,
+        "content": "## ⚡ 360 REV — EPISODE #08 BLUEPRINT\n### How to Import Free Workflow Templates (.JSON) into Self-Hosted n8n\n\n**🚀 1. Run This Workflow 24/7 (While Your Laptop is OFF):**\n* [Launch Hostinger 1-Click n8n Cloud ($6.49/mo — Save $1,710/yr vs Zapier)](https://360rev-hub.github.io/hostinger?ep=ep08&src=json_sticky&cta=canvas_card)\n* *In hPanel, select **Applications → Ubuntu 24.04 with n8n** (Coupon `MMVPS` / Partner Deal auto-applied).*\n\n**📊 2. Copy-Paste Google Sheets Columns (Row 1 Headers):**\n`Timestamp | Source_Trigger | Record_Title | Owner_Email | Status`\n* [Open Episode #08 Interactive Setup Hub & 1-Click Sheet Copy](https://360rev-hub.github.io/ep08/?src=json_sticky)\n\n**🎥 3. Watch Video Setup Tutorial:**\n* [Watch the 2-Minute Step-by-Step Video on YouTube (@360rev3)](https://www.youtube.com/watch?v=qgjIOx-UFKE)\n\n**🛠️ Architecture Highlights:**\n* **Zone 1:** Dual-Trigger Starter (supports both scheduled runs and real-time HTTPS Webhooks).\n* **Zone 2:** Clean `Edit Fields (Set)` + dynamic normalization so you can adapt this template to any app in 60 seconds.\n* **Zone 3:** Appends normalized office records directly into Google Sheets.\n\n---\n*📂 Need more free templates? Visit [360rev-hub.github.io](https://360rev-hub.github.io/?src=json_footer)*"
       },
-      "id": "sticky-ep08-1",
-      "name": "Sticky Note - Step 1",
+      "id": "sticky-master-ep08",
+      "name": "0. Master Setup & Links (EP08)",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        160,
-        120
+        -360,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 2: Auto-Map Fields & Credentials\n1. Double-click **2. Auto-Map JSON Template Fields** below.\n2. Pre-formats incoming emails, invoices, or leads so you never have to write a single formula or script!",
-        "height": 230,
-        "width": 380,
-        "color": 1
+        "color": 7,
+        "width": 460,
+        "height": 520,
+        "content": "## STEP 1: Dual Trigger (Schedule or Webhook)\n1. **1a. Scheduled Automation Trigger** runs on your custom interval.\n2. **1b. Instant Webhook Intake** accepts real-time POST requests from any form or app."
       },
-      "id": "sticky-ep08-2",
-      "name": "Sticky Note - Step 2",
+      "id": "zone1-ep08",
+      "name": "Sticky Note - Zone 1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        600,
-        120
+        120,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 3: Connect Google Sheets & Activate\n1. Double-click **3. Sync to Master Office Sheet** -> select your Google Sheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active**!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
-        "height": 250,
-        "width": 370,
-        "color": 1
+        "color": 5,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 2: Universal Field Mapper\n1. **2. Universal JSON Field Normalizer** maps incoming payload fields into standardized columns ready for Google Sheets or your CRM."
       },
-      "id": "sticky-ep08-3",
-      "name": "Sticky Note - Step 3",
+      "id": "zone2-ep08",
+      "name": "Sticky Note - Zone 2",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1060,
-        120
+        620,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "color": 4,
+        "width": 440,
+        "height": 520,
+        "content": "## STEP 3: Sync to Master Office Sheet\n1. Double-click **3. Sync to Master Office Sheet** -> select your Google Sheet.\n2. Activate 24/7 on [Hostinger 1-Click n8n ($6.49/mo)](https://360rev-hub.github.io/hostinger?ep=ep08&src=json_step3)!"
+      },
+      "id": "zone3-ep08",
+      "name": "Sticky Note - Zone 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        60
       ]
     },
     {
@@ -54,32 +74,49 @@
         "rule": {
           "interval": [
             {
-              "field": "minutes",
-              "minutesInterval": 5
+              "field": "hours",
+              "hoursInterval": 1
             }
           ]
         }
       },
-      "id": "node-ep08-trigger",
-      "name": "1. Universal Cloud Workflow Trigger",
+      "id": "ep08-node-1a",
+      "name": "1a. Scheduled Automation Trigger",
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.2,
       "position": [
-        280,
-        440
+        200,
+        230
       ]
     },
     {
       "parameters": {
-        "jsCode": "// Universal 3-Click .JSON Template Field Mapper\nreturn [\n  {\n    json: {\n      Template_Loaded: '08_Universal_JSON_Template_Pack.json',\n      Import_Time: '1.2 Seconds (3 Clicks)',\n      Server_Engine: 'Hostinger KVM 1 ($6.49/mo 1-Click n8n)',\n      Monthly_Savings: '$1,710/yr Saved vs Zapier Pro',\n      Workflow_Status: 'Active 24/7 ✓'\n    }\n  }\n];"
+        "httpMethod": "POST",
+        "path": "universal-starter-webhook",
+        "responseMode": "onReceived",
+        "options": {}
       },
-      "id": "node-ep08-processor",
-      "name": "2. Auto-Map JSON Template Fields",
+      "id": "ep08-node-1b",
+      "name": "1b. Instant Webhook Intake",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        200,
+        410
+      ],
+      "webhookId": "360rev-ep08-webhook"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Universal Multi-Source JSON Field Mapper\nreturn $input.all().map((item) => {\n  const raw = item.json.body || item.json || {};\n  return {\n    json: {\n      Timestamp: new Date().toISOString().slice(0, 19).replace('T', ' ') + ' UTC',\n      Source_Trigger: raw.headers ? 'Webhook POST Trigger' : 'Scheduled Cloud Trigger',\n      Record_Title: raw.title || raw.subject || raw.template || '08_Universal_JSON_Template_Pack.json (Verified)',\n      Owner_Email: raw.email || raw.owner || 'ops@company-domain.com',\n      Status: '✓ Imported & Active on Self-Hosted n8n Cloud'\n    }\n  };\n});"
+      },
+      "id": "ep08-node-2",
+      "name": "2. Universal JSON Field Normalizer",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        680,
-        440
+        720,
+        320
       ]
     },
     {
@@ -87,9 +124,9 @@
         "operation": "append",
         "documentId": {
           "__rl": true,
-          "value": "1Universal_JSON_Template_Sheet_2026",
+          "value": "1Universal_JSON_Template_Sheet_2027",
           "mode": "list",
-          "cachedResultName": "360REV_Master_Office_Automation.xlsx"
+          "cachedResultName": "360REV_Master_Office_Automation_2027"
         },
         "sheetName": {
           "__rl": true,
@@ -100,17 +137,17 @@
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "Column_A_Template": "={{ $json.Template_Loaded }}",
-            "Column_B_Import_Speed": "={{ $json.Import_Time }}",
-            "Column_C_Engine": "={{ $json.Server_Engine }}",
-            "Column_D_Savings": "={{ $json.Monthly_Savings }}",
-            "Column_E_Status": "={{ $json.Workflow_Status }}"
+            "Timestamp": "={{ $json.Timestamp }}",
+            "Source_Trigger": "={{ $json.Source_Trigger }}",
+            "Record_Title": "={{ $json.Record_Title }}",
+            "Owner_Email": "={{ $json.Owner_Email }}",
+            "Status": "={{ $json.Status }}"
           },
           "matchingColumns": [],
           "schema": [
             {
-              "id": "Column_A_Template",
-              "displayName": "Column A: Blueprint File",
+              "id": "Timestamp",
+              "displayName": "Timestamp",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -118,8 +155,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_B_Import_Speed",
-              "displayName": "Column B: Import Speed",
+              "id": "Source_Trigger",
+              "displayName": "Source_Trigger",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -127,8 +164,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_C_Engine",
-              "displayName": "Column C: Cloud Engine",
+              "id": "Record_Title",
+              "displayName": "Record_Title",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -136,8 +173,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_D_Savings",
-              "displayName": "Column D: Annual Savings",
+              "id": "Owner_Email",
+              "displayName": "Owner_Email",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -145,8 +182,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_E_Status",
-              "displayName": "Column E: Status",
+              "id": "Status",
+              "displayName": "Status",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -157,50 +194,50 @@
         },
         "options": {}
       },
-      "id": "node-ep08-sheets",
+      "id": "ep08-node-3",
       "name": "3. Sync to Master Office Sheet",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1080,
-        440
+        1220,
+        320
       ]
     }
   ],
   "pinData": {
-    "1. Universal Cloud Workflow Trigger": [
+    "1a. Scheduled Automation Trigger": [
       {
         "json": {
           "template": "08_Universal_JSON_Template_Pack.json",
-          "status": "Imported in 3 Clicks"
-        }
-      }
-    ],
-    "3. Sync to Master Office Sheet": [
-      {
-        "json": {
-          "Column_A_Template": "08_Universal_JSON_Template_Pack.json",
-          "Column_B_Import_Speed": "1.2 Seconds (3 Clicks)",
-          "Column_C_Engine": "Hostinger KVM 1 ($6.49/mo 1-Click n8n)",
-          "Column_D_Savings": "$1,710/yr Saved vs Zapier Pro",
-          "Column_E_Status": "Active 24/7 ✓"
+          "email": "ops@360rev-office.io"
         }
       }
     ]
   },
   "connections": {
-    "1. Universal Cloud Workflow Trigger": {
+    "1a. Scheduled Automation Trigger": {
       "main": [
         [
           {
-            "node": "2. Auto-Map JSON Template Fields",
+            "node": "2. Universal JSON Field Normalizer",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "2. Auto-Map JSON Template Fields": {
+    "1b. Instant Webhook Intake": {
+      "main": [
+        [
+          {
+            "node": "2. Universal JSON Field Normalizer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Universal JSON Field Normalizer": {
       "main": [
         [
           {

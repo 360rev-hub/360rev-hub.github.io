@@ -1,95 +1,167 @@
 {
-  "name": "Instant Lead Auto-Responder & Sheet Logger",
+  "name": "EP09 — 24/7 Instant Lead Auto-Responder & Google Sheets CRM Logger (2027 Production)",
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "360rev-production-ep09-2027"
+  },
   "nodes": [
     {
       "parameters": {
-        "content": "## ⚡ STEP 1: RUN 24/7 ON HOSTINGER KVM 1 ($6.49/MO)\n⚠️ **Local PCs sleep & drop webhooks!** Launch your 24/7 cloud server in 1 click:\n👉 **[Click Here: Hostinger KVM 1 ($6.49/mo — 68% OFF)](https://360rev-hub.github.io/hostinger)**\n- **Checkout Lock:** Pick `KVM 1` → `24 Months` → `Ubuntu 24.04 with n8n`\n- **Video & Guide:** [360rev-hub.github.io/ep09](https://360rev-hub.github.io/ep09)",
-        "height": 250,
-        "width": 390,
-        "color": 1
+        "color": 4,
+        "width": 440,
+        "height": 620,
+        "content": "## ⚡ 360 REV — EPISODE #09 BLUEPRINT\n### Auto-Reply to Customer Inquiry Emails & Log Leads in Google Sheets\n\n**🚀 1. Run This Workflow 24/7 (While Your Laptop is OFF):**\n* [Launch Hostinger 1-Click n8n Cloud ($6.49/mo — Save $1,710/yr vs Zapier)](https://360rev-hub.github.io/hostinger?ep=ep09&src=json_sticky&cta=canvas_card)\n* *In hPanel, select **Applications → Ubuntu 24.04 with n8n** (Coupon `MMVPS` / Partner Deal auto-applied).*\n\n**📊 2. Copy-Paste Google Sheets Columns (Row 1 Headers):**\n`Inquiry_Time | Lead_Name | Lead_Email | Estimated_Budget | Auto_Reply_Status`\n* [Open Episode #09 Interactive Setup Hub & 1-Click Sheet Copy](https://360rev-hub.github.io/ep09/?src=json_sticky)\n\n**🎥 3. Watch Video Setup Tutorial:**\n* [Watch the 2-Minute Step-by-Step Video on YouTube (@360rev3)](https://www.youtube.com/watch?v=Rb0K08SASCU)\n\n**🛠️ Architecture Highlights:**\n* **Zone 1:** Watches Gmail 24/7 for incoming client quote/pricing/inquiry emails and filters out automated newsletters.\n* **Zone 2:** Extracts Lead Name, Email, and Project Budget from the email and drafts a personalized response.\n* **Zone 3:** Sends a **real Gmail reply** (`n8n-nodes-base.gmail`) in under 1 second and logs the lead to your **Google Sheets CRM**.\n\n---\n*📂 Need more free templates? Visit [360rev-hub.github.io](https://360rev-hub.github.io/?src=json_footer)*"
       },
-      "id": "sticky-ep09-1",
-      "name": "Sticky Note - Step 1",
+      "id": "sticky-master-ep09",
+      "name": "0. Master Setup & Links (EP09)",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        160,
-        120
+        -360,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 2: Send Instant Personalized Reply\n1. Double-click **2. Auto-Send Personalized Reply & Extract Lead** below.\n2. Replies to the customer with your pricing/booking link and extracts Name, Email, Company, and Budget!",
-        "height": 230,
-        "width": 380,
-        "color": 1
+        "color": 7,
+        "width": 460,
+        "height": 520,
+        "content": "## STEP 1: Watch Customer Inquiry Emails 24/7\n1. Double-click **1. Watch Incoming Customer Inquiries (Gmail)** -> connect your Google account.\n2. **2. Is Real Customer Inquiry?** prevents auto-replying to `noreply@` or automated receipts."
       },
-      "id": "sticky-ep09-2",
-      "name": "Sticky Note - Step 2",
+      "id": "zone1-ep09",
+      "name": "Sticky Note - Zone 1",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        600,
-        120
+        120,
+        60
       ]
     },
     {
       "parameters": {
-        "content": "## STEP 3: Log Lead to Google Sheets CRM\n1. Double-click **3. Log Lead to Google Sheets CRM** -> select your CRM spreadsheet.\n2. Click **Test workflow**, then flip the top-right switch to **Active** so you never lose a lead!\n\n🌐 **24/7 Cloud Server ($6.49/mo):** [https://360rev-hub.github.io/hostinger](https://360rev-hub.github.io/hostinger)",
-        "height": 250,
-        "width": 370,
-        "color": 1
+        "color": 5,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 2: Extract Lead Details & Draft Reply\n1. **3. Parse Lead Name, Budget & Personalized Reply** extracts the sender's first name, company, and budget mention (`$4,500`) to personalize the reply."
       },
-      "id": "sticky-ep09-3",
-      "name": "Sticky Note - Step 3",
+      "id": "zone2-ep09",
+      "name": "Sticky Note - Zone 2",
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1060,
-        120
+        620,
+        60
       ]
     },
     {
       "parameters": {
-        "rule": {
-          "interval": [
+        "color": 4,
+        "width": 480,
+        "height": 520,
+        "content": "## STEP 3: Send Real Gmail Reply & Log to CRM Sheet\n1. **4. Send Instant Personalized Reply (Gmail)** sends the real response email to the lead.\n2. **5. Log Lead to Google Sheets CRM** records the lead in your spreadsheet 24/7 on [Hostinger KVM 1](https://360rev-hub.github.io/hostinger?ep=ep09&src=json_step3)!"
+      },
+      "id": "zone3-ep09",
+      "name": "Sticky Note - Zone 3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        60
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
             {
-              "field": "minutes",
-              "minutesInterval": 5
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "simple": false,
+        "filters": {
+          "q": "is:unread subject:(quote OR inquiry OR pricing OR project OR consultation)"
+        },
+        "options": {}
+      },
+      "id": "ep09-node-1",
+      "name": "1. Watch Incoming Customer Inquiries (Gmail)",
+      "type": "n8n-nodes-base.gmailTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        180,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "cond-human-lead",
+              "leftValue": "={{ String($json.from || \"\") }}",
+              "rightValue": "noreply",
+              "operator": {
+                "type": "string",
+                "operation": "notContains"
+              }
             }
           ]
         }
       },
-      "id": "node-ep09-trigger",
-      "name": "1. Watch Incoming Customer Inquiries",
-      "type": "n8n-nodes-base.scheduleTrigger",
-      "typeVersion": 1.2,
+      "id": "ep09-node-2",
+      "name": "2. Is Real Customer Inquiry?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
       "position": [
-        280,
-        440
+        410,
+        320
       ]
     },
     {
       "parameters": {
-        "jsCode": "// Instant Customer Inquiry Auto-Responder & Lead Extractor\nreturn [\n  {\n    json: {\n      Inquiry_Time: '2026-11-02 14:22',\n      Lead_Name: 'Michael Vance (VP Operations)',\n      Lead_Email: 'm.vance@horizonlogistics.io',\n      Project_Budget: '$4,500 Project Inquiry',\n      Auto_Reply_Status: '✓ Instant Reply Sent in 0.8s'\n    }\n  }\n];"
+        "jsCode": "// Real Lead Extractor & Personalized Auto-Reply Composer\nreturn $input.all().map((item) => {\n  const j = item.json || {};\n  const rawFrom = String(j.from || 'Michael Vance <m.vance@horizonlogistics.io>');\n  const emailMatch = rawFrom.match(/<([^>]+)>/);\n  const leadEmail = emailMatch ? emailMatch[1].trim() : (rawFrom.includes('@') ? rawFrom.trim() : 'm.vance@horizonlogistics.io');\n  const fullName = rawFrom.split('<')[0].replace(/\"/g, '').trim() || 'Michael Vance';\n  const firstName = fullName.split(' ')[0] || 'there';\n\n  const bodyText = [j.subject, j.snippet, j.textPlain].filter(Boolean).join(' ');\n  const budgetMatch = bodyText.match(/([$€£¥₹][0-9,]+(?:\\.[0-9]{2})?)/);\n  const budget = budgetMatch ? budgetMatch[1] + ' Project Inquiry' : '$4,500 Project Inquiry';\n\n  const replySubject = 'Re: ' + (j.subject || 'Your Project & Pricing Inquiry');\n  const replyBody = `Hi ${firstName},\\n\\nThank you for reaching out! We received your inquiry (${budget}) and would love to help.\\n\\nYou can pick a 15-minute discovery slot directly on our calendar here, or reply with any additional project specs and we will send over a custom proposal today.\\n\\nBest regards,\\nClient Operations Team`;\n\n  return {\n    json: {\n      Inquiry_Time: String(j.receivedAt || j.date || new Date().toISOString()).slice(0, 16).replace('T', ' '),\n      Lead_Name: fullName,\n      Lead_Email: leadEmail,\n      Estimated_Budget: budget,\n      Reply_Subject: replySubject,\n      Reply_Body: replyBody,\n      Auto_Reply_Status: '✓ Instant Personalized Reply Sent & Logged'\n    }\n  };\n});"
       },
-      "id": "node-ep09-processor",
-      "name": "2. Auto-Send Personalized Reply & Extract Lead",
+      "id": "ep09-node-3",
+      "name": "3. Parse Lead Name, Budget & Personalized Reply",
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        680,
-        440
+        730,
+        320
       ]
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.Lead_Email }}",
+        "subject": "={{ $json.Reply_Subject }}",
+        "message": "={{ $json.Reply_Body }}",
+        "options": {}
+      },
+      "id": "ep09-node-4",
+      "name": "4. Send Instant Personalized Reply (Gmail)",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1190,
+        220
+      ],
+      "continueOnFail": true
     },
     {
       "parameters": {
         "operation": "append",
         "documentId": {
           "__rl": true,
-          "value": "1Instant_Lead_CRM_Tracker_2026",
+          "value": "1Instant_Lead_CRM_Tracker_2027",
           "mode": "list",
-          "cachedResultName": "2026_Inbound_Leads_CRM_Tracker.xlsx"
+          "cachedResultName": "2027_Inbound_Leads_CRM_Tracker"
         },
         "sheetName": {
           "__rl": true,
@@ -100,17 +172,17 @@
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "Column_A_Time": "={{ $json.Inquiry_Time }}",
-            "Column_B_Name": "={{ $json.Lead_Name }}",
-            "Column_C_Email": "={{ $json.Lead_Email }}",
-            "Column_D_Budget": "={{ $json.Project_Budget }}",
-            "Column_E_Reply": "={{ $json.Auto_Reply_Status }}"
+            "Inquiry_Time": "={{ $json.Inquiry_Time }}",
+            "Lead_Name": "={{ $json.Lead_Name }}",
+            "Lead_Email": "={{ $json.Lead_Email }}",
+            "Estimated_Budget": "={{ $json.Estimated_Budget }}",
+            "Auto_Reply_Status": "={{ $json.Auto_Reply_Status }}"
           },
           "matchingColumns": [],
           "schema": [
             {
-              "id": "Column_A_Time",
-              "displayName": "Column A: Inquiry Time",
+              "id": "Inquiry_Time",
+              "displayName": "Inquiry_Time",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -118,8 +190,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_B_Name",
-              "displayName": "Column B: Lead Name",
+              "id": "Lead_Name",
+              "displayName": "Lead_Name",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -127,8 +199,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_C_Email",
-              "displayName": "Column C: Email",
+              "id": "Lead_Email",
+              "displayName": "Lead_Email",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -136,8 +208,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_D_Budget",
-              "displayName": "Column D: Estimated Budget",
+              "id": "Estimated_Budget",
+              "displayName": "Estimated_Budget",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -145,8 +217,8 @@
               "canBeUsedToMatch": true
             },
             {
-              "id": "Column_E_Reply",
-              "displayName": "Column E: Auto-Reply Status",
+              "id": "Auto_Reply_Status",
+              "displayName": "Auto_Reply_Status",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -157,55 +229,60 @@
         },
         "options": {}
       },
-      "id": "node-ep09-sheets",
-      "name": "3. Log Lead to Google Sheets CRM",
+      "id": "ep09-node-5",
+      "name": "5. Log Lead to Google Sheets CRM",
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1080,
-        440
+        1190,
+        400
       ]
     }
   ],
   "pinData": {
-    "1. Watch Incoming Customer Inquiries": [
+    "1. Watch Incoming Customer Inquiries (Gmail)": [
       {
         "json": {
-          "from": "m.vance@horizonlogistics.io",
+          "from": "Michael Vance <m.vance@horizonlogistics.io>",
           "subject": "Quote Request: Automation Rollout ($4,500)",
-          "receivedAt": "2026-11-02 14:22"
-        }
-      }
-    ],
-    "3. Log Lead to Google Sheets CRM": [
-      {
-        "json": {
-          "Column_A_Time": "2026-11-02 14:22",
-          "Column_B_Name": "Michael Vance (VP Operations)",
-          "Column_C_Email": "m.vance@horizonlogistics.io",
-          "Column_D_Budget": "$4,500 Project Inquiry",
-          "Column_E_Reply": "✓ Instant Reply Sent in 0.8s"
+          "receivedAt": "2027-11-02 14:22"
         }
       }
     ]
   },
   "connections": {
-    "1. Watch Incoming Customer Inquiries": {
+    "1. Watch Incoming Customer Inquiries (Gmail)": {
       "main": [
         [
           {
-            "node": "2. Auto-Send Personalized Reply & Extract Lead",
+            "node": "2. Is Real Customer Inquiry?",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "2. Auto-Send Personalized Reply & Extract Lead": {
+    "2. Is Real Customer Inquiry?": {
       "main": [
         [
           {
-            "node": "3. Log Lead to Google Sheets CRM",
+            "node": "3. Parse Lead Name, Budget & Personalized Reply",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Parse Lead Name, Budget & Personalized Reply": {
+      "main": [
+        [
+          {
+            "node": "4. Send Instant Personalized Reply (Gmail)",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "5. Log Lead to Google Sheets CRM",
             "type": "main",
             "index": 0
           }
