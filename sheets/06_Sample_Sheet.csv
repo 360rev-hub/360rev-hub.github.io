@@ -1,0 +1,2 @@
+"Benchmark_Date","Batch_Size_Rows","Execution_Time_ms","Throughput_Rows_Per_Sec","Peak_Memory_MB","Verdict"
+"2027-11-02 10:00:00 UTC","1000 Rows Processed (Total Aggregated: $8,733,725)","14 ms","71,428 rows/sec","340 MB / 4096 MB (Hostinger KVM 1)","✓ KVM 1 ($6.49/mo, 4GB RAM) Easily Handles Workload — KVM 2 Only Needed for Local Ollama AI"
