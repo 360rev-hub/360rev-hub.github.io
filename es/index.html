@@ -309,7 +309,7 @@
 </head>
 <body>
   <div class="topbar">
-    <a href="/" class="brand">
+    <a href="/es/" class="brand">
       <span class="brand-badge">360 REV</span>
       <div class="brand-text-wrap">
         <span class="brand-title">Blueprint Hub</span>
@@ -317,7 +317,7 @@
       </div>
     </a>
     <div class="top-actions">
-      <select id="geoSelectRoot" onchange="applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
+      <select id="geoSelectRoot" onchange="window.EVENT_FROM_SELECT=true;applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
         <option value="en">🇺🇸 EN ($)</option>
         <option value="es">🇪🇸 ES (€/$)</option>
         <option value="pt">🇧🇷 PT (PIX)</option>
@@ -573,6 +573,23 @@
         </div>
       </div>
     </div>
+
+      <!-- EPISODE 10 -->
+      <div class="ep-card" data-keywords="ep10 episode 10 update n8n hostinger vps backup workflows google drive docker">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #10</span>
+            <span class="ep-cat">SAFE UPDATE & AUTO-BACKUP</span>
+          </div>
+          <div class="ep-h">How to Update Self-Hosted n8n on Hostinger VPS Safely in 60 Seconds</div>
+          <div class="ep-desc">Never lose a workflow during an update! Automatically export and back up all your n8n workflows as timestamped .JSON files to Google Drive & Google Sheets every night.</div>
+          <div class="ep-nodes">⚡ Nodes: Midnight Trigger → .JSON Backup Builder → Google Drive & Sheets</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/ep10" class="btn-ep-hub">📖 Episode #10 Hub</a>
+          <a href="/blueprints/10_Automated_Workflow_Backup_to_Drive.json" download="10_Automated_Workflow_Backup_to_Drive.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+        </div>
+      </div>
   </div>
 
   <div class="footer">
@@ -653,6 +670,14 @@
     }
 
     function applyGeoLanguage(lang) {
+      const curMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
+      const curPathLang = curMatch ? curMatch[1].toLowerCase() : 'en';
+      if (lang && lang !== curPathLang && window.EVENT_FROM_SELECT) {
+        const epMatch = window.location.pathname.match(/\/(ep\d{2})(\/|$)/i);
+        const epSlug = epMatch ? epMatch[1].toLowerCase() + '/' : '';
+        window.location.href = (lang === 'en' ? '/' : '/' + lang + '/') + epSlug;
+        return;
+      }
       CURRENT_LANG = GEO_DICT[lang] ? lang : 'en';
       const d = GEO_DICT[CURRENT_LANG] || GEO_DICT.en;
       const sel1 = document.getElementById('geoSelectEp');
@@ -684,7 +709,7 @@
     }
     window.applyGeoEp = applyGeoLanguage;
     document.addEventListener('DOMContentLoaded', () => {
-      const pathLangMatch = window.location.pathname.match(/^/([a-z]{2})(/|$)/i);
+      const pathLangMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
       const pathLang = pathLangMatch ? pathLangMatch[1].toLowerCase() : '';
       const params = new URLSearchParams(window.location.search);
       const urlLang = (params.get('lang') || '').toLowerCase().slice(0, 2);
