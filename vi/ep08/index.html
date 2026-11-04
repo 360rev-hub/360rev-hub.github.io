@@ -262,13 +262,13 @@
 </head>
 <body>
   <div class="topbar">
-    <a href="/" class="brand">
+    <a href="/vi/" class="brand">
       <span class="brand-badge">360 REV</span>
       <span>Blueprint Hub</span>
       <span class="brand-sub">• Episode #08</span>
     </a>
     <div style="display:flex;align-items:center;gap:8px;">
-      <select id="geoSelectEp" onchange="applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
+      <select id="geoSelectEp" onchange="window.EVENT_FROM_SELECT=true;applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
         <option value="en">🇺🇸 EN ($)</option>
         <option value="es">🇪🇸 ES (€/$)</option>
         <option value="pt">🇧🇷 PT (PIX)</option>
@@ -305,7 +305,7 @@
         <option value="ru">🌍 RU ($6.49/мес)</option>
         <option value="et">🇪🇪 ET (€ GDPR)</option>
       </select>
-      <a href="/" class="url-pill" id="epBackBtn">← All Episodes</a>
+      <a href="/vi/" class="url-pill" id="epBackBtn">← Tất Cả Các Tập</a>
     </div>
   </div>
   <div class="container">
@@ -327,11 +327,11 @@
         <div>
           <div class="step-label label-purple">👉 BƯỚC 1: MÁY CHỦ CLOUD n8n 24/7 (LINK #1)</div>
           <div class="card-h">Khởi chạy Hostinger 1-Click n8n Cloud ($6.49/tháng)</div>
-          <div class="card-p">Official Hostinger KVM 1 VPS with the pre-installed <b>"Ubuntu 24.04 with n8n"</b> 1-click template.</div>
+          <div class="card-p">Máy chủ Hostinger KVM 1 VPS chính thức tích hợp sẵn mẫu cài đặt 1-Click <b>"Ubuntu 24.04 with n8n"</b>.</div>
           <div class="check-list">
-            <div class="check-item">✓ Runs 24/7 even when your office laptop is turned OFF</div>
-            <div class="check-item">✓ Unlimited workflows &amp; executions (Zero per-task fees)</div>
-            <div class="check-item">✓ 1-Click browser setup in hPanel — Zero terminal commands</div>
+            <div class="check-item">✓ Chạy tự động 24/7 ngay cả khi bạn đã tắt hoặc gập máy tính cá nhân</div>
+            <div class="check-item">✓ Không giới hạn số lượng workflow &amp; số lần chạy (0đ phí phát sinh)</div>
+            <div class="check-item">✓ Cài đặt 1-Click trên trình duyệt hPanel — Không cần gõ bất kỳ câu lệnh nào</div>
           </div>
         </div>
         <a href="/hostinger" target="_blank" rel="noopener" class="btn-action btn-purple">🚀 Mở Hostinger 1-Click n8n ($6.49/tháng) →</a>
@@ -340,14 +340,37 @@
         <div>
           <div class="step-label label-green">🎁 BƯỚC 2: TẢI FILE MẪU .JSON MIỄN PHÍ (LINK #2)</div>
           <div class="card-h">Tải File Thiết Kế Workflow .JSON Miễn Phí</div>
-          <div class="card-p">Ready-to-import workflow file: <code>08_Universal_JSON_Template_Pack.json</code></div>
+          <div class="card-p">File mẫu workflow thiết kế sẵn (Sẵn sàng Import): <code>08_Universal_JSON_Template_Pack.json</code></div>
           <div class="check-list">
             <div class="check-item">✓ Pre-mapped Universal Trigger → Auto-Mapper → Master Office Sheet</div>
-            <div class="check-item">✓ Includes 3 Yellow Sticky Notes inside the n8n canvas</div>
+            <div class="check-item">✓ Kèm sẵn Khung Ghi Chú Phân Vùng Màu Sắc + Link Cài Đặt bấm được ngay trong giao diện n8n</div>
             <div class="check-item">✓ Import in 3 clicks (under 10 seconds) — Zero coding required</div>
           </div>
         </div>
         <a href="/blueprints/08_Universal_JSON_Template_Pack.json" download="08_Universal_JSON_Template_Pack.json" onclick="triggerDlModal()" class="btn-action btn-green">📥 Tải File .JSON Miễn Phí (Kèm 3 Ghi Chú Vàng)</a>
+      </div>
+    </div>
+    
+    <!-- Companion Google Sheets Header Copy & Starter CSV Kit -->
+    <div class="companion-kit" style="background:#FFFFFF;border:2.5px solid #CBD5E1;border-radius:18px;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 8px 20px rgba(15,23,42,0.04);">
+      <div style="flex:1;min-width:280px;">
+        <div style="display:inline-block;background:#FEF08A;color:#854D0E;font-size:12px;font-weight:900;padding:4px 11px;border-radius:99px;margin-bottom:6px;">
+          📊 BỘ CỘT GOOGLE SHEETS MẪU ĐI KÈM (CHỐNG LỖI LỆCH CỘT 100%)
+        </div>
+        <div style="font-size:17px;font-weight:900;color:#0F172A;">
+          Dòng Tiêu Đề Cột Chuẩn (Row 1 Headers) Cho File Google Sheets Của Bạn:
+        </div>
+        <div style="margin-top:8px;background:#F8FAFC;border:1.5px dashed #94A3B8;padding:10px 14px;border-radius:10px;font-family:monospace;font-size:13.5px;font-weight:800;color:#1E293B;overflow-x:auto;">
+          Timestamp &nbsp;|&nbsp; Source_Trigger &nbsp;|&nbsp; Record_Title &nbsp;|&nbsp; Owner_Email &nbsp;|&nbsp; Status
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <button onclick="navigator.clipboard.writeText('Timestamp\tSource_Trigger\tRecord_Title\tOwner_Email\tStatus');this.textContent='✓ Đã Copy! Dán vào Ô A1 trên Sheet';this.style.background='#15803D';" style="background:#0F172A;color:#FACC15;border:none;padding:12px 18px;border-radius:12px;font-size:14px;font-weight:900;cursor:pointer;">
+          📋 Copy Dòng Cột (Dán vào Ô A1)
+        </button>
+        <a href="/sheets/08_Sample_Sheet.csv" download="08_Sample_Sheet.csv" style="background:#F1F5F9;border:2px solid #CBD5E1;color:#0F172A;padding:11px 16px;border-radius:12px;font-size:14px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;">
+          📥 Tải File .CSV Mẫu
+        </a>
       </div>
     </div>
     <details class="seo-drawer">
@@ -370,7 +393,7 @@
       </div>
     </details>
     <div style="text-align:center;font-size:12.5px;color:#64748B;font-weight:600;padding-top:8px;">
-      © 2027 360 REV (@360rev3) • Independent Automation Education &amp; Open Blueprint Library.<br>
+      © 2027 360 REV (@360rev3 • <a href="https://github.com/360rev-hub/360rev-hub.github.io/blob/main/docs/README.vi.md" target="_blank" rel="noopener" style="color:#673DE6;font-weight:800;text-decoration:none;">GitHub .JSON Repo (VI)</a>) • Independent Automation Education &amp; Open Blueprint Library.<br>
       <span style="font-size:11.5px;color:#94A3B8;">Disclosure: All .JSON workflow blueprints are 100% free. Some cloud hosting links on this site are partner/referral links that support our free template library at no extra cost to you.</span>
     </div>
   </div>
@@ -447,6 +470,14 @@
     }
 
     function applyGeoLanguage(lang) {
+      const curMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
+      const curPathLang = curMatch ? curMatch[1].toLowerCase() : 'en';
+      if (lang && lang !== curPathLang && window.EVENT_FROM_SELECT) {
+        const epMatch = window.location.pathname.match(/\/(ep\d{2})(\/|$)/i);
+        const epSlug = epMatch ? epMatch[1].toLowerCase() + '/' : '';
+        window.location.href = (lang === 'en' ? '/' : '/' + lang + '/') + epSlug;
+        return;
+      }
       CURRENT_LANG = GEO_DICT[lang] ? lang : 'en';
       const d = GEO_DICT[CURRENT_LANG] || GEO_DICT.en;
       const sel1 = document.getElementById('geoSelectEp');
@@ -478,7 +509,7 @@
     }
     window.applyGeoEp = applyGeoLanguage;
     document.addEventListener('DOMContentLoaded', () => {
-      const pathLangMatch = window.location.pathname.match(/^/([a-z]{2})(/|$)/i);
+      const pathLangMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
       const pathLang = pathLangMatch ? pathLangMatch[1].toLowerCase() : '';
       const params = new URLSearchParams(window.location.search);
       const urlLang = (params.get('lang') || '').toLowerCase().slice(0, 2);
