@@ -309,7 +309,7 @@
 </head>
 <body>
   <div class="topbar">
-    <a href="/" class="brand">
+    <a href="/vi/" class="brand">
       <span class="brand-badge">360 REV</span>
       <div class="brand-text-wrap">
         <span class="brand-title">Blueprint Hub</span>
@@ -317,7 +317,7 @@
       </div>
     </a>
     <div class="top-actions">
-      <select id="geoSelectRoot" onchange="applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
+      <select id="geoSelectRoot" onchange="window.EVENT_FROM_SELECT=true;applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
         <option value="en">🇺🇸 EN ($)</option>
         <option value="es">🇪🇸 ES (€/$)</option>
         <option value="pt">🇧🇷 PT (PIX)</option>
@@ -366,9 +366,9 @@
     <!-- Master Cloud Engine Hero -->
     <div class="hero-banner">
       <div>
-        <div class="hero-badge">⚡ OFFICIAL 360 REV CLOUD ENGINE &amp; FREE .JSON LIBRARY</div>
+        <div class="hero-badge">⚡ HỆ THỐNG CLOUD n8n 24/7 &amp; KHO FILE MẪU .JSON MIỄN PHÍ 360 REV</div>
         <h1 class="hero-title">Ngừng trả $149/tháng cho Zapier. Chạy không giới hạn n8n 24/7 chỉ với $6.49/tháng.</h1>
-        <div class="hero-sub">Every workflow blueprint on the 360 REV channel is 100% free to download and includes 3 beginner-friendly Yellow Sticky Notes inside the canvas. Import any file below into your self-hosted Hostinger 1-Click n8n Cloud in 10 seconds.</div>
+        <div class="hero-sub">Tất cả các file mẫu workflow .JSON trên kênh 360 REV đều miễn phí 100% và được gắn sẵn 3 Ghi Chú Màu Vàng hướng dẫn từng bước ngay trong giao diện n8n. Nhập (Import) bất kỳ file nào bên dưới vào máy chủ Hostinger 1-Click n8n Cloud của bạn chỉ trong 10 giây.</div>
         <div class="hero-Compare">
           <span class="bad-pill">Zapier Pro: $149.00/mo ($1,788/yr)</span>
           <span class="bad-pill">n8n Cloud Pro: $50.00/mo</span>
@@ -379,9 +379,9 @@
         <div class="hero-card-tag">👉 BƯỚC 1: MÁY CHỦ CLOUD n8n 24/7 (LINK #1)</div>
         <div class="hero-card-title">Khởi chạy Hostinger 1-Click n8n Cloud ($6.49/tháng)</div>
         <div class="hero-card-list">
-          <div>✓ 1-Click browser installation in hPanel (Zero Linux commands)</div>
-          <div>✓ 4 GB RAM • 50 GB NVMe • Runs 24/7 while your laptop is OFF</div>
-          <div>✓ Unlimited workflows, webhooks &amp; executions ($0 per-task fees)</div>
+          <div>✓ Cài đặt sẵn 1-Click ngay trên trình duyệt hPanel (Không cần gõ lệnh Linux)</div>
+          <div>✓ 4 GB RAM • 50 GB NVMe • Chạy tự động 24/7 ngay cả khi bạn tắt laptop</div>
+          <div>✓ Không giới hạn số lượng workflow, webhook &amp; số lần chạy (0đ phí phát sinh)</div>
         </div>
         <a href="/hostinger" target="_blank" rel="noopener" class="hero-btn">🚀 Mở Hostinger 1-Click n8n ($6.49/tháng) →</a>
       </div>
@@ -573,6 +573,23 @@
         </div>
       </div>
     </div>
+
+      <!-- EPISODE 10 -->
+      <div class="ep-card" data-keywords="ep10 episode 10 update n8n hostinger vps backup workflows google drive docker">
+        <div>
+          <div class="ep-top">
+            <span class="ep-num">EPISODE #10</span>
+            <span class="ep-cat">SAFE UPDATE & AUTO-BACKUP</span>
+          </div>
+          <div class="ep-h">How to Update Self-Hosted n8n on Hostinger VPS Safely in 60 Seconds</div>
+          <div class="ep-desc">Never lose a workflow during an update! Automatically export and back up all your n8n workflows as timestamped .JSON files to Google Drive & Google Sheets every night.</div>
+          <div class="ep-nodes">⚡ Nodes: Midnight Trigger → .JSON Backup Builder → Google Drive & Sheets</div>
+        </div>
+        <div class="ep-actions">
+          <a href="/ep10" class="btn-ep-hub">📖 Episode #10 Hub</a>
+          <a href="/blueprints/10_Automated_Workflow_Backup_to_Drive.json" download="10_Automated_Workflow_Backup_to_Drive.json" onclick="triggerDlModal()" class="btn-ep-dl">📥 Free .JSON File</a>
+        </div>
+      </div>
   </div>
 
   <div class="footer">
@@ -653,6 +670,14 @@
     }
 
     function applyGeoLanguage(lang) {
+      const curMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
+      const curPathLang = curMatch ? curMatch[1].toLowerCase() : 'en';
+      if (lang && lang !== curPathLang && window.EVENT_FROM_SELECT) {
+        const epMatch = window.location.pathname.match(/\/(ep\d{2})(\/|$)/i);
+        const epSlug = epMatch ? epMatch[1].toLowerCase() + '/' : '';
+        window.location.href = (lang === 'en' ? '/' : '/' + lang + '/') + epSlug;
+        return;
+      }
       CURRENT_LANG = GEO_DICT[lang] ? lang : 'en';
       const d = GEO_DICT[CURRENT_LANG] || GEO_DICT.en;
       const sel1 = document.getElementById('geoSelectEp');
@@ -684,7 +709,7 @@
     }
     window.applyGeoEp = applyGeoLanguage;
     document.addEventListener('DOMContentLoaded', () => {
-      const pathLangMatch = window.location.pathname.match(/^/([a-z]{2})(/|$)/i);
+      const pathLangMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
       const pathLang = pathLangMatch ? pathLangMatch[1].toLowerCase() : '';
       const params = new URLSearchParams(window.location.search);
       const urlLang = (params.get('lang') || '').toLowerCase().slice(0, 2);
