@@ -268,7 +268,7 @@
       <span class="brand-sub">• Episode #01</span>
     </a>
     <div style="display:flex;align-items:center;gap:8px;">
-      <select id="geoSelectEp" onchange="applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
+      <select id="geoSelectEp" onchange="window.EVENT_FROM_SELECT=true;applyGeoEp(this.value)" style="background:#1E293B;color:#F8FAFC;border:1.5px solid #475569;padding:6px 10px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;">
         <option value="en">🇺🇸 EN ($)</option>
         <option value="es">🇪🇸 ES (€/$)</option>
         <option value="pt">🇧🇷 PT (PIX)</option>
@@ -343,11 +343,34 @@
           <div class="card-p">Ready-to-import workflow file: <code>01_Email_Invoice_to_Spreadsheet_Assistant.json</code></div>
           <div class="check-list">
             <div class="check-item">✓ Pre-mapped Gmail Trigger → PDF Reader → Google Sheets</div>
-            <div class="check-item">✓ Includes 3 Yellow Sticky Notes inside the n8n canvas</div>
+            <div class="check-item">✓ Includes Multi-Zone Colored Sticky Notes + Clickable Setup Links inside the canvas</div>
             <div class="check-item">✓ Import in 10 seconds (No coding or formulas required)</div>
           </div>
         </div>
         <a href="/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json" download="01_Email_Invoice_to_Spreadsheet_Assistant.json" onclick="triggerDlModal()" class="btn-action btn-green">📥 Download Free .JSON Blueprint File</a>
+      </div>
+    </div>
+    
+    <!-- Companion Google Sheets Header Copy & Starter CSV Kit -->
+    <div class="companion-kit" style="background:#FFFFFF;border:2.5px solid #CBD5E1;border-radius:18px;padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;box-shadow:0 8px 20px rgba(15,23,42,0.04);">
+      <div style="flex:1;min-width:280px;">
+        <div style="display:inline-block;background:#FEF08A;color:#854D0E;font-size:12px;font-weight:900;padding:4px 11px;border-radius:99px;margin-bottom:6px;">
+          📊 COMPANION GOOGLE SHEETS STARTER KIT (ZERO COLUMN MISMATCH)
+        </div>
+        <div style="font-size:17px;font-weight:900;color:#0F172A;">
+          Ready-to-Paste Row 1 Column Headers for Your Google Sheet:
+        </div>
+        <div style="margin-top:8px;background:#F8FAFC;border:1.5px dashed #94A3B8;padding:10px 14px;border-radius:10px;font-family:monospace;font-size:13.5px;font-weight:800;color:#1E293B;overflow-x:auto;">
+          Invoice_Date &nbsp;|&nbsp; Vendor_Name &nbsp;|&nbsp; Invoice_Number &nbsp;|&nbsp; Tax_Amount &nbsp;|&nbsp; Total_Amount &nbsp;|&nbsp; File_Name &nbsp;|&nbsp; Status
+        </div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <button onclick="navigator.clipboard.writeText('Invoice_Date\tVendor_Name\tInvoice_Number\tTax_Amount\tTotal_Amount\tFile_Name\tStatus');this.textContent='✓ Copied! Paste into Cell A1';this.style.background='#15803D';" style="background:#0F172A;color:#FACC15;border:none;padding:12px 18px;border-radius:12px;font-size:14px;font-weight:900;cursor:pointer;">
+          📋 1-Click Copy Headers (Paste in Cell A1)
+        </button>
+        <a href="/sheets/01_Sample_Sheet.csv" download="01_Sample_Sheet.csv" style="background:#F1F5F9;border:2px solid #CBD5E1;color:#0F172A;padding:11px 16px;border-radius:12px;font-size:14px;font-weight:800;text-decoration:none;display:inline-flex;align-items:center;">
+          📥 Download Sample .CSV
+        </a>
       </div>
     </div>
     <details class="seo-drawer">
@@ -370,7 +393,7 @@
       </div>
     </details>
     <div style="text-align:center;font-size:12.5px;color:#64748B;font-weight:600;padding-top:8px;">
-      © 2027 360 REV (@360rev3) • Independent Automation Education &amp; Open Blueprint Library.<br>
+      © 2027 360 REV (@360rev3 • <a href="https://github.com/360rev-hub/360rev-hub.github.io/blob/main/README.md" target="_blank" rel="noopener" style="color:#673DE6;font-weight:800;text-decoration:none;">GitHub .JSON Repo (EN)</a>) • Independent Automation Education &amp; Open Blueprint Library.<br>
       <span style="font-size:11.5px;color:#94A3B8;">Disclosure: All .JSON workflow blueprints are 100% free. Some cloud hosting links on this site are partner/referral links that support our free template library at no extra cost to you.</span>
     </div>
   </div>
@@ -447,6 +470,14 @@
     }
 
     function applyGeoLanguage(lang) {
+      const curMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
+      const curPathLang = curMatch ? curMatch[1].toLowerCase() : 'en';
+      if (lang && lang !== curPathLang && window.EVENT_FROM_SELECT) {
+        const epMatch = window.location.pathname.match(/\/(ep\d{2})(\/|$)/i);
+        const epSlug = epMatch ? epMatch[1].toLowerCase() + '/' : '';
+        window.location.href = (lang === 'en' ? '/' : '/' + lang + '/') + epSlug;
+        return;
+      }
       CURRENT_LANG = GEO_DICT[lang] ? lang : 'en';
       const d = GEO_DICT[CURRENT_LANG] || GEO_DICT.en;
       const sel1 = document.getElementById('geoSelectEp');
@@ -478,7 +509,7 @@
     }
     window.applyGeoEp = applyGeoLanguage;
     document.addEventListener('DOMContentLoaded', () => {
-      const pathLangMatch = window.location.pathname.match(/^/([a-z]{2})(/|$)/i);
+      const pathLangMatch = window.location.pathname.match(/^\/([a-z]{2})(\/|$)/i);
       const pathLang = pathLangMatch ? pathLangMatch[1].toLowerCase() : '';
       const params = new URLSearchParams(window.location.search);
       const urlLang = (params.get('lang') || '').toLowerCase().slice(0, 2);
