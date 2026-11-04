@@ -1,9 +1,9 @@
-# ⚡ Awesome Self-Hosted n8n Workflows & Zero-Code Blueprints (2026) — 🇻🇳 VI (VNĐ/$)
+# ⚡ Awesome Self-Hosted n8n Workflows & Zero-Code Blueprints (2027) — 🇻🇳 VI (VNĐ/$)
 
 > **Ngừng trả $149/tháng cho Zapier. Chạy không giới hạn n8n 24/7 chỉ với $6.49/tháng.**
 >
 > 🌐 **Official Multi-Language Hub (805 Pages across 35 Languages):** [https://360rev-hub.github.io/vi/](https://360rev-hub.github.io/vi/)
-> 📺 **Official YouTube Channel (35-Language Audio & Subtitles):** [youtube.com/@360rev3](https://www.youtube.com/@360rev3)
+> 📺 **Official YouTube Channel (35-Language Audio, Subtitles & Thumbnails):** [youtube.com/@360rev3](https://www.youtube.com/@360rev3)
 > 🚀 **Step 1 — Launch 24/7 Cloud Engine:** [**🚀 Mở Hostinger 1-Click n8n ($6.49/tháng) →**](https://360rev-hub.github.io/hostinger)
 
 ---
@@ -14,65 +14,51 @@
 
 ---
 
-## 🏆 Why Self-Host n8n on Hostinger KVM 1 in 2026? (vs Zapier & Make)
+## 🏆 Why Self-Host n8n on Hostinger KVM 1 in 2027? (vs Make & Zapier)
 
 | Feature / Metric | Zapier Professional | Make Core / Pro | **Hostinger KVM 1 (1-Click n8n)** |
 | :--- | :--- | :--- | :--- |
-| **Monthly Price (2026)** | $149.00 / mo | $29.00 – $99.00 / mo | **$6.49/tháng (Không giới hạn)** |
+| **Monthly Price (2027)** | $149.00 / mo | $29.00 – $99.00 / mo | **$6.49/tháng (Không giới hạn)** |
 | **Active Workflows** | Capped / Tiered | Capped by Operations | **100% Unlimited Workflows 24/7** |
 | **Monthly Executions / Tasks** | 2,000 – 10,000 Tasks | 10,000 – 40,000 Ops | **Unlimited Executions (Zero Task Tax)** |
 | **Hardware Specs** | Shared Multi-Tenant | Shared Multi-Tenant | **Dedicated 4 GB RAM • 50 GB NVMe • 1 vCPU** |
 | **Installation Method** | SaaS | SaaS | **1-Click Pre-Installed (`Ubuntu 24.04 with n8n`)** |
 | **Annual Savings** | Baseline | -$1,200/yr | **💰 Tiết kiệm $1,710/Năm • Chạy tự động 24/7 kể cả khi tắt máy** |
 
-### 🔒 Official 3-Click Hostinger KVM 1 Checkout Lock (Zero Terminal Required)
-1. **Click Here to Open Official Hostinger KVM 1 Discount Page:** [**https://360rev-hub.github.io/hostinger**](https://360rev-hub.github.io/hostinger)
-2. **Select Plan & Duration:** Pick **`KVM 1`** (4 GB RAM / 50 GB NVMe) → Select **`24 Months`** to lock in the maximum 68% discount + 30-Day Money-Back Guarantee.
-3. **Select 1-Click OS Template:** Under *Operating System → Applications*, choose **`Ubuntu 24.04 with n8n`**. Your private 24/7 n8n cloud server launches in 60 seconds!
-
 ---
 
-## 📦 Complete Library: 20 Ready-to-Import `.JSON` n8n Workflow Blueprints (With 3 Yellow Sticky Notes)
+## 📦 Complete Library: Ready-to-Import `.JSON` n8n Workflow Blueprints (2027 Edition)
 
-Every blueprint below includes **3 Yellow Sticky Notes inside the n8n canvas** so you can import and activate in **3 clicks** without writing a single line of code:
+Every blueprint below includes **3 Yellow Sticky Notes inside the n8n canvas** so you can import and activate in **3 clicks** without writing code:
 
-| Episode | Workflow Use-Case & 2026 Tutorial (🇻🇳 VI (VNĐ/$)) | Video Tutorial (35 Audio Tracks) | Interactive Setup Hub | Direct `.JSON` Blueprint |
-| :---: | :--- | :---: | :---: | :---: |
-| **EP01** | **Tự Động Trích Xuất Hóa Đơn PDF Từ Gmail Sang Excel / Google Sheets Không Cần Code (n8n)** | [▶️ Watch Video](https://www.youtube.com/watch?v=qHAa30IxU_A) | [🌐 EP01 Guide & Setup](https://360rev-hub.github.io/vi/ep01/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json) |
-| **EP02** | **Cách Cài Đặt n8n Trên Hostinger VPS Chỉ Với 1 Click (Hướng Dẫn 2026 — Không Cần Lệnh!)** | [▶️ Watch Video](https://www.youtube.com/watch?v=TJuo4kIFhbY) | [🌐 EP02 Guide & Setup](https://360rev-hub.github.io/vi/ep02/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json) |
-| **EP03** | **Cách Kết Nối Google Sheets & Gmail Với n8n Self-Hosted Trong 2 Phút (Chuẩn OAuth 2026)** | [▶️ Watch Video](https://www.youtube.com/watch?v=Ol6l8IFQQu8) | [🌐 EP03 Guide & Setup](https://360rev-hub.github.io/vi/ep03/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/03_Gmail_%20and_Google_Sheets_Instant_Bridge.json) |
-| **EP04** | **So Sánh Giá n8n vs Zapier vs Make (2026): Thay Thế Gói $149/Tháng Bằng Cloud $6.49!** | [▶️ Watch Video](https://www.youtube.com/watch?v=NO6nRD4wC7c) | [🌐 EP04 Guide & Setup](https://360rev-hub.github.io/vi/ep04/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/04_Zapier_to_n8n_Migration_Pack.json) |
-| **EP05** | **Tự Động Lưu File Đính Kèm Gmail Vào Google Drive & Google Sheets 24/7 (n8n Không Code)** | [▶️ Watch Video](https://www.youtube.com/watch?v=kFTTyzGt7GY) | [🌐 EP05 Guide & Setup](https://360rev-hub.github.io/vi/ep05/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json) |
-| **EP06** | **So Sánh Hostinger KVM 1 vs KVM 2 Cho n8n: Test Tốc Độ & RAM Thực Tế 1.000 Dòng (2026)!** | [▶️ Watch Video](https://www.youtube.com/watch?v=_8fusBwU9n0) | [🌐 EP06 Guide & Setup](https://360rev-hub.github.io/vi/ep06/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/06_n8n_Server_Benchmark_Workflow.json) |
-| **EP07** | **Tự Động Nhập Biên Lai & Sao Kê Ngân Hàng PDF Vào Excel / Google Sheets (n8n 2026)** | [▶️ Watch Video](https://www.youtube.com/watch?v=vH3AafPv80g) | [🌐 EP07 Guide & Setup](https://360rev-hub.github.io/vi/ep07/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/07_Receipt_and_Bank_Statement_Extractor.json) |
-| **EP08** | **Cách Nhập File Mẫu Workflow Miễn Phí (.JSON) Vào n8n Self-Hosted Chỉ Với 3 Click!** | [▶️ Watch Video](https://www.youtube.com/watch?v=qgjIOx-UFKE) | [🌐 EP08 Guide & Setup](https://360rev-hub.github.io/vi/ep08/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/08_Universal_JSON_Template_Pack.json) |
-| **EP09** | **Tự Động Trả Lời Email Khách Hàng Sau 0.8 Giây & Lưu Khách Hàng Vào Google Sheets 24/7** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP09 Guide & Setup](https://360rev-hub.github.io/vi/ep09/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/09_Instant_Lead_Response_and_Tracker.json) |
-| **EP10** | **How to Update Self-Hosted n8n on Hostinger VPS Safely in 60 Seconds (2026)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP10 Guide & Setup](https://360rev-hub.github.io/vi/ep10/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/10_Automated_Workflow_Backup_to_Drive.json) |
-| **EP11** | **How to Send Automated Overdue Invoice Reminder Emails from Google Sheets (No Code)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP11 Guide & Setup](https://360rev-hub.github.io/vi/ep11/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/11_Overdue_Invoice_Followup_Assistant.json) |
-| **EP12** | **How to Setup Custom Domain & Free SSL on Hostinger n8n VPS in 2 Minutes (2026)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP12 Guide & Setup](https://360rev-hub.github.io/vi/ep12/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/12_Web_Form_to_Sheets_and_Alerts.json) |
-| **EP13** | **Cheapest Way to Run n8n 24/7 While Your Computer is Turned Off ($6.49/mo Cloud)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP13 Guide & Setup](https://360rev-hub.github.io/vi/ep13/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/13_24x7_Cloud_Scheduler_Pack.json) |
-| **EP14** | **How to Sync Shopify & Stripe Orders to Excel / Google Sheets Automatically (Zero Fees)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP14 Guide & Setup](https://360rev-hub.github.io/vi/ep14/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/14_Order_to_Accounting_Sheet_Sync.json) |
-| **EP15** | **Automate Weekly Sales & Expense Summary Reports from Google Sheets to Email** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP15 Guide & Setup](https://360rev-hub.github.io/vi/ep15/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/15_Weekly_Executive_Report_Sender.json) |
-| **EP16** | **How to Add Free OpenAI / Gemini AI to Self-Hosted n8n on Hostinger VPS (2026)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP16 Guide & Setup](https://360rev-hub.github.io/vi/ep16/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/16_AI_Document_Classifier_and_Extractor.json) |
-| **EP17** | **How to Extract Data from Purchase Order PDFs to Google Sheets Automatically** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP17 Guide & Setup](https://360rev-hub.github.io/vi/ep17/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/17_Purchase_Order_PDF_to_Sheets.json) |
-| **EP18** | **Hostinger n8n VPS Pricing & Discount Guide (2026): How to Get 68% OFF KVM 1** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP18 Guide & Setup](https://360rev-hub.github.io/vi/ep18/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/18_Resume_PDF_to_HR_Tracker.json) |
-| **EP19** | **How to Automate Client Onboarding Emails & Folder Creation in Google Drive** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP19 Guide & Setup](https://360rev-hub.github.io/vi/ep19/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/19_Client_Onboarding_Drive_and_Email.json) |
-| **EP20** | **Top 5 Free n8n Office Automation Blueprints for Bookkeepers & Small Businesses (2026)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP20 Guide & Setup](https://360rev-hub.github.io/vi/ep20/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/20_Complete_5in1_Office_Automation_Bundle.json) |
-
----
-
-## 🛠️ How to Import Any `.JSON` Blueprint into n8n in 3 Clicks
-
-1. **Launch Your 24/7 n8n Cloud:** Open [**https://360rev-hub.github.io/hostinger**](https://360rev-hub.github.io/hostinger) and deploy **Hostinger KVM 1 (`Ubuntu 24.04 with n8n`)**.
-2. **Download Any Free `.JSON` File Above:** Click any `📥 Free .JSON` link in the table above or visit [**https://360rev-hub.github.io/vi/blueprints/**](https://360rev-hub.github.io/vi/blueprints/).
-3. **Import in n8n Canvas:** Inside your n8n dashboard, click **`⋯` (top-right menu) → `Import from File...`**, select the downloaded `.json` file, follow the **3 Yellow Sticky Notes**, and flip the workflow switch to **Active**!
+| Episode | Visual Workflow Preview | Workflow Use-Case & 2027 Tutorial (🇻🇳 VI (VNĐ/$)) | Video Tutorial (35 Audio Tracks) | Interactive Setup Hub | Direct `.JSON` Blueprint |
+| :---: | :---: | :--- | :---: | :---: | :---: |
+| **EP01** | [![EP01](https://360rev-hub.github.io/thumbs/THUMB_EP01_VI.png)](https://www.youtube.com/watch?v=qHAa30IxU_A) | **Tự Động Trích Xuất Hóa Đơn PDF Từ Gmail Sang Excel / Google Sheets Không Cần Code (n8n)** | [▶️ Watch Video](https://www.youtube.com/watch?v=qHAa30IxU_A) | [🌐 EP01 Guide & Setup](https://360rev-hub.github.io/vi/ep01/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/01_Email_Invoice_to_Spreadsheet_Assistant.json) |
+| **EP02** | [![EP02](https://360rev-hub.github.io/thumbs/THUMB_EP02_VI.png)](https://www.youtube.com/watch?v=TJuo4kIFhbY) | **Cách Cài Đặt n8n Trên Hostinger VPS Chỉ Với 1 Click (Hướng Dẫn 2027 — Không Cần Lệnh!)** | [▶️ Watch Video](https://www.youtube.com/watch?v=TJuo4kIFhbY) | [🌐 EP02 Guide & Setup](https://360rev-hub.github.io/vi/ep02/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/02_Hostinger_1Click_n8n_Starter_Kit.json) |
+| **EP03** | [![EP03](https://360rev-hub.github.io/thumbs/THUMB_EP03_VI.png)](https://www.youtube.com/watch?v=Ol6l8IFQQu8) | **Cách Kết Nối Google Sheets & Gmail Với n8n Self-Hosted Trong 2 Phút (Chuẩn OAuth 2027)** | [▶️ Watch Video](https://www.youtube.com/watch?v=Ol6l8IFQQu8) | [🌐 EP03 Guide & Setup](https://360rev-hub.github.io/vi/ep03/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/03_Gmail_%20and_Google_Sheets_Instant_Bridge.json) |
+| **EP04** | [![EP04](https://360rev-hub.github.io/thumbs/THUMB_EP04_VI.png)](https://www.youtube.com/watch?v=NO6nRD4wC7c) | **So Sánh Giá n8n vs Zapier vs Make (2027): Thay Thế Gói $149/Tháng Bằng Cloud $6.49!** | [▶️ Watch Video](https://www.youtube.com/watch?v=NO6nRD4wC7c) | [🌐 EP04 Guide & Setup](https://360rev-hub.github.io/vi/ep04/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/04_Zapier_to_n8n_Migration_Pack.json) |
+| **EP05** | [![EP05](https://360rev-hub.github.io/thumbs/THUMB_EP05_VI.png)](https://www.youtube.com/watch?v=kFTTyzGt7GY) | **Tự Động Lưu File Đính Kèm Gmail Vào Google Drive & Google Sheets 24/7 (n8n Không Code)** | [▶️ Watch Video](https://www.youtube.com/watch?v=kFTTyzGt7GY) | [🌐 EP05 Guide & Setup](https://360rev-hub.github.io/vi/ep05/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/05_Gmail_Attachments_to_Drive_Organizer.json) |
+| **EP06** | [![EP06](https://360rev-hub.github.io/thumbs/THUMB_EP06_VI.png)](https://www.youtube.com/watch?v=_8fusBwU9n0) | **So Sánh Hostinger KVM 1 vs KVM 2 Cho n8n: Test Tốc Độ & RAM Thực Tế 1.000 Dòng (2027)!** | [▶️ Watch Video](https://www.youtube.com/watch?v=_8fusBwU9n0) | [🌐 EP06 Guide & Setup](https://360rev-hub.github.io/vi/ep06/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/06_n8n_Server_Benchmark_Workflow.json) |
+| **EP07** | [![EP07](https://360rev-hub.github.io/thumbs/THUMB_EP07_VI.png)](https://www.youtube.com/watch?v=vH3AafPv80g) | **Tự Động Nhập Biên Lai & Sao Kê Ngân Hàng PDF Vào Excel / Google Sheets (n8n 2027)** | [▶️ Watch Video](https://www.youtube.com/watch?v=vH3AafPv80g) | [🌐 EP07 Guide & Setup](https://360rev-hub.github.io/vi/ep07/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/07_Receipt_and_Bank_Statement_Extractor.json) |
+| **EP08** | [![EP08](https://360rev-hub.github.io/thumbs/THUMB_EP08_VI.png)](https://www.youtube.com/watch?v=qgjIOx-UFKE) | **Cách Nhập File Mẫu Workflow Miễn Phí (.JSON) Vào n8n Self-Hosted Chỉ Với 3 Click!** | [▶️ Watch Video](https://www.youtube.com/watch?v=qgjIOx-UFKE) | [🌐 EP08 Guide & Setup](https://360rev-hub.github.io/vi/ep08/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/08_Universal_JSON_Template_Pack.json) |
+| **EP09** | [![EP09](https://360rev-hub.github.io/thumbs/THUMB_EP09_VI.png)](https://www.youtube.com/watch?v=Rb0K08SASCU) | **Tự Động Trả Lời Email Khách Hàng Sau 0.8 Giây & Lưu Khách Hàng Vào Google Sheets 24/7** | [▶️ Watch Video](https://www.youtube.com/watch?v=Rb0K08SASCU) | [🌐 EP09 Guide & Setup](https://360rev-hub.github.io/vi/ep09/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/09_Instant_Lead_Response_and_Tracker.json) |
+| **EP10** | [![EP10](https://360rev-hub.github.io/thumbs/THUMB_EP10_VI.png)](https://www.youtube.com/watch?v=GjVuxPdPsOg) | **Cách Cập Nhật n8n Self-Hosted Trên Hostinger VPS An Toàn Trong 60 Giây + Tự Động Sao Lưu (2027)** | [▶️ Watch Video](https://www.youtube.com/watch?v=GjVuxPdPsOg) | [🌐 EP10 Guide & Setup](https://360rev-hub.github.io/vi/ep10/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/10_Automated_Workflow_Backup_to_Drive.json) |
+| **EP11** | — | **How to Send Automated Overdue Invoice Reminder Emails from Google Sheets (No Code)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP11 Guide & Setup](https://360rev-hub.github.io/vi/ep11/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/11_Overdue_Invoice_Followup_Assistant.json) |
+| **EP12** | — | **How to Setup Custom Domain & Free SSL on Hostinger n8n VPS in 2 Minutes (2027)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP12 Guide & Setup](https://360rev-hub.github.io/vi/ep12/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/12_Web_Form_to_Sheets_and_Alerts.json) |
+| **EP13** | — | **Cheapest Way to Run n8n 24/7 While Your Computer is Turned Off ($6.49/mo Cloud)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP13 Guide & Setup](https://360rev-hub.github.io/vi/ep13/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/13_24x7_Cloud_Scheduler_Pack.json) |
+| **EP14** | — | **How to Sync Shopify & Stripe Orders to Excel / Google Sheets Automatically (Zero Fees)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP14 Guide & Setup](https://360rev-hub.github.io/vi/ep14/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/14_Order_to_Accounting_Sheet_Sync.json) |
+| **EP15** | — | **Automate Weekly Sales & Expense Summary Reports from Google Sheets to Email** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP15 Guide & Setup](https://360rev-hub.github.io/vi/ep15/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/15_Weekly_Executive_Report_Sender.json) |
+| **EP16** | — | **How to Add Free OpenAI / Gemini AI to Self-Hosted n8n on Hostinger VPS (2027)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP16 Guide & Setup](https://360rev-hub.github.io/vi/ep16/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/16_AI_Document_Classifier_and_Extractor.json) |
+| **EP17** | — | **How to Extract Data from Purchase Order PDFs to Google Sheets Automatically** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP17 Guide & Setup](https://360rev-hub.github.io/vi/ep17/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/17_Purchase_Order_PDF_to_Sheets.json) |
+| **EP18** | — | **Hostinger n8n VPS Pricing & Discount Guide (2027): How to Get 68% OFF KVM 1** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP18 Guide & Setup](https://360rev-hub.github.io/vi/ep18/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/18_Resume_PDF_to_HR_Tracker.json) |
+| **EP19** | — | **How to Automate Client Onboarding Emails & Folder Creation in Google Drive** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP19 Guide & Setup](https://360rev-hub.github.io/vi/ep19/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/19_Client_Onboarding_Drive_and_Email.json) |
+| **EP20** | — | **Top 5 Free n8n Office Automation Blueprints for Bookkeepers & Small Businesses (2027)** | [📺 @360rev3 Channel](https://www.youtube.com/@360rev3) | [🌐 EP20 Guide & Setup](https://360rev-hub.github.io/vi/ep20/) | [📥 Free .JSON](https://360rev-hub.github.io/blueprints/20_Complete_5in1_Office_Automation_Bundle.json) |
 
 ---
 
 ## 🔗 Official Ecosystem Links & Resources
 
 - 🌐 **Global 35-Language Blueprint Hub:** [https://360rev-hub.github.io/vi/](https://360rev-hub.github.io/vi/)
-- 🧮 **Interactive n8n vs Zapier vs Make Savings Calculator:** [https://360rev-hub.github.io/vi/compare/](https://360rev-hub.github.io/vi/compare/)
+- 🧮 **Interactive n8n vs Make / Zapier Savings Calculator:** [https://360rev-hub.github.io/vi/compare/](https://360rev-hub.github.io/vi/compare/)
 - 📂 **All 20 Raw `.JSON` Workflow Files:** [https://360rev-hub.github.io/vi/blueprints/](https://360rev-hub.github.io/vi/blueprints/)
 - 📺 **YouTube Channel (`@360rev3`):** [https://www.youtube.com/@360rev3](https://www.youtube.com/@360rev3)
-- 🎬 **Official YouTube Master Playlist:** [Zero-Code n8n Cloud Automation Blueprints (2026)](https://www.youtube.com/playlist?list=PL8678791D35208E18)
